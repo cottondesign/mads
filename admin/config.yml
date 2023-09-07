@@ -9,7 +9,7 @@ collections:
     files:
       - label: "Homepage"
         name: "homepage"
-        file: "index.html"
+        file: "index.markdown"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: default"}
           - label: "Cocktails"
