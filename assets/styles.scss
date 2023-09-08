@@ -18,6 +18,8 @@ img {
   --navItemHeight: 18px;
   --tabWidth: 19.7px;
   --transition: 300ms;
+  // --transition: 3000ms;
+  // --transition: none;
   --charWidth: 9.914px;
   --linePadding: 8px;
 }
@@ -98,6 +100,7 @@ button {
 }
 .receipt-top {
   padding: 0 16.582px;
+  background: white;
 }
 .receipt-bottom {
   padding: 0 16.582px 63px 16.582px;
@@ -145,7 +148,19 @@ button {
   .receipt-container {
     max-width: 100%;
     height: 100%;
-  }  
+  }
+
+
+  body.show-theSpace {
+
+    background: blue;
+  }
+
+
+
+
+
+
 }
 /* media query for desktop */
 @media screen and (max-width: 390px) {
@@ -213,6 +228,7 @@ button {
   justify-content: space-between;
   max-height: calc(var(--navItemHeight) * 2);
   overflow: hidden;
+  padding-bottom: var(--linePadding);
 }
 
 p {
@@ -225,16 +241,21 @@ p {
   height: var(--navItemHeight);
 }
 .divider-single-bar,
-.menu-single-bar,
-.space-single-bar {
-  overflow: hidden;
+.menu-single-bar {
+  background:yellow;
   // height: var(--navItemHeight);
   line-height: 0.2em;
   height: 0.2em;
-  background:yellow;
-  margin-top: 0px;
+  overflow: hidden;
+  // margin-top: 0px;
   // cursor: pointer;
 }
+.space-single-bar {
+  height: 0;
+  overflow: hidden;
+}
+
+
 
 .nav {
   margin-top: 18px;
@@ -243,27 +264,33 @@ p {
 .nav-item {
   transition: var(--transition);
   max-height: calc(2*var(--navItemHeight));
-  /* height: var(--navItemHeight); */
   display: flex;
   flex-direction: column;
   overflow: hidden;
   opacity: 1;
   background: white;
   cursor: pointer;
+
+  position: relative;
+
+  .divider-single-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
 }
 
 #events:hover,
 #hours:hover,
 #reservations:hover {
   max-height: calc(2 * var(--navItemHeight) + 10px);
-  .section-inner {
-    padding-bottom: calc(8px + 10px);
+  .section-body {
+    max-height: 10px;
   }
 }
 
 .section-inner {
   padding: var(--linePadding) 0;
-  transition: var(--transition);
 }
 
 .section-header {
@@ -277,10 +304,31 @@ p {
 }
 .section-body {
   margin-left: var(--tabWidth);
-  margin-top: 0;
   max-height: 0;
   overflow: hidden;
   transition: var(--transition);
+
+}
+#events {
+  .section-body{
+    :first-child {
+      margin-top: var(--navItemHeight);
+    }
+  }
+}
+#hours {
+  .section-body{
+    :first-child {
+      margin-top: var(--navItemHeight);
+    }
+  }
+}
+#reservations {
+  .section-body{
+    :first-child {
+      margin-top: var(--navItemHeight);
+    }
+  }
 }
 
 .receipt-footer {
@@ -310,7 +358,7 @@ p {
   /* background: red; */
   width: calc(100% - var(--tabWidth));
   border-collapse: collapse;
-  margin-left: var(--tabWidth);
+  // margin-left: var(--tabWidth);
 }
 
 
@@ -320,6 +368,8 @@ p {
   /* margin-top: 162px; */
   transition: var(--transition);
 
+  // max-height: 0;
+  // overflow: hidden;
 }
 .food-and-drinks-header-back h1{
   display: inline-block;
@@ -342,6 +392,7 @@ p {
 .submenu-nav {
   display: flex;
   justify-content: space-between;
+  padding: var(--linePadding) 0;
 }
 .submenu-nav .submenu-button {
   visibility: hidden;
@@ -362,14 +413,20 @@ p {
   /* margin-top: 39px - 36px; */
 }
 
-.menu-subheader-top-nav span {
-  display: inline-block;
-  /* background: lightblue; */
-  padding: 10px 15px 10px 15px;
-  margin: -15px;
-  z-index: 3;
-  cursor: pointer;
+.menu-subheader-top-nav {
+  padding-top: var(--navItemHeight);
+  padding-bottom: var(--linePadding);
+
+  .menu-subheader-top-nav span {
+    display: inline-block;
+    /* background: lightblue; */
+    padding: 10px 15px 10px 15px;
+    margin: -15px;
+    z-index: 3;
+    cursor: pointer;
+  }
 }
+
 .food-and-drinks-subheader span,
 .food-and-drinks-subheader button {
   visibility: hidden;
@@ -396,6 +453,7 @@ p {
   display: flex;
   justify-content: space-between;
   /* height: var(--navItemHeight); */
+  padding: var(--linePadding) 0;
 }
 .food-and-drinks-header-back {
   opacity: 0;
@@ -410,13 +468,12 @@ p {
 // #theSpace .section-body .space-single-bar:last-child {
 //   display: none;
 // }
-#theSpaceHeader {
-  margin-bottom: var(--linePadding);
-}
+
 .the-space-arrows {
   display: flex;
   justify-content: space-between;
   padding: 8px 0;
+  cursor: default;
 }
 .arrow-right {
   text-align: right;
@@ -430,7 +487,6 @@ p {
 .arrow-left:hover {
   animation: arrow-left 300ms linear infinite;
 }
-
 
 
 .space-header {
@@ -457,18 +513,25 @@ p {
   }
 }
 
-body.show-theSpace .space-header-title {
-  // padding: 10px 0;
-  // margin: -10px 0;
-  // width: 100%;
-  // background: lightblue;
+body.show-theSpace #theSpace {
+  cursor: default;
+
+  .section-header {
+    cursor: pointer;
+  }
+  #theSpaceHeader + .space-single-bar {
+    background: purple;
+    margin-top: var(--linePadding);
+  }
+  .space-single-bar {
+    cursor: pointer;
+    background:yellow;
+    line-height: 0.2em;
+    height: 0.2em;
+  }
 }
-.space-single-bar {
-  cursor: pointer;
-  background:yellow;
-  line-height: 0.2em;
-  height: 0.2em;
-}
+
+
 
 #theSpaceHeader h1:before {
   content: "* ";
@@ -491,19 +554,56 @@ body.show-theSpace #theSpaceHeader h1:before {
 
 
 /* FOOD AND DRINKS STYLES */
-
 body.show-foodAndDrinks section#foodAndDrinks{
   max-height: inherit;
-  overflow: inherit;
+  // overflow: inherit;
   // max-height: 1000px;
-  // max-height: 2000px;
+  max-height: 2000px;
   height: auto;
+
+  .section-body {
+    // background: red;
+    // height: auto;
+    // max-height: fit-content;
+    transition: none;
+    max-height: 2000px;
+    overflow: inherit;
+    // max-height: fit-content;
+    margin-top: var(--linePadding);
+  }
+  
 }
 
-body.show-foodAndDrinks .receipt-container {
-  /* position: fixed; */
-  /* top: 1000px; */
-  height: auto;
+body.show-foodAndDrinks {
+
+  .nav-item {
+    overflow: inherit;
+  }
+
+  .receipt-container {
+    /* position: fixed; */
+    /* top: 1000px; */
+    height: auto;
+  }
+
+  .section-header {
+    height: auto;
+  }
+
+  .food-and-drinks-header-default {
+    display: none;
+  }
+
+  .food-and-drinks-header-back {
+    /* display: inline-block; */
+    opacity: 1;
+  }
+
+  .food-and-drinks-subnav.open {
+    // top: 36px;
+    top: 44px;
+  }
+
 }
 
 body.show-foodAndDrinks .nav-item:not(#foodAndDrinks), 
@@ -512,21 +612,6 @@ body.show-foodAndDrinks .divider-single-bar:not(.sub-header-single-bar) {
   /* height: 0; */
   opacity: 0;
   transition: var(--transition);
-}
-
-body.show-foodAndDrinks .section-header {
-  height: auto;
-}
-body.show-foodAndDrinks .food-and-drinks-header-default {
-  display: none;
-}
-body.show-foodAndDrinks .food-and-drinks-header-back {
-  /* display: inline-block; */
-  opacity: 1;
-}
-
-body.show-foodAndDrinks .food-and-drinks-subnav.open {
-  top: 36px;
 }
 
 /* body.show-foodAndDrinks .food-and-drinks-subnav.close {
@@ -540,15 +625,45 @@ body.show-foodAndDrinks .food-and-drinks-subnav.open {
 
 
 /* THE SPACE STYLES */
-body.show-theSpace section#theSpace{
-  max-height: inherit;
-  /* max-height: 500px; */
-  overflow: inherit;
-  margin-top: -10px;
+body.show-theSpace {
+
+  section#theSpace {
+    max-height: inherit;
+    max-height: 800px;
+    /* max-height: 500px; */
+    overflow: inherit;
+    margin-top: calc(-1 * var(--linePadding));
+
+    .section-inner {
+      padding-bottom: 0;
+    }
+    .section-body {
+      max-height: 800px;
+    }
+    .divider-single-bar {
+      bottom: -0.2em;
+    }
+  }
+
+  .nav {
+    margin-top: 0px;
+  }
+
 }
+
+// body.show-theSpace .receipt-sub-header, 
+// body.show-theSpace .nav-item:not(#theSpace), 
+// body.show-theSpace .divider-single-bar{
+//   margin-top: 0px;
+//   max-height: 0;
+//   /* height: 0; */
+//   opacity: 0;
+//   transition: var(--transition);
+// }
+
 body.show-theSpace .receipt-sub-header, 
-body.show-theSpace .nav-item:not(#theSpace), 
-body.show-theSpace .divider-single-bar{
+body.show-theSpace .nav-item:not(#theSpace),
+body.show-theSpace .sub-header-single-bar {
   margin-top: 0px;
   max-height: 0;
   /* height: 0; */
@@ -556,23 +671,33 @@ body.show-theSpace .divider-single-bar{
   transition: var(--transition);
 }
 
-body.show-theSpace .receipt-footer-text {
-  opacity: 0;
-  height: 0;
-}
-body.show-theSpace .receipt-bottom {
-  padding-bottom: 42px;
-  background: white;
+body.show-theSpace {
+
+  .receipt-footer-text {
+    opacity: 0;
+    height: 0;
+  }
+
+  .receipt-bottom {
+    padding-bottom: 42px;
+    background: white;
+  }
+
+  .receipt-container {
+    /* left: calc(62px + 195px); */
+    left: calc(7.5vh + 195px);
+  }
+
+  .carousel-container {
+    filter: blur(0);
+  }
+  
 }
 
-body.show-theSpace .receipt-container {
-  /* left: calc(62px + 195px); */
-  left: calc(7.5vh + 195px);
-}
 
-body.show-theSpace .carousel-container {
-  filter: blur(0);
-}
+
+
+
 
 .space-section {
   // max-height: var(--navItemHeight);
@@ -640,52 +765,59 @@ body.show-theSpace .carousel-container {
 
 
 /* EVENTS */
-#events .section-body p {
-  margin-top: var(--navItemHeight);
+#events {
+  // .section-body {
+  //   :first-child {
+  //     margin-top: var(--navItemHeight);
+  //   }
+  // }
+  p:not(:last-child) {
+    margin-bottom: var(--navItemHeight);
+  }
 }
-#events p:not(:last-child) {
-  margin-bottom: var(--navItemHeight);
-}
-body.show-events section#events{
-  // max-height: inherit;
-  max-height: 500px;
-  // overflow: inherit;
-  // overflow: hidden;
-}
-body.show-events section#events .section-body {
-  // max-height: inherit;
-  max-height: 500px;
-  // overflow: inherit;
-  // overflow: hidden;
-  // background: green;
-  // margin-top: var(--navItemHeight);
-}
-body.show-events .receipt-container {
-  /* min-height: 85vh; */
-  height: auto;
-}
-body.show-events .receipt-footer {
-  /* padding-top: 128px; */
+
+body.show-events {
+  section#events {
+    max-height: 500px;
+    .section-body {
+      max-height: 500px;
+    }
+  }
+  .receipt-container {
+    height: auto;
+  }
+  // .receipt-footer {
+  //   padding-top: 128px;
+  // }
 }
 
 /* HOURS */
+body.show-hours {
+  section#hours{
+    max-height: 300px;
 
-body.show-hours section#hours{
-  max-height: inherit;
-  max-height: 300px;
-  /* overflow: inherit; */
-  overflow: hidden;
-}
-body.show-hours .receipt-container {
-  height: auto;
+    .section-body {
+      max-height: 300px;
+    }
+  }
+  .receipt-container {
+    height: auto;
+  }
 }
 
 /* RESERVATIONS */
-body.show-reservations section#reservations{
-  max-height: inherit;
-  max-height: 200px;
-  /* overflow: inherit; */
-  overflow: hidden;
+body.show-reservations {
+  section#reservations{
+    // max-height: inherit;
+    max-height: 200px;
+    /* overflow: inherit; */
+    // overflow: hidden;
+
+    .section-body {
+      max-height: 200px;
+    }
+
+  }
 }
 
 

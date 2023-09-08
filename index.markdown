@@ -155,12 +155,13 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
     <div class="nav">
       <!-- food and drinks -->
       <section class="nav-item" id="foodAndDrinks">
+      <div class="food-and-drinks-inner section-inner">
         <div class="section-header food-and-drinks-header-default">
-          <h1>* food and drinks</h1>
+          <h1 id="foodAndDrinksText">* food and drinks</h1>
           <span class="nav-button" id="foodAndDrinksButton">-</span>
         </div>
-        <div class="section-header food-and-drinks-header-back">
-          <h1>< back</h1>
+        <div class="section-header food-and-drinks-header-back click">
+          <h1 class="click">< back</h1>
         </div>
         <div class="section-body">
           <div class="food-and-drinks-subnav">
@@ -170,17 +171,25 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
               <button class="submenu-button submenu-close-button">-</button>
             </div>
             <div class="menu-single-bar">------------------------------------</div>
-            <h1>Cocktails</h1>
+            <div class="submenu-nav">
+              <h1><a href="#cocktails">Cocktails</a></h1>
+              <!-- <button class="submenu-button submenu-close-button">-</button> -->
+            </div>
             <div class="menu-single-bar">------------------------------------</div>
-            <h1>Beer</h1>
+            <div class="submenu-nav">
+              <h1><a href="#beer">Beer</a></h1>
+              <!-- <button class="submenu-button submenu-close-button">-</button> -->
+            </div>
             <div class="menu-single-bar">------------------------------------</div>
-            <h1>Wine</h1>
+            <div class="submenu-nav">
+              <h1><a href="#wine">Wine</a></h1>
+              <!-- <button class="submenu-button submenu-close-button">-</button> -->
+            </div>
             <div class="menu-single-bar">------------------------------------</div>
           </div>
           <div class="food-and-drinks-subheader" id="dinnerMenu">
-            <div class="menu-subheader-top-nav">
-              <br>
-              <span class="food-and-drinks-back-button"><</span>
+            <div class="menu-subheader-top-nav click">
+              <span class="food-and-drinks-back-button click"><</span>
             </div>
             <div class="menu-single-bar">------------------------------------</div>
             <div class="food-and-drinks-subheader-title">
@@ -230,9 +239,8 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
             </span>
           </div>
           <div class="food-and-drinks-subheader" id="cocktails">
-            <div class="menu-subheader-top-nav">
-              <br>
-              <span class="food-and-drinks-back-button"><</span>
+            <div class="menu-subheader-top-nav click">
+              <span class="food-and-drinks-back-button click"><</span>
             </div>
             <div class="menu-single-bar">------------------------------------</div>
             <div class="food-and-drinks-subheader-title">
@@ -270,14 +278,15 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
             <span class="menu-note">!!!FIRE!!!</span>
           </div> -->
         </div>
-      </section>
+        </div>
       <div class="divider-single-bar">------------------------------------</div>
+      </section>
       <!-- the space -->
       <section class="nav-item" id="theSpace">
         <div class="thespace-inner section-inner">
-          <div class="section-header" id="theSpaceHeader">
-            <h1>the space</h1>
-            <span id="theSpaceButton"></span>
+          <div class="section-header click" id="theSpaceHeader">
+            <h1 class="click">the space</h1>
+            <span class="click" id="theSpaceButton"></span>
             <!-- <span class="nav-button" id="theSpaceButton">-</span>
             <span class="nav-button" id="theSpaceButtonHover">></span> -->
           </div>
@@ -322,7 +331,8 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
             {% endfor %}
           </div>
         </div>
-        <div class="space-single-bar">------------------------------------</div>
+        <!-- <div class="space-single-bar">------------------------------------</div> -->
+        <div class="divider-single-bar">------------------------------------</div>
       </section>
       <!-- events -->
       <section class="nav-item" id="events">
@@ -331,30 +341,8 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
             <h1>* events</h1>
             <span class="nav-button" id="eventsButton">-</span>
           </div>
-          <!-- <br> -->
           <div class="section-body">
           {{page.events-body | markdownify}}
-            <!-- <p>
-              Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              do eiusmod tempor incididunt ut 
-              labore et dolore magna aliqua.
-            </p>
-            <br>
-            <p>
-              Porttitor rhoncus dolor purus 
-              non enim praesent elementum 
-              facilisis leo. Eget gravida cum 
-              sociis natoque penatibus et
-              magnis dis.
-            </p>
-            <br>
-            <p>
-              Email with this info:<br>
-              (1) What kind of event is it<br>
-              (2) Estimated head count<br>
-              (3) Time
-            </p> -->
           </div>
         </div>
         <div class="divider-single-bar">------------------------------------</div>

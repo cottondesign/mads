@@ -4,31 +4,39 @@ const spaceHeaders = document.querySelectorAll(".space-header");
 const spaceHeaderTitles = document.querySelectorAll(".space-header-title");
 const theSpaceSection = document.getElementById("theSpace");
 
-
+// MAIN NAV JS
 const navSections = document.querySelectorAll("section.nav-item");
 for (navSection of navSections) {
-  // const sectionHeader = navSection.querySelector('.section-header');
   const sectionId = navSection.getAttribute('id');
 
-  // sectionHeader.addEventListener("click", function(){
-  navSection.addEventListener("click", function(){
+  navSection.addEventListener("click", function(e){
 
     // TO DO: turn off sections that are visible other than current section
-    
-
-    if (sectionId == 'theSpace' && document.body.classList.contains("show-theSpace")) {
-      closeAllSections()
+    if (sectionId == 'foodAndDrinks' && document.body.classList.contains("show-foodAndDrinks")){
+      // Close 'Food and Drinks' section only when clicking on header
+      if (e.target.classList.contains('click')) {
+        document.body.classList.toggle('show-' + sectionId);
+      }
+    } else if (sectionId == 'theSpace' && document.body.classList.contains("show-theSpace")) {
+      // Close 'The Space' section only when clicking on header
+      if (e.target.classList.contains('click')) {
+        closeAllSections();
+        document.body.classList.toggle('show-' + sectionId);
+      }
     } else {
-      openSection(spaceSections[0])
+      // Close any open section other than the one you are clicking
+      if (!document.body.classList.contains('show-' + sectionId)) {
+        document.body.removeAttribute('class');
+      }
+      document.body.classList.toggle('show-' + sectionId);
+      openSection(spaceSections[0]);
     }
-    document.body.classList.toggle('show-' + sectionId);
+    console.log(e.target);
+    // document.body.classList.toggle('show-' + sectionId);
   });
 }
 
-
 // click on headers and show the section
-// for (spaceHeaderTitle of spaceHeaderTitles) {
-//   spaceHeaderTitle.addEventListener("click", function() {
 for (spaceSection of spaceSections) {
   spaceSection.addEventListener("click", function(e) {
 
@@ -46,8 +54,6 @@ for (spaceSection of spaceSections) {
       }
     }
 
-
-
   })
 }
 
@@ -56,7 +62,6 @@ function closeAllSections(){
     spaceSection.classList.remove("show")
   }
 }
-
 function openSection(section){
   if (!section.classList.contains("show")){
     if (theSpaceSection.querySelector(".show")){
@@ -96,44 +101,31 @@ theSpaceHeader.addEventListener("mouseleave", function() {
 // TO DO: hide submenu on scroll?
 
 const submenuOpenButtons = document.querySelectorAll('.submenu-open-button');
+const submenuCloseButton = document.querySelector('.submenu-close-button');
+const subMenu = document.querySelector('.food-and-drinks-subnav');
+
+// open submenu
 for (submenuOpenButton of submenuOpenButtons) {
   submenuOpenButton.addEventListener("click", function() {
     document.querySelector('.food-and-drinks-subnav').classList.add('open');
-  
     submenuCloseButton.classList.add('show');
   })
 }
-
-const submenuCloseButton = document.querySelector('.submenu-close-button');
-submenuCloseButton.addEventListener("click", function() {
+subMenu.addEventListener("click", function(e) {
+  // close submenu when clicking on anchor link or '-' button
+  if(e.target.tagName == 'A' || e.target === submenuCloseButton) {
   document.querySelector('.food-and-drinks-subnav').classList.remove('open');
   submenuCloseButton.classList.remove('show');
+  }
 })
 
-
-
-const foodAndDrinksHeaderBackButton = document.querySelector('.food-and-drinks-header-back');
-foodAndDrinksHeaderBackButton.addEventListener("click", function() {
-  document.body.classList.remove('show-foodAndDrinks');
-  // document.querySelector('.food-and-drinks-subnav').style.height = 0;
-})
-
-const foodAndDrinksBackButtons = document.querySelectorAll('.food-and-drinks-back-button');
-for (foodAndDrinksBackButton of foodAndDrinksBackButtons) {
-  foodAndDrinksBackButton.addEventListener("click", function() {
-    document.body.classList.remove('show-foodAndDrinks');
-    // document.querySelector('.food-and-drinks-subnav').style.height = 0;
-  })
-}
-
-
+// show subheader nav buttons only when positioned at the top
 const subheaders = document.querySelectorAll('.food-and-drinks-subheader');
 window.onscroll = function() {
   for (subheader of subheaders) {
     showOnScroll(subheader);
   }
 };
-
 function showOnScroll(element) {
   let offset = element.getBoundingClientRect();
     console.log(offset);
@@ -291,6 +283,13 @@ for (theSpaceRightArrow of theSpaceRightArrows) {
 
         carousel.style.transition = '300ms';
         carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+
+        // TEST
+        if (carouselCounter == 7) {
+          document.querySelector('#mezzanine').classList.add('show');
+          document.querySelector('#bar').classList.remove('show');
+        }
+        // END OF TEST
       }
       console.log('Current Index'+currentIndex);
       
@@ -324,3 +323,13 @@ carouselContainer.addEventListener("click", function() {
     console.log(-receiptContainer.offsetHeight - 37);
   }
 })
+
+
+
+
+
+
+// const foodAndDrinksText = document.querySelector('#foodAndDrinksText');
+// function foodAndDrinksHover() {
+//   const foodAndDrinksHoverArr = ['!! FOOD !!', '!! COCKTAILS !!', '!! BEER !!', '!! WINE !!'];
+// }
