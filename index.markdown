@@ -122,11 +122,8 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
       {% endfor %}
     {% endfor %}
     <div class="carousel-image">
-      <img src="{{ page.space-areas[0].images[0].path }}" alt="" class="{{ page.space-areas[0].name | slugify }}" data="{{ page.space-areas[0].name | slugify }}">
+      <img src="{{ page.space-areas[0].images[0].path }}" alt="" class="{{ page.space-areas[0].name | slugify }} last" data="{{ page.space-areas[0].name | slugify }}">
     </div>
-    <!-- <div class="carousel-image">
-      <img src="/assets/images/test.jpg" alt="">
-    </div> -->
   </div>
 </div>
 <div class="receipt-container" id="receiptContainer">
@@ -357,7 +354,6 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
             </h1>
             <span class="nav-button" id="hoursButton">-</span>
           </div>
-          <!-- <br> -->
           <div class="section-body">
             <table class="schedule">
               <colgroup>
@@ -416,7 +412,6 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
             <h1>* reservations</h1>
             <span class="nav-button" id="reservationsButton">-</span>
           </div>
-          <!-- <br> -->
           <div class="section-body">
             <p>
               {{page.reservations-body}}
