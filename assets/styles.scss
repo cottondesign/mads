@@ -65,7 +65,7 @@ button {
 }
 
 .arrow {
-  background: red;
+  // background: red;
   width: calc(2 * var(--charWidth));
   width: 30px;
   padding: 8px 0;
@@ -126,16 +126,33 @@ button {
 .receipt-container.shift-up {
   top: 6.5vh;
 }
-.receipt-container.move-up {
-  // top: -80vh;
-  bottom: -37px;
-}
-// .receipt-container .shift-down {
-//   top: -80vh;
-// }
 .receipt-container.move-down {
   top: -80vh;
 }
+
+// when the receipt moves up
+body.receipt-moveUp {
+  .receipt-top {
+    order: 2;
+  }
+}
+.receipt-moveUp {
+  .section-header {
+    order: 10;
+  }
+  .section-body {
+    opacity: 0;
+  }
+  .divider-single-bar {
+    opacity: 0;
+  }
+}
+.hover-down {
+  // show +, hide -
+}
+
+
+// end when the receipt moves up
 
 .receipt-header {
   text-align: center;
@@ -250,6 +267,8 @@ p {
 .nav {
   margin-top: 18px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .nav-item {
   transition: var(--transition);
@@ -272,6 +291,9 @@ p {
 
 .section-inner {
   padding: var(--linePadding) 0;
+  
+  display: flex;
+  flex-direction: column;
 }
 
 .section-header {
@@ -341,17 +363,26 @@ p {
 }
 
 .food-and-drinks-subnav {
-  background: white;
+  // background: white;
   position: sticky;
   /* top: -153px; */
   top: -154px;
   // height: 153px;
-  height: 149px;
+  // height: 149px;
   z-index: 1;
-  transition: var(--transition);
+
+  div:last-of-type {
+    background: transparent;
+  }
+}
+.food-and-drinks-subnav + .food-and-drinks-subheader {
+  .menu-subheader-top-nav {
+    background: white;
+  }
 }
 
 .submenu-nav {
+  background: white;
   display: flex;
   justify-content: space-between;
   padding: var(--linePadding) 0;
@@ -372,7 +403,12 @@ p {
   height: 80px;
   margin-bottom: 10px;
   // margin-top: calc(39px - 36px);
+
+  div:last-of-type {
+    background: transparent;
+  };
 }
+
 
 .menu-subheader-top-nav {
   // background: yellow;
@@ -398,11 +434,14 @@ p {
   }
 }
 .food-and-drinks-subheader.show {
-  span,
+  span:first-of-type,
   button {
     visibility: visible;
     opacity: 1;
   }
+}
+.food-and-drinks-top-nav:first-of-type {
+  background: white;
 }
 
 .menu-item-header {
@@ -433,6 +472,8 @@ p {
   h1 {
     display: inline-block;
     background: rgb(185, 185, 255);
+    padding: 8px 0;
+    margin: -8px 0;
   }
 }
 
@@ -755,6 +796,7 @@ body.show-theSpace {
 body.show-events {
   section#events {
     max-height: 500px;
+    height: auto;
     .section-body {
       max-height: 500px;
     }
@@ -765,6 +807,11 @@ body.show-events {
   // .receipt-footer {
   //   padding-top: 128px;
   // }
+}
+body.show-events.receipt-moveUp {
+  section#events {
+    order: 10;
+  }
 }
 
 /* HOURS */
@@ -785,6 +832,11 @@ body.show-hours {
     height: auto;
   }
 }
+body.show-hours.receipt-moveUp {
+  section#hours {
+    order: 10;
+  }
+}
 
 /* RESERVATIONS */
 body.show-reservations {
@@ -796,6 +848,11 @@ body.show-reservations {
     .section-body {
       max-height: 200px;
     }
+  }
+}
+body.show-reservations.receipt-moveUp {
+  section#reservations {
+    order: 10;
   }
 }
 

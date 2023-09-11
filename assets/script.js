@@ -274,18 +274,19 @@ theSpaceRightArrow.addEventListener("click", function() {
     }
 
     carousel.style.transition = '300ms';
-    // carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+    carousel.style.left = `calc(-100vw * ${carouselCounter})`;
 
     // carousel.scrollBy({
     //   left: window.innerWidth,
     //   behavior: "smooth",
     // });
-    let left = window.innerWidth * carouselCounter;
-    console.log(left);
-    window.scrollTo({
-      left: (left),
-      behavior: "smooth",
-    });
+
+    // let left = window.innerWidth * carouselCounter;
+    // console.log(left);
+    // window.scrollTo({
+    //   left: (left),
+    //   behavior: "smooth",
+    // });
 
   }
 
@@ -296,6 +297,7 @@ theSpaceRightArrow.addEventListener("click", function() {
   console.log('Current Index'+currentIndex);
   console.log('CarouselCounter'+carouselCounter);
 })
+
 
 function toggleSpaceDescriptions() {
   for (spaceSection of spaceSections) {
@@ -337,16 +339,41 @@ carouselContainer.addEventListener("mouseleave", function() {
 })
 carouselContainer.addEventListener("click", function() {
   if (!document.body.classList.contains("show-theSpace")) {
-    carouselContainer.classList.toggle("no-blur");
+    carouselContainer.classList.add("no-blur");
+
+    // 37 pixels from the bottom of the receipt
     console.log(receiptContainer.offsetHeight);
     receiptContainer.style.top = -receiptContainer.offsetHeight + 37 + 'px';
-    console.log(-receiptContainer.offsetHeight - 37);
+    console.log(-receiptContainer.offsetHeight + 37);
+
+    document.body.classList.add('receipt-moveUp');
   }
 })
 
+receiptContainer.addEventListener("mouseover", function() {
+  if (document.body.classList.contains("receipt-moveUp")) {
+    receiptContainer.style.top = -receiptContainer.offsetHeight + 47 + 'px';
+    carouselContainer.classList.remove("no-blur");
+    carouselContainer.classList.add('hover-blur');
+  }
+})
+receiptContainer.addEventListener("mouseleave", function() {
+  if (document.body.classList.contains("receipt-moveUp")) {
+    receiptContainer.style.top = -receiptContainer.offsetHeight + 37 + 'px';
+    carouselContainer.classList.add("no-blur");
+    carouselContainer.classList.remove('hover-blur');
+  }
+})
 
-
-
+receiptContainer.addEventListener("click", function(e) {
+  if (!document.body.classList.contains("show-theSpace")) {
+    if (!e.target.classList.contains('nav-item') && document.body.classList.contains('receipt-moveUp')) {
+      document.body.classList.remove('receipt-moveUp');
+      receiptContainer.style.top = 7.5 + 'vh';
+      console.log(e.target);
+    }
+  }
+})
 
 
 const foodAndDrinksText = document.querySelector('#foodAndDrinksText');

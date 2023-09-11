@@ -1,43 +1,62 @@
 ---
 layout: default
 
-cocktails:
-  - name: Offshore Account
-    price: 15
-    description: Cognac, Pistachio, Banana Oil, Orange Blossom
-    note: '!!FIRE!!'
-  - name: Long Division
-    price: 15
-    description: Gin, Salers Aperitif, Amargo Valet, Combier
-    note: '**test**'
-  - name: Cookie Magneto
-    price: 15
-    description: Moonshine, Falernum, Creme de cacao, Demerara, vanilla, clarified Chips Ahoy Milk, Mole bitters
-    note:
-  - name: Mercy Me
-    price: 14
-    description: Rum Blend, Gold Apricot, toasted coconut cream, calamansi
-    note: test
-  - name: Fins and Suits
-    price: 15
-    description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
-    note: test
-  - name: Fins and Suits
-    price: 15
-    description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
-    note: test
-  - name: Fins and Suits
-    price: 15
-    description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
-    note: test
-  - name: Fins and Suits
-    price: 15
-    description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
-    note: test
-  - name: Fins and Suits
-    price: 15
-    description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
-    note: test
+menu:
+  - category-header: Dinner Menu
+    subsections:
+      - subsection-header: Snacks
+        # show-subsection-header: false
+        items:
+          - name: Popcorn
+            price: 12.00
+            description: '**rotating flavors**'
+            note: '!!FIRE!!'
+          - name: Long Division
+            price: 12.00
+            description: '**rotating flavors**'
+            note: '!!FIRE!!'
+  - category-header: Cocktails
+    subsections:
+      - subsection-header: ''
+      # - subsection-header: On Ice sdfsdfksdf
+        # show-subsection-header: false
+        items:
+          - name: Offshore Account
+            price: 15
+            description: Cognac, Pistachio, Banana Oil, Orange Blossom
+            note: '!!FIRE!!'
+          - name: Long Division
+            price: 15
+            description: Gin, Salers Aperitif, Amargo Valet, Combier
+            note: '**test**'
+          - name: Cookie Magneto
+            price: 15
+            description: Moonshine, Falernum, Creme de cacao, Demerara, vanilla, clarified Chips Ahoy Milk, Mole bitters
+            note:
+          - name: Mercy Me
+            price: 14
+            description: Rum Blend, Gold Apricot, toasted coconut cream, calamansi
+            note: test
+          - name: Fins and Suits
+            price: 15
+            description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
+            note: test
+          - name: Fins and Suits
+            price: 15
+            description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
+            note: test
+          - name: Fins and Suits
+            price: 15
+            description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
+            note: test
+          - name: Fins and Suits
+            price: 15
+            description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
+            note: test
+          - name: Fins and Suits
+            price: 15
+            description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
+            note: test
 
 space-areas:
   - name: Bar
@@ -163,117 +182,54 @@ reservations-body: Email info@madelines.nyc for parties of X, otherwise walk in.
         <div class="section-body">
           <div class="food-and-drinks-subnav">
             <div class="menu-single-bar">------------------------------------</div>
+            {% for menu-category in page.menu %}
             <div class="submenu-nav">
-              <h1><a href="#dinnerMenu">Dinner Menu</a></h1>
+              <h1><a href="#{{ menu-category.category-header | slugify}}">{{ menu-category.category-header }}</a></h1>
               <button class="submenu-button submenu-close-button">-</button>
             </div>
             <div class="menu-single-bar">------------------------------------</div>
-            <div class="submenu-nav">
-              <h1><a href="#cocktails">Cocktails</a></h1>
-              <!-- <button class="submenu-button submenu-close-button">-</button> -->
-            </div>
-            <div class="menu-single-bar">------------------------------------</div>
-            <div class="submenu-nav">
-              <h1><a href="#beer">Beer</a></h1>
-              <!-- <button class="submenu-button submenu-close-button">-</button> -->
-            </div>
-            <div class="menu-single-bar">------------------------------------</div>
-            <div class="submenu-nav">
-              <h1><a href="#wine">Wine</a></h1>
-              <!-- <button class="submenu-button submenu-close-button">-</button> -->
-            </div>
-            <div class="menu-single-bar">------------------------------------</div>
+            {% endfor %}
           </div>
-          <div class="food-and-drinks-subheader" id="dinnerMenu">
+          {% for menu-category in page.menu %}
+          <div class="food-and-drinks-subheader" id="{{ menu-category.category-header | slugify}}">
             <div class="menu-subheader-top-nav click">
               <span class="food-and-drinks-back-button click"><</span>
             </div>
             <div class="menu-single-bar">------------------------------------</div>
             <div class="food-and-drinks-subheader-title">
-              <h1>dinner menu</h1>
-              <button class="submenu-button submenu-open-button">=</button>
-            </div>
-            <div class="menu-single-bar">------------------------------------</div>
-          </div>
-          <br>
-          <div class="menu-subheader">
-            <h2>
-              ----[snacks]------------------------
-            </h2>
-          </div>
-          <div class="menu-item">
-          <br>
-            <div class="menu-item-header">
-              <h3>
-                popcorn
-              </h3>
-              <p>$12.00</p>
-            </div>
-            <div class="menu-item-description">
-              <p>
-                **rotating flavors**
-              </p>
-            </div>
-            <span class="menu-note">
-              !!!FIRE!!!
-            </span>
-          </div>
-          <div class="menu-item">
-            <br>
-            <div class="menu-item-header">
-              <h3>
-                popcorn
-              </h3>
-              <p>12.00</p>
-            </div>
-            <div class="menu-item-description">
-              <p>
-                **rotating flavors**
-              </p>
-            </div>
-            <span class="menu-note">
-              !!!FIRE!!!
-            </span>
-          </div>
-          <div class="food-and-drinks-subheader" id="cocktails">
-            <div class="menu-subheader-top-nav click">
-              <span class="food-and-drinks-back-button click"><</span>
-            </div>
-            <div class="menu-single-bar">------------------------------------</div>
-            <div class="food-and-drinks-subheader-title">
-              <h1>cocktails</h1>
+              <h1>{{ menu-category.category-header }}</h1>
               <button class="submenu-button submenu-open-button">=</button>
             </div>
             <div class="menu-single-bar">
               ------------------------------------
             </div>
           </div>
-          {% for cocktail in page.cocktails %}
-          <div class="menu-item">
+            {% for menu-subsection in menu-category.subsections %}
+            {% if menu-subsection.subsection-header != '' %}
             <br>
-            <div class="menu-item-header">
-              <h3>{{ cocktail.name }}</h3>
-              <p>{{ cocktail.price }}</p>
+            <div class="menu-subheader">
+              <h2>
+                ----[{{ menu-subsection.subsection-header }}]------------------------
+              </h2>
             </div>
-            <div class="menu-item-description">
-              <p>{{ cocktail.description }}</p>
-            </div>
-            {% if cocktail.note %}
-            <span class="menu-note">{{ cocktail.note }}</span>
             {% endif %}
-          </div>
+              {% for item in menu-subsection.items %}
+              <div class="menu-item">
+                <br>
+                <div class="menu-item-header">
+                  <h3>{{ item.name }}</h3>
+                  <p>{{ item.price }}</p>
+                </div>
+                <div class="menu-item-description">
+                  <p>{{ item.description }}</p>
+                </div>
+                {% if item.note %}
+                <span class="menu-note">{{ item.note }}</span>
+                {% endif %}
+              </div>
+              {% endfor %}
+            {% endfor %}
           {% endfor %}
-          <!-- <div class="menu-item">
-            <br>
-            <div class="menu-item-header">
-              <h3>popcorn</h3>
-              <p>12.00</p>
-            </div>
-            <div class="menu-item-description">
-              <p>**rotating flavors**</p>
-            </div>
-            <span class="menu-note">!!!FIRE!!!</span>
-          </div> -->
         </div>
         </div>
       <div class="divider-single-bar">------------------------------------</div>
