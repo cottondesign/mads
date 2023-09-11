@@ -22,9 +22,10 @@ collections:
                 widget: "list"
                 fields: 
                 - {label: Subsection, name: subsection-header, widget: string}
-                - label: Menu Item
-                  name: items
-                  widget: list
+                - label: "Menu Item"
+                  name: "items"
+                  widget: "list"
+                  fields:
                   - {label: Name, name: name, widget: string}
                   - {label: Price, name: price, widget: string}
                   - {label: Description, name: description, widget: string}
