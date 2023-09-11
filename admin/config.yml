@@ -13,15 +13,20 @@ collections:
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: default"}
           - label: "Menu"
-            name: "menu"
+            name: "Menu Categories"
             widget: "list"
             fields:
               - {label: Category, name: category-header, widget: string}
               - label: "Subsection"
-                name: "subsections.subsection-header"
+                name: "subsections"
                 widget: "list"
                 fields: 
-                - {label: Name, name: name, widget: string}
-                - {label: Price, name: price, widget: string}
-                - {label: Description, name: description, widget: string}
-                - {label: Note, name: note, widget: string}
+                - {label: "Subsection", name: "subsection-header", widget: string}
+                - label: Menu Items
+                  name: items
+                  widget: list
+                  fields:
+                  - {label: Name, name: name, widget: string}
+                  - {label: Price, name: price, widget: string}
+                  - {label: Description, name: description, widget: string}
+                  - {label: Note, name: note, widget: string}
