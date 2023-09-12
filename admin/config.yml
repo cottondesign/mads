@@ -49,12 +49,14 @@ collections:
           - label: "Events"
             name: "events-body"
             widget: "markdown"
-          # - label: "Hours"
-          #   name: "hours"
-          #   widget: "list"
-          #   fields:
-          #     -
-          # - Reservations
-              # name: "reservations-body"
-              # widget: "list"
-              # fields:
+          - label: "Hours"
+            name: "hours"
+            widget: "list"
+            fields:
+              - {label: Day, name: day, widget: string}
+              - {label: Open, name: open, widget: boolean}
+              - {label: From, name: from, widget: string}
+              - {label: To, name: to, widget: string}
+          - label: "Reservations"
+            name: "reservations-body"
+            widget: "markdown"
