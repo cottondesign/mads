@@ -37,6 +37,14 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Description, name: description, widget: markdown}
               - {label: Coming-Soon, name: coming-soon, widget: boolean}
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                field:
+                  - label: "Image"
+                    name: "path"
+                    widget: "image"
+                    choose_url: false
               # - label: "Images"
               #   name: "images"
               #   widget: "image"
