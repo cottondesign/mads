@@ -30,3 +30,28 @@ collections:
                   - {label: Price, name: price, widget: string}
                   - {label: Description, name: description, widget: string}
                   - {label: Note, name: note, widget: string}
+          - label: "The Space"
+            name: "space-areas"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Description, name: description, widget: markdown}
+              - {label: Coming-Soon, name: coming-soon, widget: boolean}
+              - label: "Images"
+                name: "images"
+                widget: "image"
+                choose_url: false
+
+          # - label: "Events"
+          #   name: "events-body"
+          #   widget: 
+          #   fields:
+          # - label: "Hours"
+          #   name: "hours"
+          #   widget: "list"
+          #   fields:
+          #     -
+          # - Reservations
+              # name: "reservations-body"
+              # widget: "list"
+              # fields:
