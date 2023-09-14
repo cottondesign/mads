@@ -1,7 +1,31 @@
 space-areas:
-  - name: test
-    description: est
+  - name: Bar
+    description: Bar lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis.Risus sed odio ut enim.
+    coming-soon: false
+    images:
+      - path: /assets/images/bg1.jpg
+      - path: /assets/images/bg4.jpg
+      - path: /assets/images/bg8.jpg
+      - path: /assets/images/bg7.jpg
+      # - path: /assets/images/test2.jpg
+  - name: Mezzanine
+    description: Mezzanine lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis.Risus sed odio ut enim.
+    coming-soon: false
+    images:
+      - path: /assets/images/bg2.jpg
+      - path: /assets/images/bg11.jpg
+      - path: /assets/images/bg17.jpg
+      - path: /assets/images/bg18.jpg
+      - path: /assets/images/test2.jpg
+  - name: Dining Room
+    description: Dining Room lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis.Risus sed odio ut enim.
+    coming-soon: false
+    images:
+      - path: /assets/images/bg3.jpg
+      - path: /assets/images/bg10.jpg
+      - path: /assets/images/bg13.jpg
+      - path: /assets/images/bg14.jpg
+      # - path: /assets/images/test2.jpg
+  - name: Private Room
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis.Risus sed odio ut enim.
     coming-soon: true
-  - name: test
-    coming-soon: true
-    description: asdfadsf

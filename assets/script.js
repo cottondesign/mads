@@ -1,3 +1,16 @@
+const tableLetter = document.querySelector('.table-letter');
+const tableNumber = document.querySelector('.table-number');
+tableNumber.innerHTML = Math.floor(Math.random()*20) + 1;
+const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+tableLetter.innerHTML = alphabet[Math.floor(Math.random()*alphabet.length)];
+
+const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}));
+console.log(currentDate);
+
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let day = weekday[currentDate.getDay()];
+console.log(day);
+
 // The Space JS
 const spaceSections = document.querySelectorAll(".space-section");
 const spaceHeaders = document.querySelectorAll(".space-header");
@@ -10,6 +23,8 @@ for (navSection of navSections) {
   const sectionId = navSection.getAttribute('id');
 
   navSection.addEventListener("click", function(e){
+    if (!document.body.classList.contains('receipt-moveUp')) {
+
 
     // TO DO: turn off sections that are visible other than current section
     if (sectionId == 'foodAndDrinks' && document.body.classList.contains("show-foodAndDrinks")){
@@ -44,6 +59,7 @@ for (navSection of navSections) {
     }
     console.log(e.target);
     // document.body.classList.toggle('show-' + sectionId);
+  }
   });
 }
 
@@ -128,32 +144,6 @@ function openSection(section){
     section.classList.add("show-description");
   }
 }
-
-
-
-
-
-
-
-// receipt hover
-theSpaceHeader = document.getElementById('theSpaceHeader');
-receiptContainer = document.getElementById('receiptContainer')
-
-theSpaceHeader.addEventListener("mouseover", function() {
-  if (!document.body.classList.contains("show-theSpace")) {
-    receiptContainer.classList.add('shift-left');
-    carouselContainer.classList.add('hover-blur');
-  }
-})
-theSpaceHeader.addEventListener("mouseleave", function() {
-  receiptContainer.classList.remove('shift-left');
-  carouselContainer.classList.remove('hover-blur');
-})
-
-
-
-
-
 
 
 
@@ -320,64 +310,143 @@ function toggleSpaceDescriptions() {
   }
 }
 
+// // LEFT CLICK TEST
+// const leftClick = document.querySelector('.left-click');
+// leftClick.addEventListener("mouseover", function() {
+//   theSpaceLeftArrow.classList.add('left-click-hover');
+// })
+// leftClick.addEventListener("mouseleave", function() {
+//   theSpaceLeftArrow.classList.remove('left-click-hover');
+// })
+// leftClick.addEventListener("click", function() {
+//   if (carouselCounter == 0) {
+//     carouselCounter = numImages - 1;
+//     currentIndex = carouselCounter;
+//     carousel.style.transition = 'none';
+//     carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+
+//     setTimeout(function() {
+//       carouselCounter--;
+//       carousel.style.transition = '300ms';
+//       carousel.style.left = carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+//       // console.log('timeout300');
+//     }, 0)
+//   } else {
+//     carouselCounter--;
+//     currentIndex = carouselCounter + 1;
+//     carousel.style.transition = '300ms';
+//     carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+
+//   }
+//   // TEST
+//   toggleSpaceDescriptions();
+//   // END OF TEST
+//   console.log('Current Index'+currentIndex);
+//   })
+// // END OF LEFT CLICK TEST
 
 
+// THE SPACE
+const theSpace = document.querySelector('#theSpace');
+const receiptContainer = document.querySelector('#receiptContainer')
+const theSpaceButton = document.querySelector('#theSpaceButton');
 
-
-
-carouselContainer.addEventListener("mouseover", function() {
+theSpace.addEventListener("mouseover", function() {
   if (!document.body.classList.contains("show-theSpace")) {
+    receiptContainer.classList.add('shift-left');
+    carouselContainer.classList.add('hover-blur');
+  }
+})
+theSpace.addEventListener("mouseleave", function() {
+  receiptContainer.classList.remove('shift-left');
+  carouselContainer.classList.remove('hover-blur');
+})
+
+// RECEIPT / BACKGROUND INTERACTION
+carouselContainer.addEventListener("mouseover", function() {
+  if (!document.body.classList.contains("show-theSpace") && !document.body.classList.length == 0) {
     receiptContainer.classList.add("shift-up");
     carouselContainer.classList.add("hover-blur");
     receiptContainer.classList.add('show-x');
+  } else if (document.body.classList.length == 0) {
+    // if no section is open:
+    console.log('nothing open');
+    receiptContainer.classList.add('shift-left');
+    carouselContainer.classList.add('hover-blur');
   }
 })
 carouselContainer.addEventListener("mouseleave", function() {
+  // if no section is open:
+  if (document.body.classList.length == 0) {
+    receiptContainer.classList.remove('shift-left');
+    carouselContainer.classList.remove('hover-blur');
+  } else {
+
   receiptContainer.classList.remove("shift-up");
   carouselContainer.classList.remove("hover-blur");
   receiptContainer.classList.remove('show-x');
+}
+
 })
+
 carouselContainer.addEventListener("click", function() {
-  if (!document.body.classList.contains("show-theSpace")) {
+  if (!document.body.classList.contains("show-theSpace") && !document.body.classList.length == 0) {
     carouselContainer.classList.add("no-blur");
 
     // 37 pixels from the bottom of the receipt
     console.log(receiptContainer.offsetHeight);
     receiptContainer.style.top = -receiptContainer.offsetHeight + 37 + 'px';
-    console.log(-receiptContainer.offsetHeight + 37);
 
     document.body.classList.add('receipt-moveUp');
+  } else if (document.body.classList.length == 0) {
+    // if no section is open:
+    document.body.classList.add('show-theSpace');
+    openSection(spaceSections[0]);
+    receiptContainer.classList.remove('shift-left');
   }
 })
-
+// Once the receipt is up
 receiptContainer.addEventListener("mouseover", function() {
   if (document.body.classList.contains("receipt-moveUp")) {
     receiptContainer.style.top = -receiptContainer.offsetHeight + 47 + 'px';
     carouselContainer.classList.remove("no-blur");
     carouselContainer.classList.add('hover-blur');
+
+    document.body.classList.add('receipt-moveUp-hover');
   }
 })
+
 receiptContainer.addEventListener("mouseleave", function() {
   if (document.body.classList.contains("receipt-moveUp")) {
     receiptContainer.style.top = -receiptContainer.offsetHeight + 37 + 'px';
     carouselContainer.classList.add("no-blur");
     carouselContainer.classList.remove('hover-blur');
+
+    document.body.classList.remove('receipt-moveUp-hover');
   }
 })
 
 receiptContainer.addEventListener("click", function(e) {
   if (!document.body.classList.contains("show-theSpace")) {
-    if (!e.target.classList.contains('nav-item') && document.body.classList.contains('receipt-moveUp')) {
+    if (document.body.classList.contains('receipt-moveUp')) {
       document.body.classList.remove('receipt-moveUp');
-      receiptContainer.style.top = 7.5 + 'vh';
-      console.log(e.target);
+      receiptContainer.removeAttribute('style');
+
+      document.body.classList.remove('receipt-moveUp-hover');
     }
   }
 })
 
 
+
+// FOOD AND DRINKS HOVER INTERACTION
+// to do: figure out timing
+// can it start immediately?
+// disable when receipt is up
+
 const foodAndDrinksText = document.querySelector('#foodAndDrinksText');
-let counter = 0;
+const foodAndDrinks = document.querySelector('#foodAndDrinks');
+
 function foodAndDrinksHover() {
   const foodAndDrinksHoverArr = ['!! FOOD !!', '!! COCKTAILS !!', '!! BEER !!', '!! WINE !!'];
 
@@ -388,14 +457,17 @@ function foodAndDrinksHover() {
   }
 }
 
-const foodAndDrinksHeader = document.querySelector('.food-and-drinks-header-default').addEventListener('mouseover', function() {
-  console.log('testing testing');
-  // setInterval(foodAndDrinksHover, 300);
+let mouseIsOver = false;
+let myInterval;
+let counter = 0;
+foodAndDrinks.addEventListener('mouseover', function() {
+  if (!mouseIsOver) {
+    myInterval = setInterval(foodAndDrinksHover, 150);
+    mouseIsOver = true;
+  }
 })
-
-
-
-// setInterval(foodAndDrinksHover, 1000);
-// clearInterval(myInterval);
-
-// const foodAndDrinksAnimation = setInterval(foodAndDrinksHover, 300);
+foodAndDrinks.addEventListener('mouseleave', function() {
+  mouseIsOver = false;
+  clearInterval(myInterval);
+  foodAndDrinksText.innerHTML = '* food and drinks';
+})

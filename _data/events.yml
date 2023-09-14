@@ -1,1 +1,9 @@
-events-body: Events test dsfsdfsdf
+events-body: | 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  
+  Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo. Eget gravida cum sociis natoque penatibus et magnis dis.
+
+  Email with this info:<br>
+  (1) What kind of event is it<br>
+  (2) Estimated head count<br>
+  (3) Time

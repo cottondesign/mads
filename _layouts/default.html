@@ -1,8 +1,261 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
+
+  {% if page.className %}
+  <body class="show-{{page.className}}">
+  {% else %}
   <body>
-    {{content}}
+  {% endif %}
+
+    <div class="carousel-container" id="carouselContainer">
+      <div class="carousel" id="carousel">
+        {% for space-area in site.data.space %}
+          {% for image in space-area.images %}
+            <div class="carousel-image">
+              <img src="{{ image.path }}" alt="{{ space-area.name }} Image" class="{{ space-area.name | slugify }}" data="{{ space-area.name | slugify }}">
+            </div>
+          {% endfor %}
+        {% endfor %}
+        <div class="carousel-image">
+          <img src="{{ page.space-areas[0].images[0].path }}" alt="" class="{{ page.space-areas[0].name | slugify }} last" data="{{ page.space-areas[0].name | slugify }}">
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="right-click"></div>
+    <div class="left-click"></div> -->
+    
+    <div class="receipt-container" id="receiptContainer">
+      <span class="x">x</span>
+      <div class="receipt-top">
+        <!-- header -->
+        <div class="receipt-header">
+          <p class="receipt-header-name">
+            <a href="#"><span>-</span>MADELINE'S<span>-</span></a>
+          </p>
+          <p class="receipt-header-address">
+            <a href="#"><span>-</span>113 Franklin Street<span>-</span><br><span>-</span>Greenpoint, BK<span>-</span></a>
+          </p>
+          <p class="receipt-header-email">
+            <a href=""><span>-</span>info@madelinesnyc.com<span>-</span></a>
+          </p>
+        </div>
+        <!-- subheader -->
+        <div class="divider-double-bar">====================================</div>
+        <div class="receipt-sub-header">
+          <p class="table">Table:<span class="table-letter">T</span><span class="table-number">7</span></p>
+          <p class="dine-in">Dine In</p>
+        </div>
+        <div class="divider-single-bar sub-header-single-bar">------------------------------------</div>
+        <!-- nav menu -->
+        <div class="nav">
+          <!-- food and drinks -->
+          <section class="nav-item" id="foodAndDrinks">
+          <div class="food-and-drinks-inner section-inner">
+            <div class="section-header food-and-drinks-header-default">
+              <h1 id="foodAndDrinksText">* food and drinks</h1>
+              <span class="nav-button" id="foodAndDrinksButton">+</span>
+              <span class="nav-button nav-button-hover" id="foodAndDrinksButtonHover">-</span>
+            </div>
+            <div class="section-header food-and-drinks-header-back click">
+              <h1 class="click">< back</h1>
+            </div>
+            <div class="section-body">
+              <div class="food-and-drinks-subnav">
+                <div class="menu-single-bar">------------------------------------</div>
+              {% for menu-category in site.food_and_drinks %}
+              <div class="submenu-nav">
+                <h1><a href="#{{ menu-category.category-header | slugify}}">{{ menu-category.category-header }}</a></h1>
+                <button class="submenu-button submenu-close-button">-</button>
+              </div>
+              <div class="menu-single-bar">------------------------------------</div>
+              {% endfor %}
+              </div>
+              {% for menu-category in site.food_and_drinks %}
+                    <div class="food-and-drinks-subheader" id="{{ menu-category.category-header | slugify }}">
+                      <div class="menu-subheader-top-nav click">
+                        <span class="food-and-drinks-back-button click"><</span>
+                      </div>
+                      <div class="menu-single-bar">------------------------------------</div>
+                      <div class="food-and-drinks-subheader-title">
+                        <h1>{{ menu-category.category-header }}</h1>
+                        <button class="submenu-button submenu-open-button">=</button>
+                      </div>
+                      <div class="menu-single-bar">
+                        ------------------------------------
+                      </div>
+                    </div>
+                    {% for menu-subsection in menu-category.subsections %}
+                            {% if menu-subsection.subsection-header != '' %}
+                            <br>
+                            <div class="menu-subheader">
+                              <h2>
+                                ----[{{ menu-subsection.subsection-header }}]------------------------
+                              </h2>
+                            </div>
+                            {% endif %}
+                            {% for item in menu-subsection.items %}
+                            <div class="menu-item">
+                              <br>
+                              <div class="menu-item-header">
+                                <h3>{{ item.name }}</h3>
+                                <p>{{ item.price }}</p>
+                              </div>
+                              <div class="menu-item-description">
+                                <p>{{ item.description }}</p>
+                              </div>
+                                  {% if item.note %}
+                                  <span class="menu-note">{{ item.note }}</span>
+                                  {% endif %}
+                            </div>
+                            {% endfor %}
+                    {% endfor %}
+              {% endfor %}
+            </div>
+            </div>
+          <div class="divider-single-bar">------------------------------------</div>
+          </section>
+          <!-- the space -->
+          <section class="nav-item" id="theSpace">
+            <div class="thespace-inner section-inner">
+              <div class="section-header click" id="theSpaceHeader">
+                <h1 class="click">the space</h1>
+                <!-- <span class="click" id="theSpaceButton"></span> -->
+                <span class="nav-button" id="theSpaceButton">></span>
+                <span class="nav-button nav-button-hover" id="theSpaceButtonHover">></span>
+              </div>
+              <div class="space-single-bar">------------------------------------</div>
+              <div class="section-body">
+                <div class="the-space-arrows">
+                  <button class="arrow arrow-left"><</button>
+                  <button class="arrow arrow-right">></button>
+                </div>
+                <div class="space-single-bar">------------------------------------</div>
+                {% for space-area in site.data.space %}
+                    {% if space-area.coming-soon == false %}
+                    <div class="space-section" id="{{ space-area.name | slugify}}">
+                      <div class="space-section-inner">
+                        <div class="space-header">
+                          <h1 class="space-header-title">
+                            {{ space-area.name }}
+                          </h1>
+                          <span class="see-more">+</span>
+                          <span class="see-less">-</span>
+                        </div>
+                        <div class="space-body">
+                          {{ space-area.description }}
+                        </div>
+                      </div>
+                      <div class="space-single-bar">----------------------------------</div>
+                    </div>
+                    {% else %}
+                    <div class="space-section coming-soon" id="{{ space-area.name | slugify}}">
+                    <div class="space-section-inner">
+                      <div class="space-header">
+                        <h1 class="space-header-title">
+                          {{ space-area.name }} - <span>Coming Soon</span>
+                        </h1>
+                      </div>
+                      </div>
+                    </div>
+                    {% endif %}
+
+                    {% if forloop.last == false %}
+                    <!-- <div class="space-single-bar">----------------------------------</div> -->
+                    {% endif %}
+
+                {% endfor %}
+              </div>
+            </div>
+            <!-- <div class="space-single-bar">------------------------------------</div> -->
+            <div class="divider-single-bar">------------------------------------</div>
+          </section>
+          <!-- events -->
+          <section class="nav-item" id="events">
+            <div class="events-inner section-inner">
+              <div class="section-header">
+                <h1>* events</h1>
+                <span class="nav-button" id="eventsButton">+</span>
+                <span class="nav-button nav-button-hover" id="eventsButtonHover">-</span>
+              </div>
+              <div class="section-body">
+              {{site.data.events.events-body | markdownify}}
+              </div>
+            </div>
+            <div class="divider-single-bar">------------------------------------</div>
+          </section>
+          <!-- hours -->
+          <section class="nav-item" id="hours">
+            <div class="hours-inner section-inner">
+              <div class="section-header">
+                <h1>
+                  <span id="storeStatus">* open now</span>
+                  <span id="storeClosingTime">closes 4am</span>
+                </h1>
+                <span class="nav-button" id="hoursButton">+</span>
+                <span class="nav-button nav-button-hover" id="hoursButtonHover">-</span>
+              </div>
+              <div class="section-body">
+                <table class="schedule">
+                  <colgroup>
+                    <col span="1" style="width: 33.33%">
+                    <col span="1" style="width: 66.66%">
+                  </colgroup>
+                  <tbody>
+                    {% for day in site.data.hours %}
+                      <tr>
+                        <td class="hours-day">{{ day.day }}</td>
+                        {% if day.open == false %}
+                        <td class="hours-closed">CLOSED</td>
+                        {% else %}
+                        <td class="hours-hours"><span class="hours-from">{{ day.from }}</span> – <span class='hours-to'>{{ day.to }}</span></td>
+                        {% endif %}
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="divider-single-bar">------------------------------------</div>
+          </section>
+          <!-- reservations -->
+          <section class="nav-item reservations" id="reservations">
+            <div class="reservations-inner section-inner">
+              <div class="section-header">
+                <h1>* reservations</h1>
+                <span class="nav-button" id="reservationsButton">+</span>
+                <span class="nav-button nav-button-hover" id="reservationsButtonHover">-</span>
+              </div>
+              <div class="section-body">
+                <p>
+                  {{site.data.reservations.reservations-body | markdownify}}
+                </p>
+              </div>          
+            </div>
+          <div class="divider-single-bar">------------------------------------</div>
+          </section>
+        </div>
+      </div>
+      <div class="receipt-bottom">
+        <!-- footer -->
+        <div class="receipt-footer">
+          <img class="logo" id="logo" src="/assets/images/Full-Logo-Black.png" alt="Madeline's Logo Black">
+          <div>
+            X___________________________________
+          </div>
+          <div class="receipt-footer-text">
+            <p>
+              MADELINE'S
+            </p>
+            <p>Follow us @madelinesnyc</p>
+            <br>
+            <p>THANK YOU :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   <script src="/assets/script.js" async defer></script>
   <script>
     if (window.netlifyIdentity) {

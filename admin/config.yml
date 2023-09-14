@@ -4,51 +4,84 @@ backend:
 media_folder: "/assets/images/uploads"
 
 collections:
-  - name: "general"
-    label: "General"
-    files:
-      - label: "Homepage"
-        name: "homepage"
-        file: "index.markdown"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: default"}
-          - label: "Menu Categories"
-            name: "menu"
-            widget: "list"
-            fields:
-              - {label: Category, name: category-header, widget: string}
-              - label: "Subsection"
-                name: "subsections"
-                widget: "list"
-                fields: 
-                - {label: Subsection, name: subsection-header, widget: string}
-                - label: "Menu Item"
-                  name: "items"
-                  widget: "list"
-                  fields:
-                  - {label: Name, name: name, widget: string}
-                  - {label: Price, name: price, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: Note, name: note, widget: string}
-          - label: "The Space"
-            name: "space-areas"
+  - name: "food-and-drinks"
+    label: "Menu"
+    folder: "_food_and_drinks"
+    create: true
+    fields:
+      - {label: Category, name: title, widget: string}
+      - label: "Subsection"
+        name: "subsections"
+        widget: "list"
+        fields: 
+          - {label: Subsection, name: subsection-header, widget: string}
+          - label: "Menu Item"
+            name: "items"
             widget: "list"
             fields:
               - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: markdown}
-              - {label: Coming-Soon, name: coming-soon, widget: boolean}
-              # - label: "Images"
-              #   name: "images"
-              #   widget: "list"
-              #   field:
-              #     - label: "Image"
-              #       name: "path"
-              #       widget: "image"
-              #       choose_url: false
-
+              - {label: Price, name: price, widget: string}
+              - {label: Description, name: description, widget: string}
+              - {label: Note, name: note, widget: string}
+  # - name: "Food and Drinks Menu"
+  #   label: "General"
+  #   files:
+  #     - label: "Food and Drinks Menu"
+  #       name: "menu"
+  #       file: "_data/menu.yml"
+  #       fields:
+  #         - {label: "Layout", name: "layout", widget: "hidden", default: default"}
+  #         - label: "Menu Categories"
+  #           name: "menu"
+  #           widget: "list"
+  #           fields:
+  #             - {label: Category, name: category-header, widget: string}
+  #             - label: "Subsection"
+  #               name: "subsections"
+  #               widget: "list"
+  #               fields: 
+  #               - {label: Subsection, name: subsection-header, widget: string}
+  #               - label: "Menu Item"
+  #                 name: "items"
+  #                 widget: "list"
+  #                 fields:
+  #                 - {label: Name, name: name, widget: string}
+  #                 - {label: Price, name: price, widget: string}
+  #                 - {label: Description, name: description, widget: string}
+  #                 - {label: Note, name: note, widget: string}
+  - name: "other-pages"
+    label: "Other Pages"
+    files:
+      - name: "the-space"
+        label: "Space"
+        file: "_data/space.yml"
+        fields:
+          - label: "Space Areas"
+            name: "space-areas"
+            widget: "list"
+            fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Description, name: description, widget: markdown}
+            - {label: Coming-Soon, name: coming-soon, widget: boolean, hint: "Turn this on if you want to disable the page but tell people that it is coming soon.", required: false}
+                # - label: "Images"
+                #   name: "images"
+                #   widget: "list"
+                #   field:
+                #     - label: "Image"
+                #       name: "path"
+                #       widget: "image"
+                #       choose_url: false
+      - name: "events"
+        label: "Events"
+        file: "_data/events.yml"
+        fields:
           - label: "Events"
             name: "events-body"
             widget: "markdown"
+      - name: "hours"
+        label: "Hours"
+        file: "_data/hours.yml"
+        fields:
           - label: "Hours"
             name: "hours"
             widget: "list"
@@ -57,6 +90,10 @@ collections:
               - {label: Open, name: open, widget: boolean}
               - {label: From, name: from, widget: string}
               - {label: To, name: to, widget: string}
+      - name: "reservations"
+        label: "Reservations"
+        file: "_data/reservations.yml"
+        fields:
           - label: "Reservations"
             name: "reservations-body"
             widget: "markdown"

@@ -147,9 +147,10 @@ body.receipt-moveUp {
     opacity: 0;
   }
 }
-.hover-down {
-  // show +, hide -
+.receipt-moveUp-hover {
+
 }
+
 
 
 // end when the receipt moves up
@@ -258,9 +259,32 @@ p {
 }
 /* END OF CAROUSEL IMAGES */
 
+// CAROUSEL NAV
+.right-click,
+.left-click {
+  position: fixed;
+  z-index: 0;
+  height: 100vh;
+  width: 50vw;
+  // left: 0;
+  background: #ff000065;
+}
+.left-click {
+  left: 0;
+}
+.right-click {
+  right: 0;
+}
 
 
-
+// TEST
+.hours-to {
+  color: red;
+}
+.carousel-container:hover {
+  cursor: pointer;
+}
+// END TEST
 
 
 
@@ -287,6 +311,13 @@ p {
       bottom: 0;
       left: 0;
   }
+
+  &:hover {
+    .nav-button {
+      opacity: 1;
+      transition: var(--transition);
+    }
+  }
 }
 
 .section-inner {
@@ -304,6 +335,11 @@ p {
 .nav-button {
   padding: 10px;
   transform: translate(10px,-10px);
+  opacity: 0;
+}
+
+.nav-button-hover {
+  display: none;
 }
 .section-body {
   margin-left: var(--tabWidth);
@@ -515,9 +551,9 @@ body.show-foodAndDrinks {
     height: auto;
   }
 
-  .section-header {
-    height: auto;
-  }
+  // .section-header {
+  //   height: auto;
+  // }
 
   .food-and-drinks-header-default {
     display: none;
@@ -532,6 +568,17 @@ body.show-foodAndDrinks {
 
   .food-and-drinks-subnav.open {
     top: 44px;
+  }
+}
+body.show-foodAndDrinks.receipt-moveUp {
+  // section#foodAndDrinks {
+  //   order: 10;
+  // }
+  .food-and-drinks-header-back {
+    display: none;
+  }
+  .food-and-drinks-header-default {
+    display: flex;
   }
 }
 
@@ -557,6 +604,12 @@ body.show-foodAndDrinks {
   &:hover {
     animation: arrow-left 300ms linear infinite;
   }
+}
+.right-click-hover {
+  animation: arrow-right 300ms linear infinite;
+}
+.left-click-hover {
+  animation: arrow-left 300ms linear infinite;
 }
 
 .space-header {
@@ -585,9 +638,9 @@ body.show-foodAndDrinks {
 body.show-theSpace #theSpaceHeader h1:before {
   content: "< ";
 }
-#theSpaceButton:after {
-  content: "-";
-}
+// #theSpaceButton:after {
+//   content: "-";
+// }
 .space-header-title:before{
   content: "* ";
 }

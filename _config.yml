@@ -32,6 +32,10 @@ github_username:  jekyll
 sass:
     style: compressed
 
+collections:
+  food_and_drinks:
+    output: true
+
 # Build settings
 # theme: minima
 # plugins:
