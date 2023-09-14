@@ -87,7 +87,7 @@ collections:
             widget: "list"
             fields:
               - {label: Day, name: day, widget: string}
-              - {label: Open, name: open, widget: boolean}
+              - {label: Open, name: open, widget: boolean, required: false}
               - {label: From, name: from, widget: string}
               - {label: To, name: to, widget: string}
       - name: "reservations"
