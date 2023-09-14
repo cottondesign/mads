@@ -1,8 +1,16 @@
 hours:
   - day: Monday
-    open: true
+    open: false
     from: 5PM
-    to: 5AM
+    to: 4AM
+  - day: Tuesday
+    from: 5PM
+    to: 4AM
+    open: false
+  - day: Wednesday
+    from: 5PM
+    to: 4AM
+    open: false
   - day: Thursday
     open: true
     from: 5PM
