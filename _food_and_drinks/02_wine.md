@@ -1,10 +1,10 @@
 ---
 title: Wine
 subsections:
-  - subsection-header: asdf
+  - subsection-header: White
     items:
-      - name: dfdsfd
+      - name: Name
         price: 5.5
-        description: sdf
-        note: sdfsdf
+        description: Description
+        note: Note
 ---
