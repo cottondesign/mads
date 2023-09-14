@@ -1,5 +1,21 @@
 hours:
   - day: adf
     open: true
-    from: adsf
-    to: asdf
+    from: 5PM
+    to: 4AM
+  - day: Thursday
+    open: true
+    from: 5PM
+    to: 4AM
+  - day: Friday
+    open: true
+    from: 5PM
+    to: 4AM
+  - day: Saturday
+    open: true
+    from: 2PM
+    to: 4AM
+  - day: Sunday
+    open: true
+    from: 2PM
+    to: 4AM
