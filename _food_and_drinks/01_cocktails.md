@@ -1,14 +1,10 @@
 ---
 title: Cocktails
 subsections:
-  - subsection-header: Snacks
+  - subsection-header: ""
     items:
-      - name: Popcorn
-        price: 12.50
-        description: '**rotating flavors**'
-        note: '!!FIRE!!'
-      - name: Long Division
-        price: 12
-        description: "**rotating flavors**"
-        note: "!!FIRE!!"
+      - name: Name
+        price: 12.5
+        description: Description
+        note: Note (Optional)
 ---
