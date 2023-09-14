@@ -4,7 +4,7 @@ subsections:
   - subsection-header: asdf
     items:
       - name: dfdsfd
-        price: fsdf
+        price: 5.5
         description: sdf
         note: sdfsdf
 ---
