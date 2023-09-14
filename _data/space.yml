@@ -1,0 +1,7 @@
+space-areas:
+  - name: test
+    description: est
+    coming-soon: true
+  - name: test
+    coming-soon: true
+    description: asdfadsf
