@@ -66,20 +66,20 @@
                 <div class="menu-single-bar">------------------------------------</div>
               {% for menu-category in site.food_and_drinks %}
               <div class="submenu-nav">
-                <h1><a href="#{{ menu-category.category-header | slugify}}">{{ menu-category.category-header }}</a></h1>
+                <h1><a href="#{{ menu-category.title | slugify}}">{{ menu-category.title }}</a></h1>
                 <button class="submenu-button submenu-close-button">-</button>
               </div>
               <div class="menu-single-bar">------------------------------------</div>
               {% endfor %}
               </div>
               {% for menu-category in site.food_and_drinks %}
-                    <div class="food-and-drinks-subheader" id="{{ menu-category.category-header | slugify }}">
+                    <div class="food-and-drinks-subheader" id="{{ menu-category.title | slugify }}">
                       <div class="menu-subheader-top-nav click">
                         <span class="food-and-drinks-back-button click"><</span>
                       </div>
                       <div class="menu-single-bar">------------------------------------</div>
                       <div class="food-and-drinks-subheader-title">
-                        <h1>{{ menu-category.category-header }}</h1>
+                        <h1>{{ menu-category.title }}</h1>
                         <button class="submenu-button submenu-open-button">=</button>
                       </div>
                       <div class="menu-single-bar">

@@ -14,13 +14,13 @@ collections:
         name: "subsections"
         widget: "list"
         fields: 
-          - {label: Subsection, name: subsection-header, widget: string}
+          - {label: Subsection, name: subsection-header, widget: string, hint: 'This is totally optional!!! Fill in only if you want more than one subsection. If you leave it blank, the items will fall under the general header.', required: false}
           - label: "Menu Item"
             name: "items"
             widget: "list"
             fields:
               - {label: Name, name: name, widget: string}
-              - {label: Price, name: price, widget: string}
+              - {label: Price, name: price, widget: number, value_type: "float"}
               - {label: Description, name: description, widget: string}
               - {label: Note, name: note, widget: string}
   # - name: "Food and Drinks Menu"
