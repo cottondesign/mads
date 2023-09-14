@@ -1,10 +1,10 @@
 ---
 title: Beer
 subsections:
-  - subsection-header: asdf
+  - subsection-header: Subsection (optional)
     items:
-      - name: asdf
+      - name: Name
         price: 20
-        description: asdf
-        note: asdf
+        description: Description
+        note: Note (Optional)
 ---
