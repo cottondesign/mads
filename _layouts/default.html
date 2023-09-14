@@ -10,7 +10,7 @@
 
     <div class="carousel-container" id="carouselContainer">
       <div class="carousel" id="carousel">
-        {% for space-area in site.data.space %}
+        {% for space-area in site.data.space.space-areas %}
           {% for image in space-area.images %}
             <div class="carousel-image">
               <img src="{{ image.path }}" alt="{{ space-area.name }} Image" class="{{ space-area.name | slugify }}" data="{{ space-area.name | slugify }}">
@@ -18,7 +18,7 @@
           {% endfor %}
         {% endfor %}
         <div class="carousel-image">
-          <img src="{{ page.space-areas[0].images[0].path }}" alt="" class="{{ page.space-areas[0].name | slugify }} last" data="{{ page.space-areas[0].name | slugify }}">
+          <img src="{{ site.data.space.space-areas[0].images[0].path }}" alt="" class="{{ site.data.space.space-areas[0].name | slugify }} last" data="{{ site.data.space.space-areas[0].name | slugify }}">
         </div>
       </div>
     </div>
@@ -99,8 +99,12 @@
                             <div class="menu-item">
                               <br>
                               <div class="menu-item-header">
+                                {% assign price_split = item.price | round: 2 | split: "." %}
+                                {% assign integral = price_split[0] %}
+                                {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+
                                 <h3>{{ item.name }}</h3>
-                                <p>{{ item.price }}</p>
+                                <p>${{ integral }}.{{ fractional }}</p>
                               </div>
                               <div class="menu-item-description">
                                 <p>{{ item.description }}</p>
@@ -132,7 +136,7 @@
                   <button class="arrow arrow-right">></button>
                 </div>
                 <div class="space-single-bar">------------------------------------</div>
-                {% for space-area in site.data.space %}
+                {% for space-area in site.data.space.space-areas %}
                     {% if space-area.coming-soon == false %}
                     <div class="space-section" id="{{ space-area.name | slugify}}">
                       <div class="space-section-inner">
@@ -203,7 +207,7 @@
                     <col span="1" style="width: 66.66%">
                   </colgroup>
                   <tbody>
-                    {% for day in site.data.hours %}
+                    {% for day in site.data.hours.hours %}
                       <tr>
                         <td class="hours-day">{{ day.day }}</td>
                         {% if day.open == false %}

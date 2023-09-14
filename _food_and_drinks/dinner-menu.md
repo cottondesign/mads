@@ -5,7 +5,7 @@ subsections:
     # show-subsection-header: false
     items:
       - name: Popcorn
-        price: 12.00
+        price: 12.50
         description: '**rotating flavors**'
         note: '!!FIRE!!'
       - name: Long Division

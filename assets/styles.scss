@@ -195,13 +195,14 @@ p {
 }
 .divider-single-bar,
 .menu-single-bar {
-  background:yellow;
+  // background:yellow;
   // height: var(--navItemHeight);
   line-height: 0.2em;
   height: 0.2em;
   overflow: hidden;
   // margin-top: 0px;
   // cursor: pointer;
+  background: white;
 }
 .space-single-bar {
   height: 0;
@@ -279,7 +280,7 @@ p {
 
 // TEST
 .hours-to {
-  color: red;
+  // color: red;
 }
 .carousel-container:hover {
   cursor: pointer;
@@ -453,7 +454,7 @@ p {
 
   .food-and-drinks-back-button {
     display: inline-block;
-    background: lightblue;
+    // background: lightblue;
     padding: 10px 15px 10px 15px;
     margin: -15px;
     z-index: 3;
@@ -507,7 +508,7 @@ p {
 
   h1 {
     display: inline-block;
-    background: rgb(185, 185, 255);
+    // background: rgb(185, 185, 255);
     padding: 8px 0;
     margin: -8px 0;
   }
@@ -694,12 +695,12 @@ body.show-theSpace {
       cursor: pointer;
     }
     #theSpaceHeader + .space-single-bar {
-      background: purple;
+      // background: purple;
       margin-top: var(--linePadding);
     }
     .space-single-bar {
       cursor: pointer;
-      background:yellow;
+      // background:yellow;
       line-height: 0.2em;
       height: 0.2em;
     }
