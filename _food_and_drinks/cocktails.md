@@ -27,5 +27,5 @@ subsections:
       - name: Fins and Suits
         price: 15
         description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
-        note: test
+        note: ""
 ---
