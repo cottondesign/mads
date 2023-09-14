@@ -6,5 +6,5 @@ subsections:
       - name: Name
         price: 5.5
         description: Description
-        note: Note
+        note: Note (Optional)
 ---
