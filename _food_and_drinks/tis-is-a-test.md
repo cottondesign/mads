@@ -1,5 +1,5 @@
 ---
-title: tis is a test
+title: Beer
 subsections:
   - subsection-header: asdf
     items:
