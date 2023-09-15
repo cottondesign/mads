@@ -6,7 +6,7 @@ subsections:
       - name: Popcorn
         price: 12
         description: "**rotating flavors**"
-        note: "!!FIRE!!"
+        note: Pepperoni Pizza
       - name: Long Division
         price: 15
         description: Gin, Salers Aperitif, Amargo Valet, Combier
