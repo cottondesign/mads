@@ -10,7 +10,7 @@ subsections:
       - name: Long Division
         price: 15
         description: Gin, Salers Aperitif, Amargo Valet, Combier
-        note: "**test**"
+        note: ""
       - name: Offshore Account
         price: 15
         description: Cognac, Pistachio, Banana Oil, Orange Blossom
