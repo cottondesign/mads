@@ -1,15 +1,25 @@
 space-areas:
   - name: Bar
-    description: Bar lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis.Risus sed odio ut enim.
+    description: |-
+      Features:
+
+      36ft long bar
+
+      3 hightops within an annex opposite the main bar
+
+      2 optional 80" TV screens for big events/games
+
+      A backbar with xxx bottles from craft producers
     coming-soon: false
     images:
       - path: /assets/images/bg1.jpg
       - path: /assets/images/bg4.jpg
       - path: /assets/images/bg8.jpg
       - path: /assets/images/bg7.jpg
-      # - path: /assets/images/test2.jpg
   - name: Mezzanine
-    description: Mezzanine lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis.Risus sed odio ut enim.
+    description: Overlooking the main bar from the second floor, this area has
+      several large banquets. Can host several groups or one party of 20-30
+      guests.
     coming-soon: false
     images:
       - path: /assets/images/bg2.jpg
@@ -18,14 +28,21 @@ space-areas:
       - path: /assets/images/bg18.jpg
       - path: /assets/images/test2.jpg
   - name: Dining Room
-    description: Dining Room lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis.Risus sed odio ut enim.
+    description: Perfect for if you just want a casual dinner or date removed from
+      the kinetic energy of the bar.
     coming-soon: false
     images:
       - path: /assets/images/bg3.jpg
       - path: /assets/images/bg10.jpg
       - path: /assets/images/bg13.jpg
       - path: /assets/images/bg14.jpg
-      # - path: /assets/images/test2.jpg
   - name: Private Room
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis.Risus sed odio ut enim.
+    description: |-
+      Fits up to 70 guests comfortably
+
+      Full bar and bathrooms in room
+
+      2 skylights and window providing tons of natural light for daytime events
+
+      Private entry/exit if needed
     coming-soon: true
