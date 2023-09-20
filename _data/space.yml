@@ -28,8 +28,8 @@ space-areas:
       - path: /assets/images/bg18.jpg
       - path: /assets/images/test2.jpg
   - name: Dining Room
-    description: Perfect for if you just want a casual dinner or date removed from
-      the kinetic energy of the bar.
+    description: Perfect for a casual dinner or date removed from the kinetic energy
+      of the bar.
     coming-soon: false
     images:
       - path: /assets/images/bg3.jpg
