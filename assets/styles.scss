@@ -860,7 +860,13 @@ body.show-reservations.receipt-moveUp {
       background: white;
     }
     .carousel-container {
-      display: none;
+      // display: none;
+    }
+    html {
+      scroll-snap-type: x mandatory;
+    }
+    .carousel-image {
+      scroll-snap-align: start;
     }
     .receipt-container {
       .x {
