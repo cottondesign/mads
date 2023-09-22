@@ -25,38 +25,44 @@ for (navSection of navSections) {
   navSection.addEventListener("click", function(e){
     if (!document.body.classList.contains('receipt-moveUp')) {
 
-
-    // TO DO: turn off sections that are visible other than current section
-    if (sectionId == 'foodAndDrinks' && document.body.classList.contains("show-foodAndDrinks")){
-      // Close 'Food and Drinks' section only when clicking on header
-      if (e.target.classList.contains('click')) {
-        document.body.classList.toggle('show-' + sectionId);
-      }
-    } else if (sectionId == 'theSpace' && document.body.classList.contains("show-theSpace")) {
-      // Close 'The Space' section only when clicking on header
-      if (e.target.classList.contains('click')) {
-        closeAllSections();
-        document.body.classList.toggle('show-' + sectionId);
-      }
-    } else {
-      // Close any open section other than the one you are clicking
-      if (!document.body.classList.contains('show-' + sectionId)) {
-        document.body.removeAttribute('class');
-      }
-      document.body.classList.toggle('show-' + sectionId);
-
-      if (window.innerWidth > 430){ 
-        openSection(spaceSections[0]);
+      if (sectionId == 'foodAndDrinks' && document.body.classList.contains("show-foodAndDrinks")){
+        // Close 'Food and Drinks' section only when clicking on header
+        if (e.target.classList.contains('click')) {
+          document.body.classList.toggle('show-' + sectionId);
+        }
+      } else if (sectionId == 'theSpace' && document.body.classList.contains("show-theSpace")) {
+        // Close 'The Space' section only when clicking on header
+        if (e.target.classList.contains('click')) {
+          closeAllSections();
+          document.body.classList.toggle('show-' + sectionId);
+        }
       } else {
-        // show only first space-area on mobile
-        spaceSections[0].classList.add('show-mobile');
-        for (spaceSection of spaceSections) {
-          if (!spaceSection.classList.contains('show-mobile')) {
-            spaceSection.classList.add('hide-mobile');
+        // Close any open section other than the one you are clicking
+        if (!document.body.classList.contains('show-' + sectionId)) {
+          document.body.removeAttribute('class');
+          console.log(e.target);
+          hideCloseButton();
+        }
+        // Open section
+        if (!e.target.classList.contains('dont-click')) {
+
+          document.body.classList.toggle('show-' + sectionId);
+          this.classList.toggle('show-close-button');
+        }
+
+        // Open the first Space section on desktop
+        if (window.innerWidth > 430){ 
+          openSection(spaceSections[0]);
+        } else {
+          // show only first space-area on mobile
+          spaceSections[0].classList.add('show-mobile');
+          for (spaceSection of spaceSections) {
+            if (!spaceSection.classList.contains('show-mobile')) {
+              spaceSection.classList.add('hide-mobile');
+            }
           }
         }
       }
-    }
     console.log(e.target);
     // document.body.classList.toggle('show-' + sectionId);
   }
@@ -82,8 +88,6 @@ for (spaceSection of spaceSections) {
 
           buttonSectionAncestor.classList.add("show-description")
 
-
-
           buttonSectionAncestor.parentElement.classList.remove('test-hide-nav');
           // test
           if (buttonSectionAncestor.getAttribute('id') != imageArray[currentIndex-1].getAttribute('data')) {
@@ -102,7 +106,6 @@ for (spaceSection of spaceSections) {
           }
         } else {
           buttonSectionAncestor.classList.add("show-description");
-
 
           buttonSectionAncestor.parentElement.classList.remove('test-hide-nav');
           // test
@@ -131,6 +134,18 @@ for (spaceSection of spaceSections) {
 }
 
 
+function getCurrentSectionId() {
+  let currentSection = document.body.getAttribute('class');
+  let currentSectionIdArray = currentSection.split("-");
+  let currentSectionId = currentSectionIdArray[1];
+  return currentSectionId;
+}
+
+function hideCloseButton() {
+  for (navSection of navSections) {
+    navSection.classList.remove('show-close-button');
+  }
+}
 function closeAllSections(){
   for (spaceSection of spaceSections) {
     spaceSection.classList.remove("show-description")
@@ -310,42 +325,6 @@ function toggleSpaceDescriptions() {
   }
 }
 
-// // LEFT CLICK TEST
-// const leftClick = document.querySelector('.left-click');
-// leftClick.addEventListener("mouseover", function() {
-//   theSpaceLeftArrow.classList.add('left-click-hover');
-// })
-// leftClick.addEventListener("mouseleave", function() {
-//   theSpaceLeftArrow.classList.remove('left-click-hover');
-// })
-// leftClick.addEventListener("click", function() {
-//   if (carouselCounter == 0) {
-//     carouselCounter = numImages - 1;
-//     currentIndex = carouselCounter;
-//     carousel.style.transition = 'none';
-//     carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-
-//     setTimeout(function() {
-//       carouselCounter--;
-//       carousel.style.transition = '300ms';
-//       carousel.style.left = carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-//       // console.log('timeout300');
-//     }, 0)
-//   } else {
-//     carouselCounter--;
-//     currentIndex = carouselCounter + 1;
-//     carousel.style.transition = '300ms';
-//     carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-
-//   }
-//   // TEST
-//   toggleSpaceDescriptions();
-//   // END OF TEST
-//   console.log('Current Index'+currentIndex);
-//   })
-// // END OF LEFT CLICK TEST
-
-
 // THE SPACE
 const theSpace = document.querySelector('#theSpace');
 const receiptContainer = document.querySelector('#receiptContainer')
@@ -381,12 +360,10 @@ carouselContainer.addEventListener("mouseleave", function() {
     receiptContainer.classList.remove('shift-left');
     carouselContainer.classList.remove('hover-blur');
   } else {
-
-  receiptContainer.classList.remove("shift-up");
-  carouselContainer.classList.remove("hover-blur");
-  receiptContainer.classList.remove('show-x');
-}
-
+    receiptContainer.classList.remove("shift-up");
+    carouselContainer.classList.remove("hover-blur");
+    receiptContainer.classList.remove('show-x');
+  }
 })
 
 carouselContainer.addEventListener("click", function() {
@@ -398,6 +375,10 @@ carouselContainer.addEventListener("click", function() {
     receiptContainer.style.top = -receiptContainer.offsetHeight + 37 + 'px';
 
     document.body.classList.add('receipt-moveUp');
+    receiptContainer.classList.add('cursor-pointer');
+
+    hideCloseButton();
+
   } else if (document.body.classList.length == 0) {
     // if no section is open:
     document.body.classList.add('show-theSpace');
@@ -433,16 +414,17 @@ receiptContainer.addEventListener("click", function(e) {
       receiptContainer.removeAttribute('style');
 
       document.body.classList.remove('receipt-moveUp-hover');
+
+      // test
+      let currentSectionId = getCurrentSectionId();
+      document.querySelector('#' + currentSectionId).classList.add('show-close-button');
     }
   }
 })
 
-
-
 // FOOD AND DRINKS HOVER INTERACTION
 // to do: figure out timing
 // can it start immediately?
-// disable when receipt is up
 
 const foodAndDrinksText = document.querySelector('#foodAndDrinksText');
 const foodAndDrinks = document.querySelector('#foodAndDrinks');
@@ -458,16 +440,16 @@ function foodAndDrinksHover() {
 }
 
 let mouseIsOver = false;
-let myInterval;
+let foodAndDrinksInterval;
 let counter = 0;
 foodAndDrinks.addEventListener('mouseover', function() {
-  if (!mouseIsOver) {
-    myInterval = setInterval(foodAndDrinksHover, 150);
+  if (!mouseIsOver && !document.body.classList.contains('receipt-moveUp')) {
+    foodAndDrinksInterval = setInterval(foodAndDrinksHover, 150);
     mouseIsOver = true;
   }
 })
 foodAndDrinks.addEventListener('mouseleave', function() {
   mouseIsOver = false;
-  clearInterval(myInterval);
+  clearInterval(foodAndDrinksInterval);
   foodAndDrinksText.innerHTML = '* food and drinks';
 })

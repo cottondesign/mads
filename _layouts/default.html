@@ -56,9 +56,9 @@
             <div class="section-header food-and-drinks-header-default">
               <h1 id="foodAndDrinksText">* food and drinks</h1>
               <span class="nav-button" id="foodAndDrinksButton">+</span>
-              <span class="nav-button nav-button-hover" id="foodAndDrinksButtonHover">-</span>
+              <span class="nav-button nav-button-close" id="foodAndDrinksButtonClose">-</span>
             </div>
-            <div class="section-header food-and-drinks-header-back click">
+            <div class="section-header food-and-drinks-header-back">
               <h1 class="click">< back</h1>
             </div>
             <div class="section-body">
@@ -74,7 +74,7 @@
               </div>
               {% for menu-category in site.food_and_drinks %}
                     <div class="food-and-drinks-subheader" id="{{ menu-category.title | slugify }}">
-                      <div class="menu-subheader-top-nav click">
+                      <div class="menu-subheader-top-nav">
                         <span class="food-and-drinks-back-button click"><</span>
                       </div>
                       <div class="menu-single-bar">------------------------------------</div>
@@ -127,7 +127,7 @@
                 <h1 class="click">the space</h1>
                 <!-- <span class="click" id="theSpaceButton"></span> -->
                 <span class="nav-button" id="theSpaceButton">></span>
-                <span class="nav-button nav-button-hover" id="theSpaceButtonHover">></span>
+                <span class="nav-button-close" id="theSpaceButtonClose">-</span>
               </div>
               <div class="space-single-bar">------------------------------------</div>
               <div class="section-body">
@@ -181,7 +181,7 @@
               <div class="section-header">
                 <h1>* events</h1>
                 <span class="nav-button" id="eventsButton">+</span>
-                <span class="nav-button nav-button-hover" id="eventsButtonHover">-</span>
+                <span class="nav-button nav-button-close" id="eventsButtonClose">-</span>
               </div>
               <div class="section-body">
               {{site.data.events.events-body | markdownify}}
@@ -192,13 +192,13 @@
           <!-- hours -->
           <section class="nav-item" id="hours">
             <div class="hours-inner section-inner">
-              <div class="section-header">
-                <h1>
-                  <span id="storeStatus">* open now</span>
-                  <span id="storeClosingTime">closes 4am</span>
+              <div class="section-header click">
+                <h1 class="click">
+                  <span id="storeStatus" class="click">* open now</span>
+                  <span id="storeClosingTime" class="click">closes 4am</span>
                 </h1>
-                <span class="nav-button" id="hoursButton">+</span>
-                <span class="nav-button nav-button-hover" id="hoursButtonHover">-</span>
+                <span class="nav-button click" id="hoursButton">+</span>
+                <span class="nav-button nav-button-close click" id="hoursButtonClose">-</span>
               </div>
               <div class="section-body">
                 <table class="schedule">
@@ -229,7 +229,7 @@
               <div class="section-header">
                 <h1>* reservations</h1>
                 <span class="nav-button" id="reservationsButton">+</span>
-                <span class="nav-button nav-button-hover" id="reservationsButtonHover">-</span>
+                <span class="nav-button nav-button-close" id="reservationsButtonClose">-</span>
               </div>
               <div class="section-body">
                 <p>
@@ -252,7 +252,7 @@
             <p>
               MADELINE'S
             </p>
-            <p>Follow us @madelinesnyc</p>
+            <p>Follow us <span id='ig'><a href="#"></a>@madelinesnyc</span></p>
             <br>
             <p>THANK YOU :)</p>
           </div>
