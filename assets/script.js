@@ -239,9 +239,7 @@ console.log(carousel.scrollLeft);
 // })
 let carouselScroll;
 console.log(window.innerWidth);
-let xFactor;
 let swipeCarouselCounter;
-// let xFactor = window.innerWidth / carouselScroll;
 document.addEventListener("scroll", (event) => {
     // carouselScroll = window.scrollX;
     let carouselRect = carousel.getBoundingClientRect();
@@ -265,9 +263,6 @@ document.addEventListener("scroll", (event) => {
     // let carouselRect = carousel.getBoundingClientRect();
     // carouselCounter = Math.round(carouselRect.left/window.innerWidth * -1)
 });
-
-console.log(xFactor);
-// carouselCounter = xFactor;
 
 const theSpaceLeftArrow = document.querySelector('.arrow-left');
 const theSpaceRightArrow = document.querySelector('.arrow-right');
@@ -333,7 +328,6 @@ theSpaceRightArrow.addEventListener("click", function() {
     //   left: (left),
     //   behavior: "smooth",
     // });
-
   }
 
   // TEST
