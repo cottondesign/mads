@@ -195,7 +195,7 @@ window.onscroll = function() {
 };
 function showOnScroll(element) {
   let offset = element.getBoundingClientRect();
-    console.log(offset);
+    // console.log(offset);
 
     if (offset.y == 0) {
       element.classList.add('show');
@@ -219,6 +219,9 @@ function showOnScroll(element) {
 
 // CAROUSEL JS
 // let numImages = 13;
+
+
+
 let numImages = document.getElementById("carousel").childElementCount;
 console.log(numImages);
 const imageArray = document.querySelectorAll('.carousel-image img');
@@ -227,6 +230,44 @@ const carousel = document.getElementById('carousel');
 
 let currentIndex = 1;
 let carouselCounter = 0;
+
+console.log(carouselContainer.scrollLeft);
+console.log(carousel.scrollLeft);
+
+// carousel.addEventListener("scroll", function() {
+//   console.log(carouselContainer.scrollLeft);
+// })
+let carouselScroll;
+console.log(window.innerWidth);
+let xFactor;
+let swipeCarouselCounter;
+// let xFactor = window.innerWidth / carouselScroll;
+document.addEventListener("scroll", (event) => {
+    // carouselScroll = window.scrollX;
+    let carouselRect = carousel.getBoundingClientRect();
+    // console.log(carouselRect.left);
+    if (carouselRect.left % window.innerWidth == 0) {
+      console.log(carouselRect.left);
+      swipeCarouselCounter = carouselRect.left/window.innerWidth * -1;
+
+      if (swipeCarouselCounter == 13) {
+        document.body.style.color = 'red';
+        carousel.style.left = 0;
+        // window.style.left = 0;
+        document.documentElement.style.scrollBehavior = 'auto';
+        window.scrollBy(-carouselRect.width, 0);
+      }
+      carouselCounter = swipeCarouselCounter;
+      console.log(carouselRect.left/window.innerWidth);
+    }
+
+
+    // let carouselRect = carousel.getBoundingClientRect();
+    // carouselCounter = Math.round(carouselRect.left/window.innerWidth * -1)
+});
+
+console.log(xFactor);
+// carouselCounter = xFactor;
 
 const theSpaceLeftArrow = document.querySelector('.arrow-left');
 const theSpaceRightArrow = document.querySelector('.arrow-right');
@@ -241,7 +282,7 @@ theSpaceLeftArrow.addEventListener("click", function() {
     setTimeout(function() {
       carouselCounter--;
       carousel.style.transition = '300ms';
-      carousel.style.left = carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+      carousel.style.left = `calc(-100vw * ${carouselCounter})`;
       // console.log('timeout300');
     }, 0)
   } else {
