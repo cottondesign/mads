@@ -192,7 +192,7 @@ p {
 }
 .divider-single-bar,
 .menu-single-bar {
-  background:yellow;
+  // background:yellow;
   // background: white;
   line-height: var(--dividerHeight);
   height: var(--dividerHeight);
@@ -437,7 +437,7 @@ p {
 
   .food-and-drinks-back-button {
     display: inline-block;
-    background: lightblue;
+    // background: lightblue;
     padding: 10px 15px;
     margin: -15px;
     z-index: 3;
@@ -659,7 +659,7 @@ body.show-theSpace {
       cursor: pointer;
     }
     #theSpaceHeader + .space-single-bar {
-      background: purple;
+      // background: purple;
       margin-top: var(--linePadding);
     }
     #theSpaceButton {
@@ -670,7 +670,7 @@ body.show-theSpace {
     }
     .space-single-bar {
       cursor: pointer;
-      background:yellow;
+      // background:yellow;
       line-height: var(--dividerHeight);
       height: var(--dividerHeight);
     }
