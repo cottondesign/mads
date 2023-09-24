@@ -250,13 +250,13 @@ document.addEventListener("scroll", (event) => {
       console.log(carouselRect.left);
       swipeCarouselCounter = carouselRect.left/window.innerWidth * -1;
 
-      if (swipeCarouselCounter == 13) {
-        document.body.style.color = 'red';
-        carousel.style.left = 0;
+      // if (swipeCarouselCounter == 13) {
+        // document.body.style.color = 'red';
+        // carousel.style.left = 0;
         // window.style.left = 0;
-        document.documentElement.style.scrollBehavior = 'auto';
-        window.scrollBy(-carouselRect.width, 0);
-      }
+        // document.documentElement.style.scrollBehavior = 'auto';
+        // window.scrollBy(-carouselRect.width, 0);
+      // }
       carouselCounter = swipeCarouselCounter;
       console.log(carouselRect.left/window.innerWidth);
     }
