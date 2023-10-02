@@ -14,7 +14,7 @@ subsections:
       - name: Offshore Account
         price: 15
         description: Cognac, Pistachio, Banana Oil, Orange Blossom
-        note: "!!FIRE!!"
+        note: ""
       - name: Cookie Magneto
         price: 15
         description: Moonshine, Falernum, Creme de cacao, Demerara, vanilla, clarified
@@ -23,7 +23,7 @@ subsections:
       - name: Mercy Me
         price: 14
         description: Rum Blend, Gold Apricot, toasted coconut cream, calamansi
-        note: test
+        note: ""
       - name: Fins and Suits
         price: 15
         description: Aquavit, Cucumber, Sunflower seed orgeat, lemon
