@@ -25,4 +25,12 @@ subsections:
       - name: Green Chile Martini
         price: 16
         description: Green Chile Vodka, Citadelle Gin, Antica Torino, Elixir Vegetal
+      - name: Tuxedo Mask
+        price: 15
+        description: Gin, Montenegro, Amontillado Sherry, Lemon, Pomegranate, Clarified
+          milk, Bubbles
+        note: Yup, milk
+      - name: Cocoa Beware
+        description: Cocoa Butter washed Whiskey, Amaretto, Carrots, Cinnamon
+        price: 16
 ---
