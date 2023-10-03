@@ -115,14 +115,15 @@ for (navSection of navSections) {
           } else {
             history.pushState(null, "", e.target.closest("[data-href]").getAttribute("data-href"));
           }
-
           document.body.classList.toggle('show-' + sectionId);
 
           window.addEventListener('popstate', function(event) {
             
             // document.body.classList.remove('show-' + sectionId);
+            if (!window.location.href.includes("#")){
             closeCurrentSection(sectionId);
             openPreviousSection();
+            }
             
             // e.target.closest("section").classList.remove('show-close-button');
           })

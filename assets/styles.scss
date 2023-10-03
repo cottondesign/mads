@@ -566,9 +566,12 @@ body.show-foodAndDrinks {
     opacity: 0;
     transition: var(--transition);
   }
-  .nav-item {
+  .nav-item#foodAndDrinks {
     overflow: inherit;
   }
+  // .nav-item {
+  //   overflow: inherit;
+  // }
   .receipt-container {
     /* position: fixed; */
     height: auto;
