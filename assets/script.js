@@ -159,6 +159,7 @@ for (navSection of navSections) {
         // Open section
         
         if (!e.target.classList.contains('dont-click')) {
+        // if (!e.target.closest('.section-body')) {
 
           console.log("not dont click");
 
@@ -176,14 +177,10 @@ for (navSection of navSections) {
             // e.target.closest("section").classList.remove('show-close-button');
 
             if (!window.location.href.includes("#")){
-
               closeCurrentSection(sectionId);
               hideCloseButton();
-  
               openPreviousSection();
-
             }
-
           })
 
           this.classList.toggle('show-close-button');

@@ -152,6 +152,7 @@ body.receipt-moveUp {
     order: 2;
   }
 }
+
 .receipt-moveUp {
   .section-header {
     order: 10;
@@ -597,6 +598,9 @@ body.show-foodAndDrinks.receipt-moveUp {
   }
   .food-and-drinks-header-default {
     display: flex;
+  }
+  .section-inner {
+    cursor: pointer;
   }
 }
 
