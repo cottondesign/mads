@@ -774,7 +774,7 @@ body.show-theSpace {
     }
     .divider-single-bar {
       bottom: calc(-1 * var(--dividerHeight));
-      white-space: wrap;
+      width: 100%;
     }
   }
 }
