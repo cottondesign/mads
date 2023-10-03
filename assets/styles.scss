@@ -419,6 +419,7 @@ p {
   }
 }
 .menu-subheader {
+  white-space: nowrap;
   overflow: hidden;
   line-height: var(--navItemHeight);
   height: var(--navItemHeight);
