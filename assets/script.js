@@ -24,33 +24,6 @@ for (let i = 0; i < dayElements.length; i++) {
   }
 }
 
-// currentDay = 'Monday';
-// currentDay = 'Tuesday';
-// currentDay = 'Wednesday';
-// currentDay = 'Thursday';
-// currentDay = 'Friday';
-// currentDay = 'Saturday';
-// currentDay = 'Sunday';
-// currentHour = 1;
-// currentHour = 3;
-// currentHour = 4;
-// currentHour = 10;
-// currentHour = 12;
-// currentHour = 13;
-// currentHour = 14;
-// currentHour = 16;
-// currentHour = 17;
-// currentHour = 18;
-// currentHour = 23;
-
-for (let i=0; i < schedule.length; i++) {
-  if (schedule[i].day == currentDay) {
-  console.log('Open from: ' + schedule[i].from);
-  console.log('Open to: ' + schedule[i].to);
-  console.log(schedule[schedule.length-1].to);
-  }
-}
-
 for (let i = 0; i < schedule.length; i++) {
   if (schedule[i].day == currentDay) {
     console.log(schedule[i].day);
@@ -60,20 +33,16 @@ for (let i = 0; i < schedule.length; i++) {
         storeStatus.innerHTML = '* open now ';
         storeStatus.classList.add('store-open');
         if (currentHour < schedule[schedule.length-1].to) {
-          console.log('open closes ' + (schedule[schedule.length-1].to));
-
-          storeClosingTime.innerHTML = 'closes ' + schedule[schedule.length-1].to;
+          // console.log('open closes ' + (schedule[schedule.length-1].to));
+          storeClosingTime.innerHTML = `closes ${schedule[schedule.length-1].to}am`;
         } else {
           // console.log('open closes ' + (schedule[i].to));
-
-          storeClosingTime.innerHTML = 'closes ' + schedule[i].to;
+          storeClosingTime.innerHTML = `closes ${schedule[i].to}am`;
         }
       } else if (schedule[i].from != 'CLOSED') {
-        console.log('closed opens ' + schedule[i].from);
-
+        // console.log('closed opens ' + schedule[i].from);
         storeStatus.innerHTML = '* closed ';
-        storeClosingTime.innerHTML = 'opens ' + schedule[i].from;
-
+        storeClosingTime.innerHTML = `opens ${schedule[i].from}`;
       } else {
         firstOpens();
       }
@@ -81,19 +50,16 @@ for (let i = 0; i < schedule.length; i++) {
       storeStatus.innerHTML = '* open now ';
       storeStatus.classList.add('store-open');
       if (currentHour < schedule[i-1].to) {
-        console.log('open closes ' + (schedule[i-1].to));
-
-        storeClosingTime.innerHTML = 'closes ' + schedule[i-1].to;
+        // console.log('open closes ' + (schedule[i-1].to));
+        storeClosingTime.innerHTML = `closes ${schedule[i-1].to}am`;
       } else {
-        console.log('open closes ' + (schedule[i].to));
-
-        storeClosingTime.innerHTML = 'closes ' + schedule[i].to;
+        // console.log('open closes ' + (schedule[i].to));
+        storeClosingTime.innerHTML = `closes ${schedule[i].to}am`;
       }
     } else if (schedule[i].from != 'CLOSED') {
-      console.log('closed opens ' + schedule[i].from);
-
+      // console.log('closed opens ' + schedule[i].from);
       storeStatus.innerHTML = '* closed ';
-      storeClosingTime.innerHTML = 'opens ' + schedule[i].from;
+      storeClosingTime.innerHTML = `opens ${schedule[i].from}pm`;
     } else {
       firstOpens();
     }
@@ -104,11 +70,9 @@ for (let i = 0; i < schedule.length; i++) {
 function firstOpens() {
   for (let i=0; i < schedule.length; i++) {
     if (schedule[i].from != 'CLOSED') {
-      console.log('Closed Opens ' + schedule[i].day + ' ' + schedule[i].from);
-
+      // console.log('Closed Opens ' + schedule[i].day + ' ' + schedule[i].from);
       storeStatus.innerHTML = '* closed ';
-      storeClosingTime.innerHTML = 'opens ' + schedule[i].day + ' ' + schedule[i].from;
-
+      storeClosingTime.innerHTML = `opens ${schedule[i].day} ${schedule[i].from}pm`;
       break;
     }
   }
@@ -677,9 +641,6 @@ let counter = 0;
   })
 }
 
-
-
-
 // window.addEventListener('resize', function () {
 //   receiptContainer.style.transition = '0s';
 // })
@@ -698,37 +659,3 @@ function openPreviousSection() {
     document.getElementById(currentId).classList.add('show-close-button');
   }
 }
-
-
-
-
-
-
-
-
-
-
-// // Select all anchor links that you want to apply smooth scrolling to
-// const anchorLinks = document.querySelectorAll('a[href^="#"]');
-
-// // Add click event listeners to the anchor links
-// anchorLinks.forEach((link) => {
-//   link.addEventListener('click', function (e) {
-//     e.preventDefault(); // Prevent the default anchor link behavior
-    
-//     const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
-//     const targetSection = document.getElementById(targetId); // Find the target section
-
-//     if (targetSection) {
-//       const offsetTop = targetSection.offsetTop; // Calculate the target section's offset from the top
-//       console.log(offsetTop);
-//       offsetTopRect = targetSection.getBoundingClientRect().top;
-//       console.log(offsetTopRect);
-//       window.scrollTo({
-//         top: offsetTopRect,
-//         behavior: 'smooth', // Enable smooth scrolling
-//       });
-//     }
-    
-//   });
-// });
