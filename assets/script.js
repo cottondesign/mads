@@ -1,15 +1,129 @@
+// random table
 const tableLetter = document.querySelector('.table-letter');
 const tableNumber = document.querySelector('.table-number');
 tableNumber.innerHTML = Math.floor(Math.random()*20) + 1;
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 tableLetter.innerHTML = alphabet[Math.floor(Math.random()*alphabet.length)];
 
+// dynamic header for hours
 const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}));
-console.log(currentDate);
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let currentDay = days[currentDate.getDay()];
+let currentHour = currentDate.getHours();
 
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-let day = weekday[currentDate.getDay()];
-console.log(day);
+let dayElements = document.querySelectorAll(".hours-day");
+let hours = document.querySelectorAll(".hours");
+let storeStatus = document.querySelector('#storeStatus');
+let storeClosingTime = document.querySelector('#storeClosingTime');
+const schedule = [];
+for (let i = 0; i < dayElements.length; i++) {
+  if (hours[i].textContent == 'CLOSED') {
+    schedule[i] = { day: dayElements[i].textContent, from: hours[i].textContent, to: hours[i].textContent };
+  } else {
+    schedule[i] = { day: dayElements[i].textContent, from: hours[i].querySelector('.hours-from').textContent.replace(/[^0-9]/g,"")*1, to: hours[i].querySelector('.hours-to').textContent.replace(/[^0-9]/g,"")*1 };
+  }
+}
+
+// currentDay = 'Monday';
+// currentDay = 'Tuesday';
+// currentDay = 'Wednesday';
+// currentDay = 'Thursday';
+// currentDay = 'Friday';
+// currentDay = 'Saturday';
+// currentDay = 'Sunday';
+// currentHour = 1;
+// currentHour = 3;
+// currentHour = 4;
+// currentHour = 10;
+// currentHour = 12;
+// currentHour = 13;
+// currentHour = 14;
+// currentHour = 16;
+// currentHour = 17;
+// currentHour = 18;
+// currentHour = 23;
+
+for (let i=0; i < schedule.length; i++) {
+  if (schedule[i].day == currentDay) {
+  console.log('Open from: ' + schedule[i].from);
+  console.log('Open to: ' + schedule[i].to);
+  console.log(schedule[schedule.length-1].to);
+  }
+}
+
+for (let i = 0; i < schedule.length; i++) {
+  if (schedule[i].day == currentDay) {
+    console.log(schedule[i].day);
+
+    if (i == 0) {
+      if ((currentHour >= (schedule[i].from + 12)) || (currentHour < schedule[schedule.length-1].to)) {
+        storeStatus.innerHTML = '* open now ';
+        storeStatus.classList.add('store-open');
+        if (currentHour < schedule[schedule.length-1].to) {
+          console.log('open closes ' + (schedule[schedule.length-1].to));
+
+          storeClosingTime.innerHTML = 'closes ' + schedule[schedule.length-1].to;
+        } else {
+          // console.log('open closes ' + (schedule[i].to));
+
+          storeClosingTime.innerHTML = 'closes ' + schedule[i].to;
+        }
+      } else if (schedule[i].from != 'CLOSED') {
+        console.log('closed opens ' + schedule[i].from);
+
+        storeStatus.innerHTML = '* closed ';
+        storeClosingTime.innerHTML = 'opens ' + schedule[i].from;
+
+      } else {
+        firstOpens();
+      }
+    } else if ((currentHour >= (schedule[i].from + 12)) || (currentHour < schedule[i-1].to)) {
+      storeStatus.innerHTML = '* open now ';
+      storeStatus.classList.add('store-open');
+      if (currentHour < schedule[i-1].to) {
+        console.log('open closes ' + (schedule[i-1].to));
+
+        storeClosingTime.innerHTML = 'closes ' + schedule[i-1].to;
+      } else {
+        console.log('open closes ' + (schedule[i].to));
+
+        storeClosingTime.innerHTML = 'closes ' + schedule[i].to;
+      }
+    } else if (schedule[i].from != 'CLOSED') {
+      console.log('closed opens ' + schedule[i].from);
+
+      storeStatus.innerHTML = '* closed ';
+      storeClosingTime.innerHTML = 'opens ' + schedule[i].from;
+    } else {
+      firstOpens();
+    }
+
+  }
+}
+
+function firstOpens() {
+  for (let i=0; i < schedule.length; i++) {
+    if (schedule[i].from != 'CLOSED') {
+      console.log('Closed Opens ' + schedule[i].day + ' ' + schedule[i].from);
+
+      storeStatus.innerHTML = '* closed ';
+      storeClosingTime.innerHTML = 'opens ' + schedule[i].day + ' ' + schedule[i].from;
+
+      break;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 // The Space JS
 const spaceSections = document.querySelectorAll(".space-section");
@@ -24,17 +138,52 @@ for (navSection of navSections) {
 
   navSection.addEventListener("click", function(e){
     if (!document.body.classList.contains('receipt-moveUp')) {
-
+      if (e.target.getAttribute("href") && e.target.getAttribute("href").includes("#")){
+        return;
+      }
+      console.log(e.target);
       if (sectionId == 'foodAndDrinks' && document.body.classList.contains("show-foodAndDrinks")){
         // Close 'Food and Drinks' section only when clicking on header
         if (e.target.classList.contains('click')) {
+
+          if (document.body.classList.contains('show-' + sectionId)) {
+            history.pushState(null, "", "/");
+          } else {
+            history.pushState(null, "", e.target.closest("[data-href]").getAttribute("data-href"));
+          }
+
           document.body.classList.toggle('show-' + sectionId);
+
+          window.addEventListener('popstate', function(event) {
+            
+            // document.body.classList.remove('show-' + sectionId);
+            closeCurrentSection(sectionId);
+            openPreviousSection();
+            
+            // e.target.closest("section").classList.remove('show-close-button');
+          })
+
         }
       } else if (sectionId == 'theSpace' && document.body.classList.contains("show-theSpace")) {
         // Close 'The Space' section only when clicking on header
         if (e.target.classList.contains('click')) {
           closeAllSections();
+
+          if (document.body.classList.contains('show-' + sectionId)) {
+            history.pushState(null, "", "/");
+          } else {
+            history.pushState(null, "", e.target.closest("[data-href]").getAttribute("data-href"));
+          }
+
           document.body.classList.toggle('show-' + sectionId);
+
+          window.addEventListener('popstate', function(event) {
+            // document.body.classList.remove('show-' + sectionId);
+            closeCurrentSection(sectionId);
+            openPreviousSection();
+
+            // e.target.closest("section").classList.remove('show-close-button');
+          })
         }
       } else {
         // Close any open section other than the one you are clicking
@@ -44,9 +193,35 @@ for (navSection of navSections) {
           hideCloseButton();
         }
         // Open section
+        
         if (!e.target.classList.contains('dont-click')) {
 
+          console.log("not dont click");
+
+          if (document.body.classList.contains('show-' + sectionId)) {
+            history.pushState(null, "", "/");
+          } else {
+            history.pushState(null, "", e.target.closest("[data-href]").getAttribute("data-href"));
+          }
+
           document.body.classList.toggle('show-' + sectionId);
+
+          // Listen for popstate event
+          window.addEventListener('popstate', function(event) {
+            // document.body.classList.remove('show-' + sectionId);
+            // e.target.closest("section").classList.remove('show-close-button');
+
+            if (!window.location.href.includes("#")){
+
+              closeCurrentSection(sectionId);
+              hideCloseButton();
+  
+              openPreviousSection();
+
+            }
+
+          })
+
           this.classList.toggle('show-close-button');
         }
 
@@ -63,11 +238,17 @@ for (navSection of navSections) {
           }
         }
       }
-    console.log(e.target);
+    // console.log(e.target);
     // document.body.classList.toggle('show-' + sectionId);
   }
   });
 }
+
+
+
+
+
+
 
 // click on headers and show the section
 for (spaceSection of spaceSections) {
@@ -188,25 +369,25 @@ subMenu.addEventListener("click", function(e) {
 
 // show subheader nav buttons only when positioned at the top
 const subheaders = document.querySelectorAll('.food-and-drinks-subheader');
-window.onscroll = function() {
+function showOnScroll() {
   for (subheader of subheaders) {
-    showOnScroll(subheader);
+    let offset = subheader.getBoundingClientRect();
+    if (offset.y < 1) {
+        subheader.classList.add('show');
+        console.log("show added")
+        console.log(subheader)
+    } else {
+        subheader.classList.remove('show');
+        // console.log("show removed")
+        // console.log(subheader);
+    }
   }
-};
-function showOnScroll(element) {
-  let offset = element.getBoundingClientRect();
-    // console.log(offset);
-
-    if (offset.y == 0) {
-      element.classList.add('show');
-    }
-    else {
-      element.classList.remove('show');;
-    }
 }
+window.addEventListener('scroll', showOnScroll);
+
 // END OF FOOD AND DRINKS JS
 
-
+console.log("test")
 
 
 
@@ -233,12 +414,10 @@ let carouselCounter = 0;
 
 console.log(carouselContainer.scrollLeft);
 console.log(carousel.scrollLeft);
-
 // carousel.addEventListener("scroll", function() {
 //   console.log(carouselContainer.scrollLeft);
 // })
 let carouselScroll;
-console.log(window.innerWidth);
 let swipeCarouselCounter;
 document.addEventListener("scroll", (event) => {
     // carouselScroll = window.scrollX;
@@ -258,8 +437,6 @@ document.addEventListener("scroll", (event) => {
       carouselCounter = swipeCarouselCounter;
       console.log(carouselRect.left/window.innerWidth);
     }
-
-
     // let carouselRect = carousel.getBoundingClientRect();
     // carouselCounter = Math.round(carouselRect.left/window.innerWidth * -1)
 });
@@ -328,6 +505,7 @@ theSpaceRightArrow.addEventListener("click", function() {
     //   left: (left),
     //   behavior: "smooth",
     // });
+
   }
 
   // TEST
@@ -419,6 +597,13 @@ carouselContainer.addEventListener("click", function() {
     document.body.classList.add('show-theSpace');
     openSection(spaceSections[0]);
     receiptContainer.classList.remove('shift-left');
+
+    history.pushState(null, "", '/space');
+    window.addEventListener('popstate', function(event) {
+          closeCurrentSection('theSpace');
+          openPreviousSection();
+      })
+
   }
 })
 // Once the receipt is up
@@ -477,14 +662,73 @@ function foodAndDrinksHover() {
 let mouseIsOver = false;
 let foodAndDrinksInterval;
 let counter = 0;
-foodAndDrinks.addEventListener('mouseover', function() {
-  if (!mouseIsOver && !document.body.classList.contains('receipt-moveUp')) {
-    foodAndDrinksInterval = setInterval(foodAndDrinksHover, 150);
-    mouseIsOver = true;
+  if (matchMedia('(pointer:fine)').matches) {
+
+  foodAndDrinks.addEventListener('mouseover', function() {
+    if (!mouseIsOver && !document.body.classList.contains('receipt-moveUp')) {
+      foodAndDrinksInterval = setInterval(foodAndDrinksHover, 150);
+      mouseIsOver = true;
+    }
+  })
+  foodAndDrinks.addEventListener('mouseleave', function() {
+    mouseIsOver = false;
+    clearInterval(foodAndDrinksInterval);
+    foodAndDrinksText.innerHTML = '* food and drinks';
+  })
+}
+
+
+
+
+// window.addEventListener('resize', function () {
+//   receiptContainer.style.transition = '0s';
+// })
+
+function closeCurrentSection(sectionId) {
+  document.body.classList.remove('show-' + sectionId);
+}
+function openPreviousSection() {
+  let permalink = '/' + window.location.href.split("/")[3];
+  // console.log(permalink);
+  // console.log(document.querySelector(`[data-href="${permalink}"]`));
+  if (permalink != '/' && document.querySelector(`[data-href="${permalink}"]`) != null) {
+    let dataHref = '[data-href="' + permalink + '"]';
+    let currentId = document.querySelector(dataHref).getAttribute('id');
+    document.body.classList.add('show-' + currentId);
+    document.getElementById(currentId).classList.add('show-close-button');
   }
-})
-foodAndDrinks.addEventListener('mouseleave', function() {
-  mouseIsOver = false;
-  clearInterval(foodAndDrinksInterval);
-  foodAndDrinksText.innerHTML = '* food and drinks';
-})
+}
+
+
+
+
+
+
+
+
+
+
+// // Select all anchor links that you want to apply smooth scrolling to
+// const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+// // Add click event listeners to the anchor links
+// anchorLinks.forEach((link) => {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault(); // Prevent the default anchor link behavior
+    
+//     const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
+//     const targetSection = document.getElementById(targetId); // Find the target section
+
+//     if (targetSection) {
+//       const offsetTop = targetSection.offsetTop; // Calculate the target section's offset from the top
+//       console.log(offsetTop);
+//       offsetTopRect = targetSection.getBoundingClientRect().top;
+//       console.log(offsetTopRect);
+//       window.scrollTo({
+//         top: offsetTopRect,
+//         behavior: 'smooth', // Enable smooth scrolling
+//       });
+//     }
+    
+//   });
+// });

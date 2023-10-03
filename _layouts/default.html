@@ -32,26 +32,26 @@
         <!-- header -->
         <div class="receipt-header">
           <p class="receipt-header-name">
-            <a href="#"><span>-</span>MADELINE'S<span>-</span></a>
+            <a href="/"><span>-</span>MADELINE'S<span>-</span></a>
           </p>
           <p class="receipt-header-address">
-            <a href="#"><span>-</span>113 Franklin Street<span>-</span><br><span>-</span>Greenpoint, BK<span>-</span></a>
+            <a href="https://maps.app.goo.gl/UubBrH738V1LFtoL6" target="_blank"><span>-</span>113 Franklin Street<span>-</span><br><span>-</span>Greenpoint, BK<span>-</span></a>
           </p>
           <p class="receipt-header-email">
-            <a href=""><span>-</span>info@madelinesnyc.com<span>-</span></a>
+            <a href="mailto:info@madelinesnyc.com"><span>-</span>info@madelinesnyc.com<span>-</span></a>
           </p>
         </div>
         <!-- subheader -->
-        <div class="divider-double-bar">====================================</div>
+        <div class="divider-double-bar">=========================================</div>
         <div class="receipt-sub-header">
           <p class="table">Table:<span class="table-letter">T</span><span class="table-number">7</span></p>
           <p class="dine-in">Dine In</p>
         </div>
-        <div class="divider-single-bar sub-header-single-bar">------------------------------------</div>
+        <div class="divider-single-bar sub-header-single-bar">-----------------------------------------</div>
         <!-- nav menu -->
         <div class="nav">
           <!-- food and drinks -->
-          <section class="nav-item" id="foodAndDrinks">
+          <section class="nav-item" id="foodAndDrinks" data-href="/menu">
           <div class="food-and-drinks-inner section-inner">
             <div class="section-header food-and-drinks-header-default">
               <h1 id="foodAndDrinksText">* food and drinks</h1>
@@ -63,27 +63,34 @@
             </div>
             <div class="section-body">
               <div class="food-and-drinks-subnav">
-                <div class="menu-single-bar">------------------------------------</div>
+                <div class="menu-single-bar">----------------------------------------</div>
               {% for menu-category in site.food_and_drinks %}
               <div class="submenu-nav">
-                <h1><a href="#{{ menu-category.title | slugify}}">{{ menu-category.title }}</a></h1>
+                <h1><a class="dont-click" href="#{{ menu-category.title | slugify}}">{{ menu-category.title }}</a></h1>
                 <button class="submenu-button submenu-close-button">-</button>
               </div>
-              <div class="menu-single-bar">------------------------------------</div>
+              <div class="menu-single-bar">----------------------------------------</div>
               {% endfor %}
               </div>
               {% for menu-category in site.food_and_drinks %}
-                    <div class="food-and-drinks-subheader" id="{{ menu-category.title | slugify }}">
+                    <!-- <div class="food-and-drinks-subheader" id="{{ menu-category.title | slugify }}"> -->
+
+                    <div class="food-and-drinks-subheader-ghost" id="{{ menu-category.title | slugify }}"></div>
+                    <div class="food-and-drinks-subheader" >
+
+
+
+
                       <div class="menu-subheader-top-nav">
                         <span class="food-and-drinks-back-button click"><</span>
                       </div>
-                      <div class="menu-single-bar">------------------------------------</div>
+                      <div class="menu-single-bar">----------------------------------------</div>
                       <div class="food-and-drinks-subheader-title">
                         <h1>{{ menu-category.title }}</h1>
                         <button class="submenu-button submenu-open-button">=</button>
                       </div>
                       <div class="menu-single-bar">
-                        ------------------------------------
+                        ----------------------------------------
                       </div>
                     </div>
                     {% for menu-subsection in menu-category.subsections %}
@@ -91,7 +98,7 @@
                             <br>
                             <div class="menu-subheader">
                               <h2>
-                                ----[{{ menu-subsection.subsection-header }}]------------------------
+                                ----[{{ menu-subsection.subsection-header }}]----------------------------------
                               </h2>
                             </div>
                             {% endif %}
@@ -118,10 +125,10 @@
               {% endfor %}
             </div>
             </div>
-          <div class="divider-single-bar">------------------------------------</div>
+          <div class="divider-single-bar">----------------------------------------</div>
           </section>
           <!-- the space -->
-          <section class="nav-item" id="theSpace">
+          <section class="nav-item" id="theSpace" data-href="/space">
             <div class="thespace-inner section-inner">
               <div class="section-header click" id="theSpaceHeader">
                 <h1 class="click">the space</h1>
@@ -135,7 +142,8 @@
                   <button class="arrow arrow-left"><</button>
                   <button class="arrow arrow-right">></button>
                 </div>
-                <div class="space-single-bar">------------------------------------</div>
+                <!-- <div class="space-single-bar">------------------------------------</div> -->
+                <div class="space-single-bar">----------------------------------------</div>
                 {% for space-area in site.data.space.space-areas %}
                     {% if space-area.coming-soon == false %}
                     <div class="space-section" id="{{ space-area.name | slugify}}">
@@ -151,7 +159,8 @@
                           {{ space-area.description }}
                         </div>
                       </div>
-                      <div class="space-single-bar">----------------------------------</div>
+                      <!-- <div class="space-single-bar">----------------------------------</div> -->
+                      <div class="space-single-bar">----------------------------------------</div>
                     </div>
                     {% else %}
                     <div class="space-section coming-soon" id="{{ space-area.name | slugify}}">
@@ -173,10 +182,10 @@
               </div>
             </div>
             <!-- <div class="space-single-bar">------------------------------------</div> -->
-            <div class="divider-single-bar">------------------------------------</div>
+            <div class="divider-single-bar">----------------------------------------</div>
           </section>
           <!-- events -->
-          <section class="nav-item" id="events">
+          <section class="nav-item" id="events" data-href="/events">
             <div class="events-inner section-inner">
               <div class="section-header">
                 <h1>* events</h1>
@@ -187,15 +196,15 @@
               {{site.data.events.events-body | markdownify}}
               </div>
             </div>
-            <div class="divider-single-bar">------------------------------------</div>
+            <div class="divider-single-bar">----------------------------------------</div>
           </section>
           <!-- hours -->
-          <section class="nav-item" id="hours">
+          <section class="nav-item" id="hours" data-href="/hours">
             <div class="hours-inner section-inner">
               <div class="section-header click">
                 <h1 class="click">
-                  <span id="storeStatus" class="click">* open now</span>
-                  <span id="storeClosingTime" class="click">closes 4am</span>
+                  <span id="storeStatus" class="store-status" class="store-status click">* hours</span>
+                  <span id="storeClosingTime" class="click"></span>
                 </h1>
                 <span class="nav-button click" id="hoursButton">+</span>
                 <span class="nav-button nav-button-close click" id="hoursButtonClose">-</span>
@@ -208,12 +217,12 @@
                   </colgroup>
                   <tbody>
                     {% for day in site.data.hours.hours %}
-                      <tr>
+                      <tr class="day-schedule">
                         <td class="hours-day">{{ day.day }}</td>
                         {% if day.open == false %}
-                        <td class="hours-closed">CLOSED</td>
+                        <td class="hours hours-closed">CLOSED</td>
                         {% else %}
-                        <td class="hours-hours"><span class="hours-from">{{ day.from }}</span> – <span class='hours-to'>{{ day.to }}</span></td>
+                        <td class="hours hours-hours"><span class="hours-from">{{ day.from }}</span> – <span class='hours-to'>{{ day.to }}</span></td>
                         {% endif %}
                       </tr>
                     {% endfor %}
@@ -221,10 +230,10 @@
                 </table>
               </div>
             </div>
-            <div class="divider-single-bar">------------------------------------</div>
+            <div class="divider-single-bar">----------------------------------------</div>
           </section>
           <!-- reservations -->
-          <section class="nav-item reservations" id="reservations">
+          <section class="nav-item reservations" id="reservations" data-href="/reservations">
             <div class="reservations-inner section-inner">
               <div class="section-header">
                 <h1>* reservations</h1>
@@ -237,7 +246,7 @@
                 </p>
               </div>          
             </div>
-          <div class="divider-single-bar">------------------------------------</div>
+          <div class="divider-single-bar">----------------------------------------</div>
           </section>
         </div>
       </div>
@@ -252,7 +261,7 @@
             <p>
               MADELINE'S
             </p>
-            <p>Follow us <span id='ig'><a href="#"></a>@madelinesnyc</span></p>
+            <p>Follow us <span id='ig'><a href="https://www.instagram.com/madelinesnyc/" target="_blank">@madelinesnyc</a></span></p>
             <br>
             <p>THANK YOU :)</p>
           </div>
