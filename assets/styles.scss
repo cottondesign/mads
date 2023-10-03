@@ -541,12 +541,14 @@ body.show-foodAndDrinks {
 
   // show food and drinks
   section#foodAndDrinks{
-    max-height: 2000px;
+    // max-height: 2000px;
+    max-height: 9000px;
     height: auto;
   
     .section-body {
       // transition: none;
-      max-height: 2000px;
+      // max-height: 2000px;
+      max-height: 9000px;
       // DO NOT DELETE:
       overflow: inherit;
     }
