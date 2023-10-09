@@ -23,11 +23,13 @@
       </div>
     </div>
     
-    <!-- <div class="right-click"></div>
-    <div class="left-click"></div> -->
+    <div class="carousel-external-button right-click"></div>
+    <div class="carousel-external-button left-click"></div>
     
     <div class="receipt-container" id="receiptContainer">
       <span class="x">x</span>
+      <span class="external-right-arrow">></span>
+      <span class="external-left-arrow"><</span>
       <div class="receipt-top">
         <!-- header -->
         <div class="receipt-header">
@@ -54,7 +56,8 @@
           <section class="nav-item" id="foodAndDrinks" data-href="/menu">
           <div class="food-and-drinks-inner section-inner">
             <div class="section-header food-and-drinks-header-default">
-              <h1 id="foodAndDrinksText">* food and drinks</h1>
+              <!-- <h1 id="foodAndDrinksText">* food and drinks</h1> -->
+              <h1 id="foodAndDrinksText"></h1>
               <span class="nav-button" id="foodAndDrinksButton">+</span>
               <span class="nav-button nav-button-close" id="foodAndDrinksButtonClose">-</span>
             </div>
@@ -65,11 +68,16 @@
               <div class="food-and-drinks-subnav">
                 <div class="menu-single-bar">----------------------------------------</div>
               {% for menu-category in site.food_and_drinks %}
-              <div class="submenu-nav">
+              <!-- <div class="submenu-nav">
                 <h1><a href="#{{ menu-category.title | slugify}}">{{ menu-category.title }}</a></h1>
                 <button class="submenu-button submenu-close-button">-</button>
               </div>
-              <div class="menu-single-bar">----------------------------------------</div>
+              <div class="menu-single-bar">----------------------------------------</div> -->
+              <a href="#{{ menu-category.title | slugify}}"><div class="submenu-nav">
+                <h1>{{ menu-category.title }}</h1>
+                <button class="submenu-button submenu-close-button">-</button>
+              </div>
+              <div class="menu-single-bar">----------------------------------------</div></a>
               {% endfor %}
               </div>
               {% for menu-category in site.food_and_drinks %}

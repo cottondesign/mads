@@ -50,8 +50,6 @@ body {
   // background: white;
   color: #1f1f1f;
   line-height: var(--navItemHeight);
-
-  
 }
 h1, h2, h3 {
   font-weight: 400;
@@ -93,8 +91,15 @@ button {
   height: 85vh;
   min-height: 700px;
 
+  // height: auto;
+  // min-height: 85vh;
+
   background: white;
+  -webkit-box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.50);
   box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.50);
+
+  // border-bottom: 1px solid white;
+
   position: absolute;
   top: 7.5vh;
   left: 50vw;
@@ -116,6 +121,9 @@ button {
 .receipt-bottom {
   padding: 0 16.582px 63px 16.582px;
   /* padding-bottom: 63px; */
+  padding-top: 50px;
+  // padding-top: 103px;
+
   background: white;
   width: 100%;
 }
@@ -127,18 +135,29 @@ button {
   color: white;
   transition: var(--transition);
   opacity: 0;
+  pointer-events: none;
 }
 .receipt-container.show-x .x {
   opacity: 1;
 }
+.receipt-container {
+  .external-right-arrow,
+  .external-left-arrow {
+    color: white;
+    position: absolute;
+    bottom: calc(var(--linePadding) + var(--dividerHeight));
+    transition: var(--transition);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .external-right-arrow {
+    right: -20px;
+  }
+  .external-left-arrow {
+    left: -20px;
+  }
+}
 
-// .receipt-container.shift-left {
-//   transform: translateX(-52%);
-
-//   #theSpaceButton {
-//     opacity: 1;
-//   }
-// }
 .receipt-container.shift-up {
   top: 6.5vh;
 }
@@ -210,8 +229,6 @@ p {
   height: 0;
   background: white;
   overflow: hidden;
-  // -webkit-overflow: hidden;
-  // white-space: nowrap;
 }
 .divider-double-bar,
 .receipt-sub-header,
@@ -230,17 +247,15 @@ p {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  // opacity: 0.8;
   filter: blur(25px);
   transition: 300ms -webkit-filter linear;
 }
 .carousel {
-  opacity: 0.8;
-
   height: 100%;
   display: flex;
   position: absolute;
   left: 0;
+  opacity: 0.8;
   transition: var(--transition);
   width: fit-content;
 }
@@ -248,40 +263,40 @@ p {
   height: 100vh;
   width: 100vw;
 }
-
-// .carousel-container.hover-blur {
-//   filter: blur(15px);
-// }
-// .carousel-container.no-blur {
-//   filter: blur(0px);
-// }
 /* END OF CAROUSEL IMAGES */
 
 // CAROUSEL NAV
-.right-click,
-.left-click {
+.carousel-container:hover {
+  cursor: pointer;
+}
+.carousel-external-button {
   position: fixed;
   z-index: 0;
   height: 100vh;
   width: 50vw;
-  // left: 0;
-  background: #ff000065;
+  
+  cursor: pointer;
+  display: none;
 }
+body.receipt-moveUp,
+body.show-theSpace {
+  .carousel-external-button {
+    display: block;
+  }
+  .external-right-arrow.show,
+  .external-left-arrow.show {
+    opacity: 1;
+  }
+}
+
 .left-click {
   left: 0;
+  // background: blue;
+  // background: rgba(0, 0, 255, 0.237);
 }
 .right-click {
   right: 0;
 }
-
-// TEST
-.hours-to {
-  // color: red;
-}
-.carousel-container:hover {
-  cursor: pointer;
-}
-// END TEST
 
 .nav {
   margin-top: 18px;
@@ -306,13 +321,6 @@ p {
       left: 0;
       white-space: nowrap;
   }
-
-  // &:hover {
-  //   .nav-button {
-  //     opacity: 1;
-  //     transition: var(--transition);
-  //   }
-  // }
 }
 
 .section-inner {
@@ -320,12 +328,16 @@ p {
   padding-bottom: calc(var(--linePadding) + var(--dividerHeight));
   display: flex;
   flex-direction: column;
-}
 
+  // background: green;
+}
 .section-header {
   display: flex;
   justify-content: space-between;
   height: var(--navItemHeight);
+  transition: var(--transition);
+
+  // background: blue;
 }
 .nav-button {
   padding: 10px;
@@ -342,34 +354,60 @@ p {
   max-height: 0;
   overflow: hidden;
   transition: var(--transition);
+
+  // background: red;
 }
-#events:hover,
-#hours:hover,
-#reservations:hover {
-  max-height: calc(2 * var(--navItemHeight) + 10px);
-  .section-body {
-    max-height: 10px;
-  }
-  // overflow: visible;
-}
-// #hours {
+// #events:hover,
+// #hours:hover,
+// #reservations:hover {
+//   max-height: calc(2 * var(--navItemHeight) + 10px);
+
 //   .section-header {
-//     height: calc(var(--navItemHeight) + 10px);
+//     margin-bottom: 10px;
 //   }
 // }
+
+body.show-events,
+body.show-hours,
+body.show-reservations {
+  .receipt-bottom {
+    padding-top: 30px;
+  }
+}
+
+body.show-events #events,
+body.show-hours #hours,
+body.show-reservations #reservations {
+  .section-header {
+    margin-bottom: 10px;
+  }
+}
+body.receipt-moveUp {
+  #events,
+  #hours,
+  #reservations {
+    .section-header {
+      margin-bottom: 0px;
+    }
+  }
+}
 
 #events,
 #hours,
 #reservations {
   .section-body{
+
+    margin-left: 0;
+    padding-left: var(--tabWidth);
+
     :first-child {
-      margin-top: var(--navItemHeight);
+      // margin-top: var(--navItemHeight);
+      margin-top: calc(var(--navItemHeight) - 10px);
     }
   }
 }
 
 .receipt-footer {
-  // padding-top: 100px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -389,7 +427,6 @@ p {
 }
 
 
-
 /* FOOD AND DRINKS */
 #foodAndDrinks .section-body{
   margin-left: 0;
@@ -399,10 +436,7 @@ p {
   // overflow: hidden;
 }
 .food-and-drinks-inner {
-  padding-bottom: 0;
-}
-.food-and-drinks-header-default {
-  height: calc(var(--navItemHeight) + var(--linePadding) + var(--dividerHeight));
+  padding-top: 0;
 }
 .food-and-drinks-subnav {
   position: sticky;
@@ -410,8 +444,13 @@ p {
   top: -154px;
   z-index: 1;
 
-  div:last-of-type {
-    background: transparent;
+  a:last-of-type {
+    .menu-single-bar {
+      background: transparent;
+    }
+  }
+  a {
+    background: red;
   }
 }
 .food-and-drinks-subnav + .food-and-drinks-subheader {
@@ -456,7 +495,6 @@ p {
   };
 }
 
-
 .menu-subheader-top-nav {
   padding-top: var(--navItemHeight);
   padding-bottom: var(--linePadding);
@@ -500,6 +538,11 @@ p {
   button {
     visibility: visible;
     opacity: 1;
+    transition: var(--transition);
+  }
+
+  .food-and-drinks-subheader-title {
+    cursor: pointer;
   }
 }
 
@@ -538,8 +581,20 @@ p {
   }
 }
 
+.food-and-drinks-subnav .menu-single-bar:first-of-type {
+  margin-top: var(--linePadding);
+}
+
+.food-and-drinks-header-default {
+  // margin-bottom: 10px;
+}
+
 /* FOOD AND DRINKS STYLES */
 body.show-foodAndDrinks {
+
+  .food-and-drinks-subnav .menu-single-bar:first-of-type {
+    margin-top: 0;
+  }
 
   // show food and drinks
   section#foodAndDrinks{
@@ -588,11 +643,10 @@ body.show-foodAndDrinks {
   .food-and-drinks-subnav.open {
     top: 44px;
     top: 43px;
+  }
 
-    // div:first-child {
-    //   padding-top: 2px;
-    //   height: calc(var(--dividerHeight) + 2px);
-    // }
+  .receipt-bottom {
+    padding-top: 50px;
   }
 }
 body.show-foodAndDrinks.receipt-moveUp {
@@ -613,6 +667,11 @@ body.show-foodAndDrinks.receipt-moveUp {
 // #theSpace .section-body .space-single-bar:last-child {
 //   display: none;
 // }
+#theSpace {
+  .section-body {
+    margin-left: 0;
+  }
+}
 .the-space-arrows {
   display: flex;
   justify-content: space-between;
@@ -658,9 +717,6 @@ body.show-foodAndDrinks.receipt-moveUp {
 body.show-theSpace #theSpaceHeader h1:before {
   content: "< ";
 }
-// #theSpaceButton:after {
-//   content: "-";
-// }
 #theSpaceButtonClose {
   opacity: 0;
 }
@@ -673,12 +729,6 @@ body.show-theSpace #theSpaceHeader h1:before {
 
 
 @media screen and (min-width: 430px) {
-  // .receipt-container {
-  //   top: 7.5vh;
-  //   left: 50vw;
-  //   transform: translateX(-50%);
-  // }
-  
   body.show-theSpace {
     .receipt-container {
       left: calc(7.5vh + 195px);
@@ -691,6 +741,9 @@ body.show-theSpace #theSpaceHeader h1:before {
     opacity: 0;
     transition: var(--transition);
   }
+  .section-body {
+    padding-left: var(--tabWidth);
+  }
 
   }
   .receipt-container.shift-left {
@@ -701,13 +754,9 @@ body.show-theSpace #theSpaceHeader h1:before {
     }
   }
 
-  body.show-events {
-    .receipt-container {
-      height: auto;
-    }
-  }
-
-  body.show-hours {
+  body.show-events,
+  body.show-hours,
+  body.show-reservations {
     .receipt-container {
       height: auto;
     }
@@ -715,20 +764,7 @@ body.show-theSpace #theSpaceHeader h1:before {
 }
 // when space is open
 body.show-theSpace {
-  // hide other elements
-  // .receipt-sub-header,
-  // .nav-item:not(#theSpace),
-  // .sub-header-single-bar {
-  //   margin-top: 0px;
-  //   max-height: 0;
-  //   opacity: 0;
-  //   transition: var(--transition);
-  // }
 
-  // receipt container
-  // .receipt-container {
-  //   left: calc(7.5vh + 195px);
-  // }
   .nav {
     margin-top: 0px;
   }
@@ -737,6 +773,7 @@ body.show-theSpace {
     height: 0;
   }
   .receipt-bottom {
+    padding-top: 0px;
     padding-bottom: 42px;
     background: white;
   }
@@ -840,12 +877,6 @@ body.show-events {
       cursor: default;
     }
   }
-  // .receipt-container {
-  //   height: auto;
-  // }
-  // .receipt-footer {
-  //   padding-top: 128px;
-  // }
 
 }
 body.show-events.receipt-moveUp {
@@ -897,9 +928,6 @@ body.show-hours {
       cursor: default;
     }
   }
-  // .receipt-container {
-  //   height: auto;
-  // }
 }
 body.show-hours.receipt-moveUp {
   section#hours {
@@ -944,6 +972,28 @@ body.show-reservations.receipt-moveUp {
   }
 }
 
+// .receipt-container {
+//   animation: on-load-receipt-move-up 1500ms;
+// }
+// .carousel-container {
+//   animation: on-load-carousel-unblur 1500ms;
+// }
+// @keyframes on-load-receipt-move-up {
+//   0% {top: 79.5vh;}
+//   33% {top: 79.5vh;}
+//   100% {top: 7.5vh;}
+//   0% {top: calc(100vh - 204px);}
+//   33% {top: calc(100vh - 204px);}
+//   100% {top: 7.5vh;}
+// }
+// @keyframes on-load-carousel-unblur {
+//   0% {filter: blur(0px);}
+//   33% {filter: blur(0px);}
+//   100% {filter: blur(25px);}
+// }
+
+
+
 @keyframes arrow-right {
   0% {padding-right: var(--charWidth)}
   49% {padding-right: var(--charWidth)}
@@ -954,6 +1004,20 @@ body.show-reservations.receipt-moveUp {
   49% {padding-left: var(--charWidth)}
   50% {padding-left: 0;}
 }
+
+
+#foodAndDrinksText:after {
+  content: '* food and drinks';
+}
+@keyframes food-and-drinks-hover {
+  0% {content: "!! WINE !!"}
+  25% {content: "!! BEER !!"}
+  50% {content: "!! COCKTAILS !!"}
+  75% {content: "!! FOOD !!"}
+  100% {content: "!! WINE !!"}
+}
+
+
 
 // all hover states for desktop only
 @media (hover: hover) and (pointer: fine) {
@@ -981,7 +1045,6 @@ body.show-reservations.receipt-moveUp {
       }
   }
 
-
   #theSpaceHeader:hover .nav-button-close {
     opacity: 1;
   }
@@ -997,6 +1060,28 @@ body.show-reservations.receipt-moveUp {
       opacity: 1;
     }
   }
+
+  #events:hover,
+  #hours:hover,
+  #reservations:hover {
+    max-height: calc(2 * var(--navItemHeight) + 10px);
+
+    .section-header {
+      margin-bottom: 10px;
+    }
+  }
+
+  #foodAndDrinks:hover {
+    #foodAndDrinksText:after {
+      animation: food-and-drinks-hover 600ms  linear infinite;
+    }
+  }
+  body.receipt-moveUp #foodAndDrinks:hover {
+    #foodAndDrinksText:after {
+      animation: none;
+    }
+  }
+
 
 }
 //  end of hover states
@@ -1081,12 +1166,6 @@ body.show-reservations.receipt-moveUp {
       height: 100%;
       height: 100vh;
     }  
-
-    // body.show-hours {
-    //   .receipt-container {
-    //     height: 100%;
-    //   }
-    // }
   }
 
   // FOOD AND DRINKS MEDIA QUERY

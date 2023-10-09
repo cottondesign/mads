@@ -159,8 +159,8 @@ for (navSection of navSections) {
         }
         // Open section
         
-        if (!e.target.classList.contains('dont-click')) {
-        // if (!e.target.closest('.section-body')) {
+        // if (!e.target.classList.contains('dont-click')) {
+        if (!e.target.closest('.section-body')) {
 
           console.log("not dont click");
 
@@ -310,20 +310,37 @@ function openSection(section){
 // Food And Drinks JS
 // TO DO: hide submenu on scroll?
 
-const submenuOpenButtons = document.querySelectorAll('.submenu-open-button');
+const subheaderTitles = document.querySelectorAll('.food-and-drinks-subheader-title');
+// const submenuOpenButtons = document.querySelectorAll('.submenu-open-button');
 const submenuCloseButton = document.querySelector('.submenu-close-button');
 const subMenu = document.querySelector('.food-and-drinks-subnav');
 
-// open submenu
-for (submenuOpenButton of submenuOpenButtons) {
-  submenuOpenButton.addEventListener("click", function() {
-    document.querySelector('.food-and-drinks-subnav').classList.add('open');
-    submenuCloseButton.classList.add('show');
+// new open submenu 
+for (subheaderTitle of subheaderTitles) {
+
+  subheaderTitle.addEventListener("click", function(e) {
+    // if (e.target.closest('.food-and-drinks-subheader-title')) {
+    if (e.target.closest('.food-and-drinks-subheader').classList.contains('show')) {
+      document.querySelector('.food-and-drinks-subnav').classList.add('open');
+      submenuCloseButton.classList.add('show');
+    }
   })
 }
+
+
+// open submenu
+// for (submenuOpenButton of submenuOpenButtons) {
+//   submenuOpenButton.addEventListener("click", function() {
+//     document.querySelector('.food-and-drinks-subnav').classList.add('open');
+//     submenuCloseButton.classList.add('show');
+//   })
+// }
+
 subMenu.addEventListener("click", function(e) {
   // close submenu when clicking on anchor link or '-' button
-  if(e.target.tagName == 'A' || e.target === submenuCloseButton) {
+  if(e.target.closest('a') || e.target === submenuCloseButton) {
+    console.log('true');
+  // if(e.target.tagName == 'A' || e.target === submenuCloseButton) {
   document.querySelector('.food-and-drinks-subnav').classList.remove('open');
   submenuCloseButton.classList.remove('show');
   }
@@ -336,20 +353,18 @@ function showOnScroll() {
     let offset = subheader.getBoundingClientRect();
     if (offset.y < 1) {
         subheader.classList.add('show');
-        console.log("show added")
-        console.log(subheader)
+        // console.log("show added");
     } else {
         subheader.classList.remove('show');
         // console.log("show removed")
-        // console.log(subheader);
     }
   }
+  subMenu.classList.remove('open');
+  submenuCloseButton.classList.remove('show');
 }
 window.addEventListener('scroll', showOnScroll);
 
 // END OF FOOD AND DRINKS JS
-
-console.log("test")
 
 
 
@@ -363,6 +378,106 @@ console.log("test")
 // CAROUSEL JS
 // let numImages = 13;
 
+// external nav
+const carouselRightClick = document.querySelector('.right-click');
+const carouselLeftClick = document.querySelector('.left-click');
+const externalRightArrow = document.querySelector('.external-right-arrow');
+const externalLeftArrow = document.querySelector('.external-left-arrow');
+
+carouselRightClick.addEventListener('mouseover', function() {
+  if (!document.body.classList.contains('show-theSpace')) {
+    externalRightArrow.classList.add('show');
+  }
+  if (document.body.classList.contains('show-theSpace')) {
+    theSpaceRightArrow.classList.add('right-click-hover');
+  }
+})
+carouselRightClick.addEventListener('mouseleave', function() {
+  externalRightArrow.classList.remove('show');
+  theSpaceRightArrow.classList.remove('right-click-hover');
+})
+carouselLeftClick.addEventListener('mouseover', function() {
+  if (!document.body.classList.contains('show-theSpace')) {
+    externalLeftArrow.classList.add('show');
+  }
+  if (document.body.classList.contains('show-theSpace')) {
+    theSpaceLeftArrow.classList.add('left-click-hover');
+  }
+})
+carouselLeftClick.addEventListener('mouseleave', function() {
+  externalLeftArrow.classList.remove('show');
+  theSpaceLeftArrow.classList.remove('left-click-hover');
+})
+
+
+
+// click functionality
+carouselLeftClick.addEventListener("click", function() {
+  if (carouselCounter == 0) {
+    carouselCounter = numImages - 1;
+    currentIndex = carouselCounter;
+    carousel.style.transition = 'none';
+    carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+
+    setTimeout(function() {
+      carouselCounter--;
+      carousel.style.transition = '300ms';
+      carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+      // console.log('timeout300');
+    }, 0)
+  } else {
+    carouselCounter--;
+    currentIndex = carouselCounter + 1;
+    carousel.style.transition = '300ms';
+    carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+
+  }
+  // TEST
+  toggleSpaceDescriptions();
+  // END OF TEST
+  console.log('Current Index'+currentIndex);
+  })
+
+  carouselRightClick.addEventListener("click", function() {
+    if (carouselCounter == numImages - 1) {
+      carouselCounter = numImages;
+      carousel.style.transition = 'none';
+      carousel.style.left = 0;
+  
+      setTimeout(function() {
+        carouselCounter = 1;
+        carousel.style.transition = '300ms';
+        carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+        // console.log('timeout300');
+      }, 0)
+      currentIndex = 2;
+  
+    } else {
+      carouselCounter++;
+      currentIndex = carouselCounter+1;
+      if (currentIndex > numImages - 1) {
+        currentIndex = 1;
+      }
+  
+      carousel.style.transition = '300ms';
+      carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+    }
+  
+    // TEST
+    toggleSpaceDescriptions();
+    // END OF TEST
+  
+    console.log('Current Index'+currentIndex);
+    console.log('CarouselCounter'+carouselCounter);
+  })
+// end of click functionality
+
+
+const theSpaceLeftArrow = document.querySelector('.arrow-left');
+const theSpaceRightArrow = document.querySelector('.arrow-right');
+
+// end of external nav
+
 
 
 let numImages = document.getElementById("carousel").childElementCount;
@@ -374,11 +489,14 @@ const carousel = document.getElementById('carousel');
 let currentIndex = 1;
 let carouselCounter = 0;
 
-console.log(carouselContainer.scrollLeft);
-console.log(carousel.scrollLeft);
+// console.log(carouselContainer.scrollLeft);
+// console.log(carousel.scrollLeft);
+
 // carousel.addEventListener("scroll", function() {
 //   console.log(carouselContainer.scrollLeft);
 // })
+
+
 let carouselScroll;
 let swipeCarouselCounter;
 document.addEventListener("scroll", (event) => {
@@ -386,7 +504,7 @@ document.addEventListener("scroll", (event) => {
     let carouselRect = carousel.getBoundingClientRect();
     // console.log(carouselRect.left);
     if (carouselRect.left % window.innerWidth == 0) {
-      console.log(carouselRect.left);
+      // console.log(carouselRect.left);
       swipeCarouselCounter = carouselRect.left/window.innerWidth * -1;
 
       // if (swipeCarouselCounter == 13) {
@@ -397,14 +515,17 @@ document.addEventListener("scroll", (event) => {
         // window.scrollBy(-carouselRect.width, 0);
       // }
       carouselCounter = swipeCarouselCounter;
-      console.log(carouselRect.left/window.innerWidth);
+      // console.log(carouselRect.left/window.innerWidth);
     }
     // let carouselRect = carousel.getBoundingClientRect();
     // carouselCounter = Math.round(carouselRect.left/window.innerWidth * -1)
+
 });
 
-const theSpaceLeftArrow = document.querySelector('.arrow-left');
-const theSpaceRightArrow = document.querySelector('.arrow-right');
+
+
+
+
 
 theSpaceLeftArrow.addEventListener("click", function() {
   if (carouselCounter == 0) {
@@ -455,18 +576,6 @@ theSpaceRightArrow.addEventListener("click", function() {
 
     carousel.style.transition = '300ms';
     carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-
-    // carousel.scrollBy({
-    //   left: window.innerWidth,
-    //   behavior: "smooth",
-    // });
-
-    // let left = window.innerWidth * carouselCounter;
-    // console.log(left);
-    // window.scrollTo({
-    //   left: (left),
-    //   behavior: "smooth",
-    // });
 
   }
 
@@ -547,7 +656,12 @@ carouselContainer.addEventListener("click", function() {
 
     // 37 pixels from the bottom of the receipt
     console.log(receiptContainer.offsetHeight);
-    receiptContainer.style.top = -receiptContainer.offsetHeight + 37 + 'px';
+
+    if (document.body.classList.contains("show-foodAndDrinks")) {
+      receiptContainer.style.top = -receiptContainer.offsetHeight + 47.5 + 'px';
+    } else {
+      receiptContainer.style.top = -receiptContainer.offsetHeight + 49 + 'px';
+    }
 
     document.body.classList.add('receipt-moveUp');
     receiptContainer.classList.add('cursor-pointer');
@@ -571,7 +685,7 @@ carouselContainer.addEventListener("click", function() {
 // Once the receipt is up
 receiptContainer.addEventListener("mouseover", function() {
   if (document.body.classList.contains("receipt-moveUp")) {
-    receiptContainer.style.top = -receiptContainer.offsetHeight + 47 + 'px';
+    receiptContainer.style.top = -receiptContainer.offsetHeight + 49 + 'px';
     carouselContainer.classList.remove("no-blur");
     carouselContainer.classList.add('hover-blur');
 
@@ -581,7 +695,14 @@ receiptContainer.addEventListener("mouseover", function() {
 
 receiptContainer.addEventListener("mouseleave", function() {
   if (document.body.classList.contains("receipt-moveUp")) {
-    receiptContainer.style.top = -receiptContainer.offsetHeight + 37 + 'px';
+    // receiptContainer.style.top = -receiptContainer.offsetHeight + 39 + 'px';
+
+    if (document.body.classList.contains("show-foodAndDrinks")) {
+      receiptContainer.style.top = -receiptContainer.offsetHeight + 39.5 + 'px';
+    } else {
+      receiptContainer.style.top = -receiptContainer.offsetHeight + 39 + 'px';
+    }
+
     carouselContainer.classList.add("no-blur");
     carouselContainer.classList.remove('hover-blur');
 
@@ -604,44 +725,15 @@ receiptContainer.addEventListener("click", function(e) {
   }
 })
 
-// FOOD AND DRINKS HOVER INTERACTION
-// to do: figure out timing
-// can it start immediately?
 
-const foodAndDrinksText = document.querySelector('#foodAndDrinksText');
-const foodAndDrinks = document.querySelector('#foodAndDrinks');
 
-function foodAndDrinksHover() {
-  const foodAndDrinksHoverArr = ['!! FOOD !!', '!! COCKTAILS !!', '!! BEER !!', '!! WINE !!'];
-
-  foodAndDrinksText.innerHTML = foodAndDrinksHoverArr[counter];
-  counter++;
-  if (counter == foodAndDrinksHoverArr.length) {
-    counter = 0;
-  }
-}
-
-let mouseIsOver = false;
-let foodAndDrinksInterval;
-let counter = 0;
-  if (matchMedia('(pointer:fine)').matches) {
-
-  foodAndDrinks.addEventListener('mouseover', function() {
-    if (!mouseIsOver && !document.body.classList.contains('receipt-moveUp')) {
-      foodAndDrinksInterval = setInterval(foodAndDrinksHover, 150);
-      mouseIsOver = true;
-    }
-  })
-  foodAndDrinks.addEventListener('mouseleave', function() {
-    mouseIsOver = false;
-    clearInterval(foodAndDrinksInterval);
-    foodAndDrinksText.innerHTML = '* food and drinks';
-  })
-}
 
 // window.addEventListener('resize', function () {
 //   receiptContainer.style.transition = '0s';
 // })
+
+
+
 
 function closeCurrentSection(sectionId) {
   document.body.classList.remove('show-' + sectionId);
@@ -656,4 +748,10 @@ function openPreviousSection() {
     document.body.classList.add('show-' + currentId);
     document.getElementById(currentId).classList.add('show-close-button');
   }
+}
+
+
+receiptMoveUpOnLoad();
+function receiptMoveUpOnLoad() {
+  receiptContainer.classList.add('position-default');
 }
