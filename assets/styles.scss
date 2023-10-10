@@ -642,7 +642,7 @@ body.show-foodAndDrinks {
   }
   .food-and-drinks-subnav.open {
     top: 44px;
-    top: 43px;
+    // top: 43px;
   }
 
   .receipt-bottom {
@@ -972,25 +972,28 @@ body.show-reservations.receipt-moveUp {
   }
 }
 
-// .receipt-container {
-//   animation: on-load-receipt-move-up 1500ms;
-// }
-// .carousel-container {
-//   animation: on-load-carousel-unblur 1500ms;
-// }
-// @keyframes on-load-receipt-move-up {
-//   0% {top: 79.5vh;}
-//   33% {top: 79.5vh;}
-//   100% {top: 7.5vh;}
-//   0% {top: calc(100vh - 204px);}
-//   33% {top: calc(100vh - 204px);}
-//   100% {top: 7.5vh;}
-// }
-// @keyframes on-load-carousel-unblur {
-//   0% {filter: blur(0px);}
-//   33% {filter: blur(0px);}
-//   100% {filter: blur(25px);}
-// }
+.receipt-container {
+  animation: on-load-receipt-move-up 1500ms;
+}
+.carousel-container {
+  animation: on-load-carousel-unblur 1500ms;
+}
+@keyframes on-load-receipt-move-up {
+  // 0% {top: 79.5vh;}
+  // 33% {top: 79.5vh;}
+  // 100% {top: 7.5vh;}
+  0% {top: calc(100vh - 204px);
+  transform: translateX(-50%);}
+  33% {top: calc(100vh - 204px);
+    transform: translateX(-50%);}
+  100% {top: 7.5vh;
+    transform: translateX(-50%);}
+}
+@keyframes on-load-carousel-unblur {
+  0% {filter: blur(0px);}
+  33% {filter: blur(0px);}
+  100% {filter: blur(25px);}
+}
 
 
 
