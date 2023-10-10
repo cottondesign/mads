@@ -240,6 +240,10 @@ p {
   pointer-events: all;
   cursor: pointer;
 }
+.signature-bar {
+  width: 100%;
+  overflow: hidden;
+}
 
 /* CAROUSEL IMAGES */
 .carousel-container {
