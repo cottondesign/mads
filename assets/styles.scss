@@ -126,6 +126,7 @@ button {
 
   background: white;
   width: 100%;
+  transition: var(--transition);
 }
 .receipt-container .x {
   text-transform: uppercase;
