@@ -729,6 +729,16 @@ body.show-theSpace #theSpaceHeader h1:before {
 
 
 @media screen and (min-width: 430px) {
+  .receipt-container {
+    animation: on-load-receipt-move-up 1500ms;
+  }
+  .carousel-container {
+    animation: on-load-carousel-unblur 1500ms;
+  }
+
+
+
+
   body.show-theSpace {
     .receipt-container {
       left: calc(7.5vh + 195px);
@@ -972,12 +982,7 @@ body.show-reservations.receipt-moveUp {
   }
 }
 
-.receipt-container {
-  animation: on-load-receipt-move-up 1500ms;
-}
-.carousel-container {
-  animation: on-load-carousel-unblur 1500ms;
-}
+
 @keyframes on-load-receipt-move-up {
   // 0% {top: 79.5vh;}
   // 33% {top: 79.5vh;}
