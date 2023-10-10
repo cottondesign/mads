@@ -1124,7 +1124,9 @@ body.show-reservations.receipt-moveUp {
     }
 
     .receipt-container {
-      .x {
+      .x,
+      .external-right-arrow,
+      .external-left-arrow {
         display: none;
       }
     }
