@@ -5,15 +5,19 @@
 
   {% if page.title %}
   <title>{{page.title}} - {{site.title}}</title>
+  <meta property="twitter:image:alt" content="{{page.title}} - {{site.title}}">
+  <meta property="og:site_name" content="{{page.title}} - {{site.title}}">
+  <meta property="og:title" content="{{page.title}} - {{site.title}}">
+  <meta property="twitter:title" content="{{page.title}} - {{site.title}}">
   {% else %}
   <title>{{site.title}}</title>
-  {% endif %}
-
-  <!-- META CONTENT -->
-  <!-- <meta property="twitter:image:alt" content="{{site.title}}">
+  <meta property="twitter:image:alt" content="{{site.title}}">
   <meta property="og:site_name" content="{{site.title}}">
   <meta property="og:title" content="{{site.title}}">
   <meta property="twitter:title" content="{{site.title}}">
+  {% endif %}
+
+  <!-- META CONTENT -->
 
   <meta name="description" content="{{site.description}}">
   <meta property="og:description" content="{{site.description}}">
@@ -21,8 +25,8 @@
 
   <meta property="og:url" content="madelinesnyc.com">
 
-  <meta property="twitter:image" content="https://mads-full.netlify.app/assets/og-image.jpg">
-  <meta property="og:image" content="https://mads-full.netlify.app/assets/og-image.jpg"> -->
+  <meta property="twitter:image" content="{{site.baseurl}}/assets/og-image.jpg">
+  <meta property="og:image" content="{{site.baseurl}}/assets/og-image.jpg">
 
   <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
