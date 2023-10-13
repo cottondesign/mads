@@ -1,15 +1,35 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   {% if page.title %}
   <title>{{page.title}} - {{site.title}}</title>
-  <!-- <title>Madeline's</title> -->
   {% else %}
   <title>{{site.title}}</title>
-  <!-- <title>Madeline's</title> -->
   {% endif %}
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- META CONTENT -->
+  <!-- <meta property="twitter:image:alt" content="{{site.title}}">
+  <meta property="og:site_name" content="{{site.title}}">
+  <meta property="og:title" content="{{site.title}}">
+  <meta property="twitter:title" content="{{site.title}}">
+
+  <meta name="description" content="{{site.description}}">
+  <meta property="og:description" content="{{site.description}}">
+  <meta property="twitter:description" content="{{site.description}}">
+
+  <meta property="og:url" content="madelinesnyc.com">
+
+  <meta property="twitter:image" content="https://mads-full.netlify.app/assets/og-image.jpg">
+  <meta property="og:image" content="https://mads-full.netlify.app/assets/og-image.jpg"> -->
+
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/assets/styles.css">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

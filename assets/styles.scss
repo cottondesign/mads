@@ -1117,9 +1117,6 @@ body.show-reservations.receipt-moveUp {
     body {
       background: white;
     }
-    body::-webkit-scrollbar {
-      display: none;
-    }
     html {
       scroll-snap-type: x mandatory;
     }
