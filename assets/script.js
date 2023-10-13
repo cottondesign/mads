@@ -26,21 +26,18 @@ for (let i = 0; i < dayElements.length; i++) {
 
 for (let i = 0; i < schedule.length; i++) {
   if (schedule[i].day == currentDay) {
-    console.log(schedule[i].day);
+    // console.log(schedule[i].day);
 
     if (i == 0) {
       if ((currentHour >= (schedule[i].from + 12)) || (currentHour < schedule[schedule.length-1].to)) {
         storeStatus.innerHTML = '* open now ';
         storeStatus.classList.add('store-open');
         if (currentHour < schedule[schedule.length-1].to) {
-          // console.log('open closes ' + (schedule[schedule.length-1].to));
           storeClosingTime.innerHTML = `closes ${schedule[schedule.length-1].to}am`;
         } else {
-          // console.log('open closes ' + (schedule[i].to));
           storeClosingTime.innerHTML = `closes ${schedule[i].to}am`;
         }
       } else if (schedule[i].from != 'CLOSED') {
-        // console.log('closed opens ' + schedule[i].from);
         storeStatus.innerHTML = '* closed ';
         storeClosingTime.innerHTML = `opens ${schedule[i].from}`;
       } else {
@@ -50,44 +47,27 @@ for (let i = 0; i < schedule.length; i++) {
       storeStatus.innerHTML = '* open now ';
       storeStatus.classList.add('store-open');
       if (currentHour < schedule[i-1].to) {
-        // console.log('open closes ' + (schedule[i-1].to));
         storeClosingTime.innerHTML = `closes ${schedule[i-1].to}am`;
       } else {
-        // console.log('open closes ' + (schedule[i].to));
         storeClosingTime.innerHTML = `closes ${schedule[i].to}am`;
       }
     } else if (schedule[i].from != 'CLOSED') {
-      // console.log('closed opens ' + schedule[i].from);
       storeStatus.innerHTML = '* closed ';
       storeClosingTime.innerHTML = `opens ${schedule[i].from}pm`;
     } else {
       firstOpens();
     }
-
   }
 }
-
 function firstOpens() {
   for (let i=0; i < schedule.length; i++) {
     if (schedule[i].from != 'CLOSED') {
-      // console.log('Closed Opens ' + schedule[i].day + ' ' + schedule[i].from);
       storeStatus.innerHTML = '* closed ';
       storeClosingTime.innerHTML = `opens ${schedule[i].day} ${schedule[i].from}pm`;
       break;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // The Space JS
 const spaceSections = document.querySelectorAll(".space-section");
@@ -118,14 +98,10 @@ for (navSection of navSections) {
           document.body.classList.toggle('show-' + sectionId);
 
           window.addEventListener('popstate', function(event) {
-            
-            // document.body.classList.remove('show-' + sectionId);
             if (!window.location.href.includes("#")){
             closeCurrentSection(sectionId);
             openPreviousSection();
             }
-            
-            // e.target.closest("section").classList.remove('show-close-button');
           })
 
         }
@@ -143,11 +119,8 @@ for (navSection of navSections) {
           document.body.classList.toggle('show-' + sectionId);
 
           window.addEventListener('popstate', function(event) {
-            // document.body.classList.remove('show-' + sectionId);
             closeCurrentSection(sectionId);
             openPreviousSection();
-
-            // e.target.closest("section").classList.remove('show-close-button');
           })
         }
       } else {
@@ -158,12 +131,7 @@ for (navSection of navSections) {
           hideCloseButton();
         }
         // Open section
-        
-        // if (!e.target.classList.contains('dont-click')) {
         if (!e.target.closest('.section-body')) {
-
-          console.log("not dont click");
-
           if (document.body.classList.contains('show-' + sectionId)) {
             history.pushState(null, "", "/");
           } else {
@@ -174,9 +142,6 @@ for (navSection of navSections) {
 
           // Listen for popstate event
           window.addEventListener('popstate', function(event) {
-            // document.body.classList.remove('show-' + sectionId);
-            // e.target.closest("section").classList.remove('show-close-button');
-
             if (!window.location.href.includes("#")){
               closeCurrentSection(sectionId);
               hideCloseButton();
@@ -205,8 +170,10 @@ for (navSection of navSections) {
   }
   });
 }
-
-
+if (document.body.classList != '') {
+  let currentId = document.body.classList.value.split('-')[1];
+  document.querySelector(`#${currentId}`).classList.add('show-close-button');
+}
 
 
 
@@ -283,7 +250,6 @@ function getCurrentSectionId() {
   let currentSectionId = currentSectionIdArray[1];
   return currentSectionId;
 }
-
 function hideCloseButton() {
   for (navSection of navSections) {
     navSection.classList.remove('show-close-button');
@@ -305,11 +271,7 @@ function openSection(section){
 
 
 
-
-
 // Food And Drinks JS
-// TO DO: hide submenu on scroll?
-
 const subheaderTitles = document.querySelectorAll('.food-and-drinks-subheader-title');
 // const submenuOpenButtons = document.querySelectorAll('.submenu-open-button');
 const submenuCloseButton = document.querySelector('.submenu-close-button');
@@ -327,20 +289,10 @@ for (subheaderTitle of subheaderTitles) {
   })
 }
 
-
-// open submenu
-// for (submenuOpenButton of submenuOpenButtons) {
-//   submenuOpenButton.addEventListener("click", function() {
-//     document.querySelector('.food-and-drinks-subnav').classList.add('open');
-//     submenuCloseButton.classList.add('show');
-//   })
-// }
-
 subMenu.addEventListener("click", function(e) {
   // close submenu when clicking on anchor link or '-' button
   if(e.target.closest('a') || e.target === submenuCloseButton) {
     console.log('true');
-  // if(e.target.tagName == 'A' || e.target === submenuCloseButton) {
   document.querySelector('.food-and-drinks-subnav').classList.remove('open');
   submenuCloseButton.classList.remove('show');
   }
@@ -363,12 +315,7 @@ function showOnScroll() {
   submenuCloseButton.classList.remove('show');
 }
 window.addEventListener('scroll', showOnScroll);
-
 // END OF FOOD AND DRINKS JS
-
-
-
-
 
 
 
@@ -408,8 +355,6 @@ carouselLeftClick.addEventListener('mouseleave', function() {
   externalLeftArrow.classList.remove('show');
   theSpaceLeftArrow.classList.remove('left-click-hover');
 })
-
-
 
 // click functionality
 carouselLeftClick.addEventListener("click", function() {
@@ -472,10 +417,8 @@ carouselLeftClick.addEventListener("click", function() {
   })
 // end of click functionality
 
-
 const theSpaceLeftArrow = document.querySelector('.arrow-left');
 const theSpaceRightArrow = document.querySelector('.arrow-right');
-
 // end of external nav
 
 
@@ -633,7 +576,6 @@ carouselContainer.addEventListener("mouseover", function() {
     receiptContainer.classList.add('show-x');
   } else if (document.body.classList.length == 0) {
     // if no section is open:
-    console.log('nothing open');
     receiptContainer.classList.add('shift-left');
     carouselContainer.classList.add('hover-blur');
   }
@@ -679,9 +621,9 @@ carouselContainer.addEventListener("click", function() {
           closeCurrentSection('theSpace');
           openPreviousSection();
       })
-
   }
 })
+
 // Once the receipt is up
 receiptContainer.addEventListener("mouseover", function() {
   if (document.body.classList.contains("receipt-moveUp")) {
@@ -695,8 +637,6 @@ receiptContainer.addEventListener("mouseover", function() {
 
 receiptContainer.addEventListener("mouseleave", function() {
   if (document.body.classList.contains("receipt-moveUp")) {
-    // receiptContainer.style.top = -receiptContainer.offsetHeight + 39 + 'px';
-
     if (document.body.classList.contains("show-foodAndDrinks")) {
       receiptContainer.style.top = -receiptContainer.offsetHeight + 39.5 + 'px';
     } else {
@@ -725,23 +665,11 @@ receiptContainer.addEventListener("click", function(e) {
   }
 })
 
-
-
-
-// window.addEventListener('resize', function () {
-//   receiptContainer.style.transition = '0s';
-// })
-
-
-
-
 function closeCurrentSection(sectionId) {
   document.body.classList.remove('show-' + sectionId);
 }
 function openPreviousSection() {
   let permalink = '/' + window.location.href.split("/")[3];
-  // console.log(permalink);
-  // console.log(document.querySelector(`[data-href="${permalink}"]`));
   if (permalink != '/' && document.querySelector(`[data-href="${permalink}"]`) != null) {
     let dataHref = '[data-href="' + permalink + '"]';
     let currentId = document.querySelector(dataHref).getAttribute('id');
@@ -750,8 +678,12 @@ function openPreviousSection() {
   }
 }
 
-
 receiptMoveUpOnLoad();
 function receiptMoveUpOnLoad() {
   receiptContainer.classList.add('position-default');
 }
+
+// window.addEventListener('resize', function () {
+//   receiptContainer.style.transition = '0s';
+// })
+

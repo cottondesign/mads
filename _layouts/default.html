@@ -56,7 +56,6 @@
           <section class="nav-item" id="foodAndDrinks" data-href="/menu">
           <div class="food-and-drinks-inner section-inner">
             <div class="section-header food-and-drinks-header-default">
-              <!-- <h1 id="foodAndDrinksText">* food and drinks</h1> -->
               <h1 id="foodAndDrinksText"></h1>
               <span class="nav-button" id="foodAndDrinksButton">+</span>
               <span class="nav-button nav-button-close" id="foodAndDrinksButtonClose">-</span>
@@ -68,11 +67,6 @@
               <div class="food-and-drinks-subnav">
                 <div class="menu-single-bar">----------------------------------------</div>
               {% for menu-category in site.food_and_drinks %}
-              <!-- <div class="submenu-nav">
-                <h1><a href="#{{ menu-category.title | slugify}}">{{ menu-category.title }}</a></h1>
-                <button class="submenu-button submenu-close-button">-</button>
-              </div>
-              <div class="menu-single-bar">----------------------------------------</div> -->
               <a href="#{{ menu-category.title | slugify}}"><div class="submenu-nav">
                 <h1>{{ menu-category.title }}</h1>
                 <button class="submenu-button submenu-close-button">-</button>
@@ -81,14 +75,8 @@
               {% endfor %}
               </div>
               {% for menu-category in site.food_and_drinks %}
-                    <!-- <div class="food-and-drinks-subheader" id="{{ menu-category.title | slugify }}"> -->
-
                     <div class="food-and-drinks-subheader-ghost" id="{{ menu-category.title | slugify }}"></div>
-                    <div class="food-and-drinks-subheader" >
-
-
-
-
+                    <div class="food-and-drinks-subheader">
                       <div class="menu-subheader-top-nav">
                         <span class="food-and-drinks-back-button click"><</span>
                       </div>
@@ -140,7 +128,6 @@
             <div class="thespace-inner section-inner">
               <div class="section-header click" id="theSpaceHeader">
                 <h1 class="click">the space</h1>
-                <!-- <span class="click" id="theSpaceButton"></span> -->
                 <span class="nav-button" id="theSpaceButton">></span>
                 <span class="nav-button-close" id="theSpaceButtonClose">-</span>
               </div>
@@ -150,7 +137,6 @@
                   <button class="arrow arrow-left"><</button>
                   <button class="arrow arrow-right">></button>
                 </div>
-                <!-- <div class="space-single-bar">------------------------------------</div> -->
                 <div class="space-single-bar">----------------------------------------</div>
                 {% for space-area in site.data.space.space-areas %}
                     {% if space-area.coming-soon == false %}
@@ -167,7 +153,6 @@
                           {{ space-area.description }}
                         </div>
                       </div>
-                      <!-- <div class="space-single-bar">----------------------------------</div> -->
                       <div class="space-single-bar">----------------------------------------</div>
                     </div>
                     {% else %}
@@ -183,7 +168,6 @@
                     {% endif %}
 
                     {% if forloop.last == false %}
-                    <!-- <div class="space-single-bar">----------------------------------</div> -->
                     {% endif %}
 
                 {% endfor %}
@@ -261,9 +245,6 @@
         <!-- footer -->
         <div class="receipt-footer">
           <img class="logo" id="logo" src="/assets/images/Full-Logo-Black.png" alt="Madeline's Logo Black">
-          <!-- <div class="signature-bar">
-            X___________________________________
-          </div> -->
           <div class="signature-bar">
             X_______________________________________
           </div>

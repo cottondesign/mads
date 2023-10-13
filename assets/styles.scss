@@ -29,9 +29,7 @@ img {
   // --transition: 3000ms;
   // --transition: none;
   --charWidth: 9.914px;
-  // --dividerHeight: 0.2em;
   --dividerHeight: 0.3em;
-  // --linePadding: calc((var(--navItemHeight) - 0.2em) / 2);
   --linePadding: calc((var(--navItemHeight) - var(--dividerHeight)) / 2);
 }
 
@@ -79,7 +77,6 @@ button {
 }
 
 .arrow {
-  // width: calc(2 * var(--charWidth));
   width: 30px;
   padding: 8px 0;
   margin: -8px 0;
@@ -91,44 +88,28 @@ button {
   max-width: 390px;
   height: 85vh;
   min-height: 700px;
-
-  // height: auto;
-  // min-height: 85vh;
-
   background: white;
-  -webkit-box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.50);
   box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.50);
-
-  // border-bottom: 1px solid white;
-
   position: absolute;
   top: 7.5vh;
   left: 50vw;
   transform: translateX(-50%);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   transition: var(--transition);
 }
 
 .receipt-top {
+  width: 100%;
   padding: 0 16.582px;
   background: white;
-  width: 100%;
-  // transition: var(--transition);
 }
 .receipt-bottom {
-  padding: 0 16.582px 63px 16.582px;
-  /* padding-bottom: 63px; */
-  // padding-top: 50px;
-  padding-top: 30px;
-  // padding-top: 103px;
-
-  background: white;
   width: 100%;
+  padding: 30px 16.582px 63px 16.582px;
+  background: white;
   transition: var(--transition);
 }
 .receipt-container .x {
@@ -175,7 +156,6 @@ body.receipt-moveUp {
     order: 2;
   }
 }
-
 .receipt-moveUp {
   .section-header {
     order: 10;
@@ -191,8 +171,7 @@ body.receipt-moveUp {
 
 .receipt-header {
   text-align: center;
-  padding-top: 65px;
-  padding-bottom: 49px;
+  padding: 65px 0 49px 0;
   
   span {
     opacity: 0;
@@ -202,12 +181,12 @@ body.receipt-moveUp {
 
 .receipt-sub-header {
   width: 100%;
+  max-height: calc(var(--navItemHeight) * 2);
+  padding-bottom: var(--linePadding);
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
-  max-height: calc(var(--navItemHeight) * 2);
   overflow: hidden;
-  padding-bottom: var(--linePadding);
 }
 
 p {
@@ -215,19 +194,18 @@ p {
 }
 
 .divider-double-bar {
-  overflow-wrap: anywhere;
-  overflow: hidden;
   height: var(--navItemHeight);
-  white-space: nowrap;
+  overflow: hidden;
+  // overflow-wrap: anywhere;
+  // white-space: nowrap;
 }
 .divider-single-bar,
 .menu-single-bar {
-  background: white;
-  line-height: var(--dividerHeight);
   height: var(--dividerHeight);
+  line-height: var(--dividerHeight);
+  background: white;
   overflow: hidden;
   white-space: nowrap;
-
 }
 .space-single-bar {
   height: 0;
@@ -251,40 +229,37 @@ p {
 
 /* CAROUSEL IMAGES */
 .carousel-container {
-  background: #A9652C;
-  position: fixed;
   width: 100vw;
   height: 100vh;
+  background: #A9652C;
+  position: fixed;
   filter: blur(25px);
   transition: 300ms -webkit-filter linear;
 }
 .carousel {
+  width: fit-content;
   height: 100%;
-  display: flex;
   position: absolute;
   left: 0;
+  display: flex;
   opacity: 0.8;
   transition: var(--transition);
-  width: fit-content;
 }
 .carousel-image {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
 }
-/* END OF CAROUSEL IMAGES */
-
 // CAROUSEL NAV
 .carousel-container:hover {
   cursor: pointer;
 }
 .carousel-external-button {
+  width: 50vw;
+  height: 100vh;
   position: fixed;
   z-index: 0;
-  height: 100vh;
-  width: 50vw;
-  
-  cursor: pointer;
   display: none;
+  cursor: pointer;
 }
 body.receipt-moveUp,
 body.show-theSpace {
@@ -296,38 +271,34 @@ body.show-theSpace {
     opacity: 1;
   }
 }
-
 .left-click {
   left: 0;
-  // background: blue;
-  // background: rgba(0, 0, 255, 0.237);
 }
 .right-click {
   right: 0;
 }
 
 .nav {
-  margin-top: 18px;
   width: 100%;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
 }
 .nav-item {
-  transition: var(--transition);
   max-height: calc((2*var(--navItemHeight)) + var(--dividerHeight));
+  background: white;
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   opacity: 1;
-  background: white;
+  transition: var(--transition);
   cursor: pointer;
 
-  position: relative;
   .divider-single-bar {
       position: absolute;
       bottom: 0;
       left: 0;
-      white-space: nowrap;
   }
 }
 
@@ -340,9 +311,9 @@ body.show-theSpace {
   // background: green;
 }
 .section-header {
+  height: var(--navItemHeight);
   display: flex;
   justify-content: space-between;
-  height: var(--navItemHeight);
   transition: var(--transition);
 
   // background: blue;
@@ -355,7 +326,6 @@ body.show-theSpace {
 }
 .nav-button-close {
   display: none;
-  transition: var(--transition);
 }
 .section-body {
   margin-left: var(--tabWidth);
@@ -364,23 +334,6 @@ body.show-theSpace {
   transition: var(--transition);
 
   // background: red;
-}
-// #events:hover,
-// #hours:hover,
-// #reservations:hover {
-//   max-height: calc(2 * var(--navItemHeight) + 10px);
-
-//   .section-header {
-//     margin-bottom: 10px;
-//   }
-// }
-
-body.show-events,
-body.show-hours,
-body.show-reservations {
-  .receipt-bottom {
-    padding-top: 30px;
-  }
 }
 
 body.show-events #events,
@@ -404,28 +357,26 @@ body.receipt-moveUp {
 #hours,
 #reservations {
   .section-body{
-
-    margin-left: 0;
     padding-left: var(--tabWidth);
+    margin-left: 0;
 
     :first-child {
-      // margin-top: var(--navItemHeight);
       margin-top: calc(var(--navItemHeight) - 10px);
     }
   }
 }
 
 .receipt-footer {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   transition: var(--transition);
 }
 .receipt-footer-text {
-  opacity: 1;
   height: 72px;
   margin-top: 26px;
+  opacity: 1;
 }
 .logo {
   width: 106.5%;
@@ -439,9 +390,6 @@ body.receipt-moveUp {
 #foodAndDrinks .section-body{
   margin-left: 0;
   transition: var(--transition);
-
-  // max-height: 0;
-  // overflow: hidden;
 }
 .food-and-drinks-inner {
   padding-top: 0;
@@ -457,9 +405,6 @@ body.receipt-moveUp {
       background: transparent;
     }
   }
-  a {
-    background: red;
-  }
 }
 .food-and-drinks-subnav + .food-and-drinks-subheader {
   .menu-subheader-top-nav {
@@ -467,17 +412,17 @@ body.receipt-moveUp {
   }
 }
 .menu-subheader {
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: var(--navItemHeight);
   height: var(--navItemHeight);
+  line-height: var(--navItemHeight);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .submenu-nav {
+  padding: var(--linePadding) 0;
   background: white;
   display: flex;
   justify-content: space-between;
-  padding: var(--linePadding) 0;
   overflow: hidden;
 
   .submenu-button {
@@ -491,11 +436,11 @@ body.receipt-moveUp {
 }
 
 .food-and-drinks-subheader {
+  height: 80px;
+  margin-bottom: 10px;
   position: sticky;
   position: -webkit-sticky;
   top: 0px;
-  height: 80px;
-  margin-bottom: 10px;
 
   div:last-of-type {
     background: transparent;
@@ -509,7 +454,6 @@ body.receipt-moveUp {
 
   .food-and-drinks-back-button {
     display: inline-block;
-    // background: lightblue;
     padding: 10px 15px;
     margin: -15px;
     z-index: 3;
@@ -522,7 +466,6 @@ body.receipt-moveUp {
   button {
     visibility: hidden;
     opacity: 0;
-    // transition: var(--transition);
   }
 
   .menu-subheader-top-nav {
@@ -533,14 +476,13 @@ body.receipt-moveUp {
   span {
     transition: 0s;
   }
-}
 
-.food-and-drinks-subheader ~ .food-and-drinks-subheader {
   .menu-subheader-top-nav {
     background: transparent;
     color: transparent;
   }
 }
+
 .food-and-drinks-subheader.show {
   span:first-of-type,
   button {
@@ -555,7 +497,6 @@ body.receipt-moveUp {
 }
 
 .food-and-drinks-subheader-ghost {
-  background: red;
   position: relative;
   top: var(--dividerHeight);
 }
@@ -570,31 +511,27 @@ body.receipt-moveUp {
 }
 .food-and-drinks-subheader-title {
   background: white;
-  display: flex;
-  justify-content: space-between;
   padding: var(--linePadding) 0;
   padding-bottom: calc(var(--linePadding) + 0.1em);
+  display: flex;
+  justify-content: space-between;
 }
 .food-and-drinks-header-back {
-  opacity: 0;
-  display: none;
-  transition: var(--transition);
   height: calc(var(--navItemHeight) + var(--linePadding));
+  display: none;
+  opacity: 0;
+  transition: var(--transition);
 
   h1 {
-    display: inline-block;
     padding: 8px 0;
     margin: -8px 0;
+    display: inline-block;
     cursor: pointer;
   }
 }
 
 .food-and-drinks-subnav .menu-single-bar:first-of-type {
   margin-top: var(--linePadding);
-}
-
-.food-and-drinks-header-default {
-  // margin-bottom: 10px;
 }
 
 /* FOOD AND DRINKS STYLES */
@@ -606,13 +543,10 @@ body.show-foodAndDrinks {
 
   // show food and drinks
   section#foodAndDrinks{
-    // max-height: 2000px;
-    max-height: 9000px;
     height: auto;
+    max-height: 9000px;
   
     .section-body {
-      // transition: none;
-      // max-height: 2000px;
       max-height: 9000px;
       // DO NOT DELETE:
       overflow: inherit;
@@ -632,14 +566,10 @@ body.show-foodAndDrinks {
   .nav-item#foodAndDrinks {
     overflow: inherit;
   }
-  // .nav-item {
-  //   overflow: inherit;
-  // }
+
   .receipt-container {
-    /* position: fixed; */
     height: auto;
   }
-
   .food-and-drinks-header-default {
     display: none;
   }
@@ -652,7 +582,6 @@ body.show-foodAndDrinks {
     // top: 44px;
     top: 43px;
   }
-
   .receipt-bottom {
     padding-top: 50px;
   }
@@ -669,21 +598,16 @@ body.show-foodAndDrinks.receipt-moveUp {
   }
 }
 
-
-
 /* THE SPACE STYLES */
-// #theSpace .section-body .space-single-bar:last-child {
-//   display: none;
-// }
 #theSpace {
   .section-body {
     margin-left: 0;
   }
 }
 .the-space-arrows {
+  padding: 8px 0;
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
   cursor: default;
 }
 .arrow-right {
@@ -700,9 +624,9 @@ body.show-foodAndDrinks.receipt-moveUp {
 }
 
 .space-header {
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 
   .see-more {
     opacity: 0;
@@ -735,7 +659,6 @@ body.show-theSpace #theSpaceHeader h1:before {
   padding-left: var(--tabWidth);
 }
 
-
 @media screen and (min-width: 430px) {
   .receipt-container {
     animation: on-load-receipt-move-up 1500ms;
@@ -744,9 +667,6 @@ body.show-theSpace #theSpaceHeader h1:before {
     animation: on-load-carousel-unblur 1500ms;
   }
 
-
-
-
   body.show-theSpace {
     .receipt-container {
       left: calc(7.5vh + 195px);
@@ -754,8 +674,8 @@ body.show-theSpace #theSpaceHeader h1:before {
     .receipt-sub-header,
     .nav-item:not(#theSpace),
     .sub-header-single-bar {
+      max-height: 0;
     margin-top: 0px;
-    max-height: 0;
     opacity: 0;
     transition: var(--transition);
   }
@@ -787,8 +707,8 @@ body.show-theSpace {
     margin-top: 0px;
   }
   .receipt-footer-text {
-    opacity: 0;
     height: 0;
+    opacity: 0;
   }
   .receipt-bottom {
     padding-top: 0px;
@@ -801,10 +721,10 @@ body.show-theSpace {
 
   section#theSpace {
 
-    cursor: default;
     max-height: 800px;
-    overflow: inherit;
     margin-top: calc(-1 * var(--linePadding));
+    overflow: inherit;
+    cursor: default;
 
     .section-header {
       cursor: pointer;
@@ -819,15 +739,11 @@ body.show-theSpace {
       display: flex;
     }
     .space-single-bar {
-      cursor: pointer;
-      overflow: hidden;
-      line-height: var(--dividerHeight);
       height: var(--dividerHeight);
-
-      // background: red;
+      line-height: var(--dividerHeight);
       white-space: nowrap;
+      cursor: pointer;
     }
-    
     .section-inner {
       padding-bottom: 0;
     }
@@ -835,8 +751,8 @@ body.show-theSpace {
       max-height: 800px;
     }
     .divider-single-bar {
-      bottom: calc(-1 * var(--dividerHeight));
       width: 100%;
+      bottom: calc(-1 * var(--dividerHeight));
     }
   }
 }
@@ -852,11 +768,11 @@ body.show-theSpace {
 }
 .space-section.show-description  {
   .space-body {
-    max-height: inherit;
     height: auto;
-    overflow: inherit;
+    max-height: inherit;
     padding: var(--navItemHeight) 0;
     padding-left: calc(var(--charWidth)*2);
+    overflow: inherit;
   }
   .see-more {
     opacity: 0;
@@ -888,8 +804,8 @@ body.show-theSpace {
 
 body.show-events {
   section#events {
-    max-height: 500px;
     height: auto;
+    max-height: 500px;
     .section-body {
       max-height: 500px;
       cursor: default;
@@ -957,7 +873,6 @@ body.show-hours.receipt-moveUp {
 }
 
 /* RESERVATIONS */
-
 #reservations.show-close-button{
   .nav-button {
     display: none;
@@ -973,7 +888,6 @@ body.show-hours.receipt-moveUp {
 body.show-reservations {
   section#reservations{
     max-height: 200px;
-    // overflow: hidden;
     .section-body {
       max-height: 200px;
       cursor: default;
@@ -989,7 +903,6 @@ body.show-reservations.receipt-moveUp {
     }
   }
 }
-
 
 @keyframes on-load-receipt-move-up {
   // 0% {top: 79.5vh;}
@@ -1008,8 +921,6 @@ body.show-reservations.receipt-moveUp {
   100% {filter: blur(25px);}
 }
 
-
-
 @keyframes arrow-right {
   0% {padding-right: var(--charWidth)}
   49% {padding-right: var(--charWidth)}
@@ -1021,7 +932,6 @@ body.show-reservations.receipt-moveUp {
   50% {padding-left: 0;}
 }
 
-
 #foodAndDrinksText:after {
   content: '* food and drinks';
 }
@@ -1032,8 +942,6 @@ body.show-reservations.receipt-moveUp {
   75% {content: "!! FOOD !!"}
   100% {content: "!! WINE !!"}
 }
-
-
 
 // all hover states for desktop only
 @media (hover: hover) and (pointer: fine) {
@@ -1097,15 +1005,8 @@ body.show-reservations.receipt-moveUp {
       animation: none;
     }
   }
-
-
 }
 //  end of hover states
-
-
-
-
-
 
 
 /* media query for mobile */
