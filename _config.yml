@@ -22,7 +22,7 @@ title: Madeline's
 description: >- # this means to ignore newlines until "baseurl:"
   Madeline's is a new bar and restaurant in Greenpoint, BK on three floors. Walk-ins are always welcome. Plan your next event here.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://madelinesnyc.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 sass:
     style: compressed
