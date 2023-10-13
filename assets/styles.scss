@@ -29,8 +29,10 @@ img {
   // --transition: 3000ms;
   // --transition: none;
   --charWidth: 9.914px;
-  --dividerHeight: 0.2em;
-  --linePadding: calc((var(--navItemHeight) - 0.2em) / 2);
+  // --dividerHeight: 0.2em;
+  --dividerHeight: 0.3em;
+  // --linePadding: calc((var(--navItemHeight) - 0.2em) / 2);
+  --linePadding: calc((var(--navItemHeight) - var(--dividerHeight)) / 2);
 }
 
 @font-face {
@@ -77,8 +79,7 @@ button {
 }
 
 .arrow {
-  // background: red;
-  width: calc(2 * var(--charWidth));
+  // width: calc(2 * var(--charWidth));
   width: 30px;
   padding: 8px 0;
   margin: -8px 0;
@@ -648,8 +649,8 @@ body.show-foodAndDrinks {
     opacity: 1;
   }
   .food-and-drinks-subnav.open {
-    top: 44px;
-    // top: 43px;
+    // top: 44px;
+    top: 43px;
   }
 
   .receipt-bottom {
@@ -1147,43 +1148,19 @@ body.show-reservations.receipt-moveUp {
     .receipt-header {
       padding-top: 18px;
     }
-
-
-    
-
   }
-
-  // test the space fix
-  // @media screen and (max-width: 430px) and (pointer:coarse) {
-  // body.show-theSpace {
-  //   section#theSpace{
-
-  //     .space-single-bar {
-  //       height: .13em;
-  //     }
-  //   }
-
-  // }
-  // }
-
-  // @media screen and (-webkit-min-device-pixel-ratio:0) {
-  //   body.show-theSpace {
-  //   section#theSpace{
-
-  //     .space-single-bar {
-  //       height: .13em;
-  //     }
-  //   }
-
-  // }
-  // }
   
   /* media query for desktop */
   @media screen and (max-width: 430px) {
     .receipt-container {
       height: 100%;
       height: 100vh;
-    }  
+    }
+  }
+  @media screen and (max-width:430px) and (pointer:fine) {
+    .receipt-header {
+      padding-top: 65px;
+    }
   }
 
   // FOOD AND DRINKS MEDIA QUERY

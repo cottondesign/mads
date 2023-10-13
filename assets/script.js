@@ -658,9 +658,9 @@ carouselContainer.addEventListener("click", function() {
     console.log(receiptContainer.offsetHeight);
 
     if (document.body.classList.contains("show-foodAndDrinks")) {
-      receiptContainer.style.top = -receiptContainer.offsetHeight + 47.5 + 'px';
+      receiptContainer.style.top = -receiptContainer.offsetHeight + 46.5 + 'px';
     } else {
-      receiptContainer.style.top = -receiptContainer.offsetHeight + 49 + 'px';
+      receiptContainer.style.top = -receiptContainer.offsetHeight + 50 + 'px';
     }
 
     document.body.classList.add('receipt-moveUp');
@@ -700,7 +700,7 @@ receiptContainer.addEventListener("mouseleave", function() {
     if (document.body.classList.contains("show-foodAndDrinks")) {
       receiptContainer.style.top = -receiptContainer.offsetHeight + 39.5 + 'px';
     } else {
-      receiptContainer.style.top = -receiptContainer.offsetHeight + 39 + 'px';
+      receiptContainer.style.top = -receiptContainer.offsetHeight + 40 + 'px';
     }
 
     carouselContainer.classList.add("no-blur");
