@@ -8,22 +8,23 @@
   <body>
   {% endif %}
 
-    <div class="carousel-container" id="carouselContainer">
-      <div class="carousel" id="carousel">
-        {% for space-area in site.data.space.space-areas %}
-          {% for image in space-area.images %}
-            <div class="carousel-image">
-              <img src="{{ image.path }}" alt="{{ space-area.name }} Image" class="{{ space-area.name | slugify }}" data="{{ space-area.name | slugify }}">
-            </div>
+    <!-- <div class="carousel-container-container"> -->
+      <div class="carousel-container" id="carouselContainer">
+        <div class="carousel" id="carousel">
+          {% for space-area in site.data.space.space-areas %}
+            {% for image in space-area.images %}
+              <div class="carousel-image">
+                <img src="{{ image.path }}" alt="{{ space-area.name }} Image" class="{{ space-area.name | slugify }}" data="{{ space-area.name | slugify }}">
+              </div>
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
-        <div class="carousel-image">
-          <img src="{{ site.data.space.space-areas[0].images[0].path }}" alt="" class="{{ site.data.space.space-areas[0].name | slugify }} last" data="{{ site.data.space.space-areas[0].name | slugify }}">
+          <div class="carousel-image">
+            <img src="{{ site.data.space.space-areas[0].images[0].path }}" alt="" class="{{ site.data.space.space-areas[0].name | slugify }} last" data="{{ site.data.space.space-areas[0].name | slugify }}">
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div class="carousel-external-button right-click"></div>
+    <!-- </div>  -->
+    <div class="carousel-external-bubtton right-click"></div>
     <div class="carousel-external-button left-click"></div>
     
     <div class="receipt-container" id="receiptContainer">

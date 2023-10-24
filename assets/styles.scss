@@ -1016,20 +1016,32 @@ body.show-reservations.receipt-moveUp {
       overscroll-behavior-x: none;
       overscroll-behavior-y: none;
     }
+    
     body {
       background: white;
     }
-    html {
-      scroll-snap-type: x mandatory;
+    
+    .carousel-container{
+      // position: relative;
+      position:fixed;
     }
+
     .carousel {
-      // overflow-x: scroll;
-      // -webkit-overflow-scrolling: touch;
-      // height: 100vh;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      overflow-x: scroll;
+      width: 100vw;
+      overflow: scroll;
     }
+  
     .carousel-image {
       scroll-snap-align: start;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
     }
+  
 
     .receipt-container {
       .x,
@@ -1039,12 +1051,14 @@ body.show-reservations.receipt-moveUp {
       }
     }
     .receipt-container {
-      max-width: 100%;
+      max-width: 100vw;
       height: 100%;
       height: 100vh;
       position: static;
       transform: translate(0);
       box-shadow: none;
+      // height: auto;
+      // min-height: auto;
     }
     .receipt-header {
       padding-top: 18px;
@@ -1054,8 +1068,8 @@ body.show-reservations.receipt-moveUp {
   /* media query for desktop */
   @media screen and (max-width: 430px) {
     .receipt-container {
-      height: 100%;
-      height: 100vh;
+      // height: 100%;
+      // height: 100vh;
     }
   }
   @media screen and (max-width:430px) and (pointer:fine) {
@@ -1093,7 +1107,7 @@ body.show-reservations.receipt-moveUp {
 
       .carousel-container {
         display: block;
-        position: absolute;
+        position: fixed;
       }
       .receipt-bottom {
         display: none;
@@ -1114,6 +1128,8 @@ body.show-reservations.receipt-moveUp {
         transform: translateX(0%);
         background: transparent;
         transition: transform 0s;
+          height: auto;
+          min-height: auto;
       }
       .receipt-top {
         box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.50);
