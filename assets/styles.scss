@@ -385,6 +385,7 @@ body.receipt-moveUp {
   // top: 29px;
   mix-blend-mode: multiply;
   transform:translateY(48px);
+  pointer-events:none;
 }
 .logo-container:hover .logo{
   opacity:0;
