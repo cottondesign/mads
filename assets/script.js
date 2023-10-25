@@ -85,7 +85,7 @@ for (navSection of navSections) {
       if (e.target.getAttribute("href") && e.target.getAttribute("href").includes("#")){
         return;
       }
-      console.log(e.target);
+      // console.log(e.target);
       if (sectionId == 'foodAndDrinks' && document.body.classList.contains("show-foodAndDrinks")){
         // Close 'Food and Drinks' section only when clicking on header
         if (e.target.classList.contains('click')) {
@@ -384,6 +384,7 @@ carouselLeftClick.addEventListener("click", function() {
   })
 
   carouselRightClick.addEventListener("click", function() {
+    
     if (carouselCounter == numImages - 1) {
       carouselCounter = numImages;
       carousel.style.transition = 'none';
@@ -442,93 +443,254 @@ let carouselCounter = 0;
 
 let carouselScroll;
 let swipeCarouselCounter;
-document.addEventListener("scroll", (event) => {
-    // carouselScroll = window.scrollX;
-    let carouselRect = carousel.getBoundingClientRect();
-    // console.log(carouselRect.left);
-    if (carouselRect.left % window.innerWidth == 0) {
-      // console.log(carouselRect.left);
-      swipeCarouselCounter = carouselRect.left/window.innerWidth * -1;
+// document.addEventListener("scroll", (event) => {
+//     // carouselScroll = window.scrollX;
+//     let carouselRect = carousel.getBoundingClientRect();
+//     // console.log(carouselRect.left);
+//     if (carouselRect.left % window.innerWidth == 0) {
+//       // console.log(carouselRect.left);
+//       swipeCarouselCounter = carouselRect.left/window.innerWidth * -1;
 
-      // if (swipeCarouselCounter == 13) {
-        // document.body.style.color = 'red';
-        // carousel.style.left = 0;
-        // window.style.left = 0;
-        // document.documentElement.style.scrollBehavior = 'auto';
-        // window.scrollBy(-carouselRect.width, 0);
-      // }
-      carouselCounter = swipeCarouselCounter;
-      // console.log(carouselRect.left/window.innerWidth);
-    }
-    // let carouselRect = carousel.getBoundingClientRect();
-    // carouselCounter = Math.round(carouselRect.left/window.innerWidth * -1)
+//       // if (swipeCarouselCounter == 13) {
+//         // document.body.style.color = 'red';
+//         // carousel.style.left = 0;
+//         // window.style.left = 0;
+//         // document.documentElement.style.scrollBehavior = 'auto';
+//         // window.scrollBy(-carouselRect.width, 0);
+//       // }
+//       carouselCounter = swipeCarouselCounter;
+//       // console.log(carouselRect.left/window.innerWidth);
+//     }
+//     // let carouselRect = carousel.getBoundingClientRect();
+//     // carouselCounter = Math.round(carouselRect.left/window.innerWidth * -1)
 
+// });
+
+
+
+
+
+
+// theSpaceLeftArrow.addEventListener("click", function() {
+//   if (carouselCounter == 0) {
+//     // carouselCounter = numImages - 1;
+//     // currentIndex = carouselCounter;
+//     carousel.style.transition = 'none';
+//     // carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+
+//     setTimeout(function() {
+//       // carouselCounter--;
+//       // carousel.style.transition = '300ms';
+//       // carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+//       if (window.innerWidth <= 430){
+//       } else {
+//         carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+//       }
+//       // console.log('timeout300');
+//     }, 0)
+//   } else {
+//     // carouselCounter--;
+//     // currentIndex = carouselCounter + 1;
+//     carousel.style.transition = '300ms';
+//     carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+
+//   }
+//   // TEST
+//   toggleSpaceDescriptions();
+//   // END OF TEST
+//   console.log('Current Index'+currentIndex);
+//   })
+
+// theSpaceRightArrow.addEventListener("click", moveCarouselRight);
+
+// function moveCarouselRight(){
+
+//   console.log("current index:" + currentIndex, "carouselCounter:" + carouselCounter)
+  
+//   if (carouselCounter == numImages - 1) {
+//     carouselCounter = numImages;
+//     // carousel.style.transition = 'none';
+//     // carousel.style.left = 0;
+
+//     setTimeout(function() {
+//       carouselCounter = 1;
+//       carousel.style.transition = '300ms';
+//       if (window.innerWidth <= 430){
+//         carousel.scrollTo({
+//           top: 0,
+//           left: window.innerWidth * carouselCounter,
+//           behavior: "smooth",
+//         });
+//       } else {
+//         carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+//       }
+//       // console.log('timeout300');
+//     }, 0)
+//     // currentIndex = 2;
+
+//   } else {
+//     // carouselCounter++;
+//     carouselCounter = currentIndex+1;
+//     // if (currentIndex > numImages - 1) {
+//     //   currentIndex = 1;
+//     // }
+
+//     carousel.style.transition = '300ms';
+//     if (window.innerWidth <= 430){
+//       carousel.scrollTo({
+//         top: 0,
+//         left: window.innerWidth * carouselCounter,
+//         behavior: "smooth",
+//       });
+//     } else {
+//       carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+//     }
+
+//   }
+
+//   // TEST
+//   toggleSpaceDescriptions();
+//   // END OF TEST
+
+//   console.log('Current Index'+currentIndex);
+//   console.log('CarouselCounter'+carouselCounter);
+// }
+
+
+
+// // Custom "Scroll Snap" event to determine when the carousel has snapped
+// let scrollTimer; // To detect when the scrolling has stopped
+
+// carousel.addEventListener("scroll", function() {
+//   console.log("scrolling");
+
+//   // Clear the previous timeout if it exists
+//   clearTimeout(scrollTimer);
+
+//   // Set a timeout to detect when scrolling stops
+//   scrollTimer = setTimeout(() => {
+//       console.log("scrolling stopped");
+
+//       // Here you can determine which item is currently in view
+//       currentIndex = Math.round(carousel.scrollLeft / window.innerWidth);
+//       console.log(`Snapped to item: ${currentIndex}`);
+
+//       // Optionally, dispatch a custom event here if you need
+//       // let snapEvent = new CustomEvent('snap', { 
+//       //     detail: { index: currentIndex } 
+//       // });
+//       // carousel.dispatchEvent(snapEvent);
+//   }, 100); // 100ms after the user stops scrolling, we'll consider it "stopped"
+// });
+
+// // carousel.addEventListener("snap", function(e) {
+// //   console.log("Snapped to:", e.detail.index);
+// // });
+
+
+// let carousel = document.querySelector(".carousel");
+// let theSpaceRightArrow = document.querySelector("#yourArrowSelector"); // replace with your actual selector
+// let numImages = 5; // replace this with the actual number of images in the carousel
+// let carouselCounter = 0;
+// let currentIndex = 0;
+
+let scrollTimer;
+
+// theSpaceRightArrow.addEventListener("click", function() {
+//   moveCarouselRight();
+//   // You can increment the counter here if desired
+//   // carouselCounter++;
+// });
+
+
+
+
+
+
+theSpaceRightArrow.addEventListener("click", moveCarouselRight);
+
+theSpaceLeftArrow.addEventListener("click", moveCarouselLeft);
+
+function moveCarouselRight() {
+
+  if (currentIndex == 1) {
+    carouselCounter = 0;
+  } 
+  
+  carouselCounter++;
+  console.log("carousel counter increased to: " + carouselCounter);
+  moveByWidth(carouselCounter, "right");
+  toggleSpaceDescriptions();
+
+}
+
+function moveCarouselLeft() {
+
+  console.log(currentIndex)
+
+  if (currentIndex < 2) {
+    carouselCounter = numImages;
+  } 
+
+  carouselCounter--;
+  console.log("carousel counter decreased to: " + carouselCounter);
+  moveByWidth(carouselCounter, "left");
+  toggleSpaceDescriptions();
+
+}
+
+function moveByWidth(counter, direction) {
+  let behavior = "smooth";
+  if (counter == 0 && direction == "right" || 
+      counter == numImages && direction == "left"){
+    behavior = "auto";
+  }
+  if (window.innerWidth <= 430) {
+    carousel.scrollTo({
+      top: 0,
+      left: window.innerWidth * counter,
+      behavior: behavior,
+    });
+  } else {
+    carousel.style.left = `calc(-100vw * ${counter})`;
+  }
+}
+
+carousel.addEventListener("scroll", function() {
+  clearTimeout(scrollTimer);
+  
+  scrollTimer = setTimeout(() => {
+    currentIndex = Math.round(carousel.scrollLeft / window.innerWidth)+1;
+    console.log(`Snapped to item: ${currentIndex}`);
+    
+    toggleSpaceDescriptions()
+
+    if (currentIndex == numImages){
+      // reset carousel
+      console.log("reset")
+      moveByWidth(0, "right");
+    } 
+    // else if (currentIndex == 1){
+    //   console.log("reset")
+    //   moveByWidth(numImages, "left");
+    // }
+
+  }, 100);
 });
 
+// function resetCarousel(){
 
+//   console.log("reset")
+//     // carousel.style.transition = 'none';
+//     moveByWidth(0);
 
+//     setTimeout(function() {
+//       // carouselCounter = 1;
+//       // carousel.style.transition = '300ms';
+//       // moveByWidth(carouselCounter);
+//     }, 150); // Small delay to ensure the transition 'none' takes effect
+// }
 
-
-
-theSpaceLeftArrow.addEventListener("click", function() {
-  if (carouselCounter == 0) {
-    carouselCounter = numImages - 1;
-    currentIndex = carouselCounter;
-    carousel.style.transition = 'none';
-    carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-
-    setTimeout(function() {
-      carouselCounter--;
-      carousel.style.transition = '300ms';
-      carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-      // console.log('timeout300');
-    }, 0)
-  } else {
-    carouselCounter--;
-    currentIndex = carouselCounter + 1;
-    carousel.style.transition = '300ms';
-    carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-
-  }
-  // TEST
-  toggleSpaceDescriptions();
-  // END OF TEST
-  console.log('Current Index'+currentIndex);
-  })
-
-theSpaceRightArrow.addEventListener("click", function() {
-  if (carouselCounter == numImages - 1) {
-    carouselCounter = numImages;
-    carousel.style.transition = 'none';
-    carousel.style.left = 0;
-
-    setTimeout(function() {
-      carouselCounter = 1;
-      carousel.style.transition = '300ms';
-      carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-      // console.log('timeout300');
-    }, 0)
-    currentIndex = 2;
-
-  } else {
-    carouselCounter++;
-    currentIndex = carouselCounter+1;
-    if (currentIndex > numImages - 1) {
-      currentIndex = 1;
-    }
-
-    carousel.style.transition = '300ms';
-    carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-
-  }
-
-  // TEST
-  toggleSpaceDescriptions();
-  // END OF TEST
-
-  console.log('Current Index'+currentIndex);
-  console.log('CarouselCounter'+carouselCounter);
-})
 
 
 function toggleSpaceDescriptions() {
