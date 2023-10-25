@@ -372,11 +372,13 @@ body.receipt-moveUp {
   flex-direction: column;
   align-items: center;
   transition: var(--transition);
+  user-select: none;
 }
 .receipt-footer-text {
   height: 72px;
   margin-top: 26px;
   opacity: 1;
+  user-select: none;
 }
 .logo {
   width: 100%;
