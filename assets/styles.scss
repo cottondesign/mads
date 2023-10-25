@@ -384,7 +384,7 @@ body.receipt-moveUp {
   // position: relative;
   // top: 29px;
   mix-blend-mode: multiply;
-  transform:translateY(60px);
+  transform:translateY(48px);
 }
 .logo-container:hover .logo{
   opacity:0;
@@ -1050,6 +1050,27 @@ body.show-reservations.receipt-moveUp {
   }
 }
 //  end of hover states
+
+.carousel-container{
+  // position: relative;
+  position:fixed;
+}
+
+.carousel {
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+  width: 100vw;
+  overflow: scroll;
+}
+
+.carousel-image {
+  scroll-snap-align: start;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+}
 
 
 /* media query for mobile */

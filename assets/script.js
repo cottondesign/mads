@@ -611,50 +611,77 @@ theSpaceRightArrow.addEventListener("click", moveCarouselRight);
 
 theSpaceLeftArrow.addEventListener("click", moveCarouselLeft);
 
+
+
 function moveCarouselRight() {
 
-  if (currentIndex == 1) {
-    carouselCounter = 0;
-  } 
-  
-  carouselCounter++;
+  // if (window.innerWidth <= 430){
+    if (currentIndex !== 1) {
+        carouselCounter++;
+    } else {
+        carouselCounter = 1;
+    }
+  // } 
+  // else {
+  //   if (currentIndex <= numImages) {
+  //     carouselCounter++;
+  // } else {
+  //     carouselCounter = 0;
+  // }
+  // }
   console.log("carousel counter increased to: " + carouselCounter);
   moveByWidth(carouselCounter, "right");
   toggleSpaceDescriptions();
-
 }
 
 function moveCarouselLeft() {
-
-  console.log(currentIndex)
+  console.log(currentIndex);
 
   if (currentIndex < 2) {
-    carouselCounter = numImages;
-  } 
+      console.log("moved");
+      carouselCounter = numImages - 1;
+      moveByWidth(carouselCounter, "left");
+      toggleSpaceDescriptions();
+      return;  // return here to prevent further decrement
+  }
 
   carouselCounter--;
+  if(carouselCounter<0){
+    carouselCounter=numImages-2
+  }
   console.log("carousel counter decreased to: " + carouselCounter);
   moveByWidth(carouselCounter, "left");
   toggleSpaceDescriptions();
-
 }
+
 
 function moveByWidth(counter, direction) {
   let behavior = "smooth";
-  if (counter == 0 && direction == "right" || 
-      counter == numImages && direction == "left"){
-    behavior = "auto";
+  let transition = "300ms";
+  
+  if ((counter == 0 && direction == "right") || 
+      (counter == numImages - 1 && direction == "left")) {
+    behavior = "auto";  // instant jump
+    transition = "none"
   }
-  if (window.innerWidth <= 430) {
+
+  // if (window.innerWidth <= 430) {
     carousel.scrollTo({
       top: 0,
       left: window.innerWidth * counter,
       behavior: behavior,
     });
-  } else {
-    carousel.style.left = `calc(-100vw * ${counter})`;
-  }
+  // } 
+  // else {
+  //   console.log("desktop")
+  //   carousel.style.transition = transition;
+  //   console.log(counter);
+  //   carousel.style.left = `calc(-100vw * ${counter})`;
+  // }
 }
+
+
+let stop = false;
 
 carousel.addEventListener("scroll", function() {
   clearTimeout(scrollTimer);
@@ -665,15 +692,18 @@ carousel.addEventListener("scroll", function() {
     
     toggleSpaceDescriptions()
 
-    if (currentIndex == numImages){
+    if (currentIndex == numImages && !stop){
       // reset carousel
       console.log("reset")
       moveByWidth(0, "right");
-    } 
-    // else if (currentIndex == 1){
-    //   console.log("reset")
-    //   moveByWidth(numImages, "left");
-    // }
+      stop = true;
+    } else if (currentIndex == 1 && !stop){
+      console.log("reset left")
+      moveByWidth(numImages - 1, "left");
+      stop = true;
+    } else if (currentIndex >= 2 && currentIndex < numImages){
+      stop = false;
+    }
 
   }, 100);
 });

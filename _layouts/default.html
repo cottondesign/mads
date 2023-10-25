@@ -247,9 +247,14 @@
         <div class="receipt-footer">
           <!-- <img class="logo" id="logo" src="/assets/images/Full-Logo-Black.png" alt="Madeline's Logo Black"> -->
           <div class="logo-container">
-            <img class="logo" id="logo" src="/assets/images/logo-handdrawn.png" alt="Madeline's Logo Black">
+            <img class="logo" id="logo" src="/assets/images/mads-logo-1.png" alt="Madeline's Logo Black">
             <div class="easter-egg"></div>
           </div>
+          <script>
+            const logoElem = document.getElementById("logo");
+            const rand = Math.ceil(Math.random()*3);
+            logo.src = `/assets/images/mads-logo-${rand}.png`
+          </script>
           <div class="signature-bar">
             X_______________________________________
           </div>
