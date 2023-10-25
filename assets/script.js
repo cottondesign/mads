@@ -320,6 +320,25 @@ window.addEventListener('scroll', showOnScroll);
 
 
 
+// for the button and span on scroll in food and drinks section
+document.addEventListener("scroll", function() {
+  var subheaders = document.querySelectorAll(".food-and-drinks-subheader");
+
+  subheaders.forEach(function(subheader) {
+    if (isSticky(subheader)) {
+      subheader.classList.add("is-sticky");
+    } else {
+      subheader.classList.remove("is-sticky");
+    }
+  });
+});
+
+function isSticky(element) {
+  var rect = element.getBoundingClientRect();
+  return rect.top <= 0 && rect.bottom > 0;
+}
+
+
 
 
 // CAROUSEL JS

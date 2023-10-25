@@ -511,8 +511,8 @@ body.receipt-moveUp {
 .food-and-drinks-subheader {
   span,
   button {
-    // visibility: hidden;
-    // opacity: 0;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .menu-subheader-top-nav {
@@ -535,7 +535,7 @@ body.receipt-moveUp {
   button {
     visibility: visible;
     opacity: 1;
-    transition: var(--transition);
+    // transition: var(--transition);
   }
 
   .food-and-drinks-subheader-title {
