@@ -28,4 +28,14 @@ subsections:
       - name: Nuova Cappelletta "NSA"
         price: 17
         description: Piedmonte - Savory, spicy, darkly floral and brooding.
+  - subsection-header: Skin Contact
+    items:
+      - name: OVUm "PNK Salt"
+        price: 15
+        description: Oregon - Takes you straight to the Gorge with cherry orchards and
+          salty thru-lines.
+      - name: Roberto Henriquez "Pais Verde"
+        price: 15
+        description: Chile - 200+ yr old vines! Juicy in the way that cranberries are,
+          yet combined with a sexy, almost feral undercurrent.
 ---
