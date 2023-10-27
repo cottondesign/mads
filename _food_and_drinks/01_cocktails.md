@@ -1,7 +1,7 @@
 ---
 title: Cocktails
 subsections:
-  - subsection-header: Boozy
+  - subsection-header: ""
     items:
       - name: Madeline
         price: 16
