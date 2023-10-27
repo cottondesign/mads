@@ -16,12 +16,6 @@ subsections:
         price: 8
         description: I mean, it already said Porter 6.5%
         note: ""
-      - name: BK Lager
-        price: 8
-        description: Lager 5.2%
-      - name: Dogfish Head 60 min
-        price: 8
-        description: IPA 6%
   - items:
       - name: Miller High Life
         price: 6
