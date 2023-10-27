@@ -20,8 +20,8 @@ subsections:
         description: Spinach, caramelized onions, chive sour cream
       - name: Ploughman's Platter
         price: 34
-        description: two house made charcuterie, two hand selected cheeses, apple jam,
-          pickled vegetables, candied walnuts, everything crackers
+        description: wild boar pate, short rib pastrami, Bayley Hazen Blue, Calderwood,
+          apple jam,  pickled vegetables, candied walnuts, everything crackers
       - name: Dip Melange
         price: 24
         description: white bean hummus, merguez spiced creton, tirokafteri, crudite
