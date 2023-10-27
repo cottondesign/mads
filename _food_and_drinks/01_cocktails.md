@@ -26,7 +26,7 @@ subsections:
   - subsection-header: N/A Beverages
     items:
       - name: Yuzu Soda
-        price: 8
+        price: 7
         description: Yuzu Juice + carbonation
       - name: Athletic Brewing Free Wave
         price: 6
