@@ -4,7 +4,7 @@ subsections:
   - subsection-header: Small Things
     items:
       - name: Popcorn
-        price: 5
+        price: 6
         description: "**rotating flavors**"
         note: Pepperoni Pizza
       - name: Marinated Olives
