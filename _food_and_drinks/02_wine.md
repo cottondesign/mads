@@ -5,7 +5,7 @@ subsections:
     items:
       - name: Santei "Malvazija"
         price: 15
-        description: Solvenia; golden-hued, crisp and lightly aromatic
+        description: Slovenia; golden-hued, crisp and lightly aromatic
         note: Note (Optional)
       - name: White
         price: 15
