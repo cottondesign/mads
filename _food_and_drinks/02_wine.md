@@ -1,6 +1,26 @@
 ---
 title: Wine
 subsections:
+  - subsection-header: Sparkling
+    items:
+      - name: Hild "Sekt Brut"
+        price: 13
+        description: Germany - The wine bubbles with flavors of juicy tropical fruit,
+          white flowers, and chalky, vibrant acidity.
+      - name: Mae Son "Frizzante"
+        price: 16
+        description: Trentino-Alto Adige - Perky, happy, dry effervesance wrapped in
+          crunchy savory red fruit.
+  - subsection-header: Skin Contact
+    items:
+      - name: OVUm "PNK Salt"
+        price: 15
+        description: Oregon - Takes you straight to the Gorge with cherry orchards and
+          salty thru-lines.
+      - name: Roberto Henriquez "Pais Verde"
+        price: 15
+        description: Chile - 200+ yr old vines! Juicy in the way that cranberries are,
+          yet combined with a sexy, almost feral undercurrent.
   - subsection-header: White
     items:
       - name: Santei "Malvazija"
@@ -28,24 +48,4 @@ subsections:
       - name: Nuova Cappelletta "NSA"
         price: 17
         description: Piedmonte - Savory, spicy, darkly floral and brooding.
-  - subsection-header: Skin Contact
-    items:
-      - name: OVUm "PNK Salt"
-        price: 15
-        description: Oregon - Takes you straight to the Gorge with cherry orchards and
-          salty thru-lines.
-      - name: Roberto Henriquez "Pais Verde"
-        price: 15
-        description: Chile - 200+ yr old vines! Juicy in the way that cranberries are,
-          yet combined with a sexy, almost feral undercurrent.
-  - subsection-header: Sparkling
-    items:
-      - name: Hild "Sekt Brut"
-        price: 13
-        description: Germany - The wine bubbles with flavors of juicy tropical fruit,
-          white flowers, and chalky, vibrant acidity.
-      - name: Mae Son "Frizzante"
-        price: 16
-        description: Trentino-Alto Adige - Perky, happy, dry effervesance wrapped in
-          crunchy savory red fruit.
 ---
