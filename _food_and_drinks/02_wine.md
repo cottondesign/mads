@@ -3,9 +3,9 @@ title: Wine
 subsections:
   - subsection-header: White
     items:
-      - name: Red
+      - name: Santei "Malvazija"
         price: 15
-        description: Description
+        description: Solvenia; golden-hued, crisp and lightly aromatic
         note: Note (Optional)
       - name: White
         price: 15
