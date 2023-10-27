@@ -3,25 +3,25 @@ title: Beer
 subsections:
   - subsection-header: On tap
     items:
-      - name: Torch and Crown Tenement
+      - name: Grimm Weisse
         price: 9
-        description: Pilsner 4.9%
+        description: hefeweissbier 5.5%
+      - name: Maine Lunch
+        price: 14
+        description: IPA 7.0%
+      - name: Talea Al Dente
+        price: 9
+        description: Pilsner 5.0%
       - name: Founders Porter
         price: 8
         description: I mean, it already said Porter 6.5%
         note: Note (Optional)
-      - name: Radiant Pig It Ain't Easy
-        price: 12
-        description: Double IPA 8%
-      - name: Maine Lunch
-        price: 10
-        description: IPA
-      - name: Other Half Stout
-        price: 12
-        description: Oatmeal stout 7%
-      - name: Rotating Local Special
-        price: 10
-        description: Local Rotate
+      - name: BK Lager
+        price: 8
+        description: Lager 5.2%
+      - name: Dogfish Head 60 min
+        price: 8
+        description: IPA 6%
   - items:
       - name: Miller High Life
         price: 6
