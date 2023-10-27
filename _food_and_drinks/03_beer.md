@@ -15,7 +15,7 @@ subsections:
       - name: Founders Porter
         price: 8
         description: I mean, it already said Porter 6.5%
-        note: Note (Optional)
+        note: ""
       - name: BK Lager
         price: 8
         description: Lager 5.2%
