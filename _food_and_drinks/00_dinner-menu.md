@@ -1,12 +1,8 @@
 ---
 title: Dinner Menu
 subsections:
-  - subsection-header: Small Things
+  - subsection-header: ""
     items:
-      - name: Popcorn
-        price: 6
-        description: "**rotating flavors**"
-        note: Pepperoni Pizza
       - name: Marinated Olives
         price: 10
         description: citrus, curry, red pepper flakes
