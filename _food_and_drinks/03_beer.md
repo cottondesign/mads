@@ -29,14 +29,11 @@ subsections:
       - name: Le Chouffe Blonde
         description: Blonde Ale 8%
         price: 9
-      - name: Three's Logical Conclusion
+      - name: Oxbow Surfcasting
         price: 8
-        description: IPA 7%
-      - name: Ace Joker Cider
-        description: Again, it's a cider 6.9%
-        price: 8
-      - name: Ebbs Watermelon
-        price: 8
-        description: Gose 4.1%
+        description: Gose 4.5%
+      - name: Radiant Pig It Ain't Easy
+        price: 11
+        description: Imperial IPA 8%
     subsection-header: Packaged
 ---
