@@ -5,11 +5,11 @@ subsections:
     items:
       - name: Santei "Malvazija"
         price: 15
-        description: Slovenia; golden-hued, crisp and lightly aromatic
-        note: Note (Optional)
+        description: Slovenia - golden-hued, crisp and lightly aromatic
+        note: ""
       - name: Barbara Ohlzelt "Leader"
         price: 14
-        description: Austria; Mineral with green fruit, white pepper, and a light
+        description: Austria - Mineral with green fruit, white pepper, and a light
           herbaciousness
       - name: Lieu Dit "Sauvignon Blanc"
         price: 17
