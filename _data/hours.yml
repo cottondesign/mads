@@ -9,8 +9,8 @@ hours:
     open: false
   - day: Wednesday
     from: 5PM
-    to: 4AM
-    open: false
+    to: 12AM
+    open: true
   - day: Thursday
     open: true
     from: 5PM
