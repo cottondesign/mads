@@ -24,6 +24,6 @@ hours:
     from: 2PM
     to: 4AM
   - day: Sunday
-    open: false
+    open: true
     from: 2PM
     to: 4AM
