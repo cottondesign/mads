@@ -397,6 +397,7 @@ body.receipt-moveUp {
 .easter-egg {
   width: 390px;
   height: 260px;
+  transform: translateY(-15%);
   position:absolute;
   visibility:hidden;
   pointer-events: none;
