@@ -5,7 +5,7 @@ subsections:
     items:
       - name: Madeline
         price: 16
-        description: Vodka, Green Chiles, Amargo Vallet, Vanilla, Moka, Espresso
+        description: Vodka, Espresso, Amargo Vallet, Green Chiles, Vanilla, Moka
       - name: Offshore Account
         price: 16
         description: Cognac, Jamaican Rum, Banana Oil, Pistachio
