@@ -11,27 +11,21 @@ space-areas:
       - path: /assets/images/bg1.jpg
       - path: /assets/images/bg4.jpg
       - path: /assets/images/bg8.jpg
-      - path: /assets/images/bg7.jpg
   - name: Mezzanine
     description: Overlooking the main bar from the second floor, this area has
       several large banquets and can host several groups or one party of 20-40
       guests.
     coming-soon: false
     images:
-      - path: /assets/images/bg2.jpg
       - path: /assets/images/bg11.jpg
       - path: /assets/images/bg17.jpg
       - path: /assets/images/bg18.jpg
-      - path: /assets/images/test2.jpg
   - name: Dining Room
     description: Grab a table. Have a meal or drink...not sure what else to say
       here. It's a dining room.
     coming-soon: false
     images:
-      - path: /assets/images/bg3.jpg
-      - path: /assets/images/bg10.jpg
       - path: /assets/images/bg13.jpg
-      - path: /assets/images/bg14.jpg
   - name: Private Room
     description: |-
       Fits up to 70 guests comfortably
