@@ -14,7 +14,7 @@ subsections:
         description: Dark Rum, Fino Sherry, Spiced Pear, Demerara, Mole Bitters
       - name: Morning Margarita
         price: 16
-        description: Earl Grey tequila, Combier, Agave, Lime, Saline
+        description: Earl Grey infused Don Fulano blanco, Dry Curacao, Agave, Lime, Saline
       - name: Tuxedo Mask
         price: 16
         description: Gin, Montenegro, Amontillado Sherry, Lemon, Pomegranate, Lemon,
@@ -35,4 +35,7 @@ subsections:
       - name: Athletic Brewing Free Wave
         price: 6
         description: n/a hazy ipa
+      - name: Phony Negroni
+        price: 10
+        description: n/a gin or mezcal negroni
 ---
