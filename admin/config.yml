@@ -14,7 +14,7 @@ collections:
         name: "subsections"
         widget: "list"
         fields: 
-          - {label: Subsection, name: subsection-header, widget: string, hint: 'This is totally optional!!! Fill in only if you want more than one subsection. If you leave it blank, the items will fall under the general header.', required: false}
+          - {label: Subsection Header, name: subsection-header, widget: string, hint: 'Having a header is totally optional! Fill in only if you want more than one subsection. If you leave it blank, the items will fall under the general header.', required: false}
           - label: "Menu Item"
             name: "items"
             widget: "list"
