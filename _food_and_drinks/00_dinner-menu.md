@@ -3,6 +3,10 @@ title: Dinner Menu
 subsections:
   - subsection-header: ""
     items:
+      - name: House Popcorn
+        price: 6
+        description: Rotating flavors
+        note: Pepperoni Pizza
       - name: Marinated Olives
         price: 10
         description: citrus, curry, red pepper flakes
