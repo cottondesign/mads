@@ -22,7 +22,7 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Price, name: price, widget: number, value_type: float}
               - {label: Description, name: description, widget: string}
-              - {label: Note, name: note, widget: string, required: false}
+              - {label: Funny Red Text, name: note, widget: string, required: false}
   # - name: "Food and Drinks Menu"
   #   label: "General"
   #   files:
