@@ -14,8 +14,8 @@ subsections:
         description: Pilsner 5.0%
       - name: Founders Porter
         price: 8
-        description: I mean, it already said Porter 6.5%
-        note: ""
+        description: Porter 6.5%
+        note: I mean, it already said Porter
   - items:
       - name: Miller High Life
         price: 6
