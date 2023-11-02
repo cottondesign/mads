@@ -1093,7 +1093,6 @@ body.show-reservations.receipt-moveUp {
     .carousel-container{
       // position: relative;
       position:fixed;
-      overscroll-behavior-y: none;
     }
 
     .carousel {
@@ -1102,7 +1101,7 @@ body.show-reservations.receipt-moveUp {
       overflow-x: scroll;
       width: 100vw;
       overflow: scroll;
-      // overscroll-behavior-y: none;
+      overscroll-behavior-y: none;
     }
   
     .carousel-image {
