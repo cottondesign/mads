@@ -24,6 +24,11 @@ for (let i = 0; i < dayElements.length; i++) {
   }
 }
 
+// if (schedule[schedule.length-1].to == 12) {
+//   schedule[schedule.length-1].to = 0;
+// }
+// console.log(schedule[schedule.length-1].to);
+
 for (let i = 0; i < schedule.length; i++) {
   if (schedule[i].day == currentDay) {
     // console.log(schedule[i].day);
