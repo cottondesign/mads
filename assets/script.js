@@ -212,7 +212,8 @@ for (spaceSection of spaceSections) {
                 break;
               }
             }
-            carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+            // carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+            moveByWidth(carouselCounter, 'left');
           }
         } else {
           buttonSectionAncestor.classList.add("show-description");
@@ -230,7 +231,8 @@ for (spaceSection of spaceSections) {
                 break;
               }
             }
-            carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+            // carousel.style.left = `calc(-100vw * ${carouselCounter})`;
+            moveByWidth(carouselCounter, 'left');
           }
         }
 
