@@ -26,4 +26,4 @@ hours:
   - day: Sunday
     open: true
     from: 2PM
-    to: 12am
+    to: 12AM
