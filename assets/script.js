@@ -382,67 +382,12 @@ carouselLeftClick.addEventListener('mouseleave', function() {
   theSpaceLeftArrow.classList.remove('left-click-hover');
 })
 
+
+// theSpaceRightArrow.addEventListener("click", moveCarouselRight);
+// theSpaceLeftArrow.addEventListener("click", moveCarouselLeft);
 // click functionality
-carouselLeftClick.addEventListener("click", function() {
-  if (carouselCounter == 0) {
-    carouselCounter = numImages - 1;
-    currentIndex = carouselCounter;
-    carousel.style.transition = 'none';
-    carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-
-    setTimeout(function() {
-      carouselCounter--;
-      carousel.style.transition = '300ms';
-      carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-      // console.log('timeout300');
-    }, 0)
-  } else {
-    carouselCounter--;
-    currentIndex = carouselCounter + 1;
-    carousel.style.transition = '300ms';
-    carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-
-  }
-  // TEST
-  toggleSpaceDescriptions();
-  // END OF TEST
-  console.log('Current Index'+currentIndex);
-  })
-
-  carouselRightClick.addEventListener("click", function() {
-    
-    if (carouselCounter == numImages - 1) {
-      carouselCounter = numImages;
-      carousel.style.transition = 'none';
-      carousel.style.left = 0;
-  
-      setTimeout(function() {
-        carouselCounter = 1;
-        carousel.style.transition = '300ms';
-        carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-        // console.log('timeout300');
-      }, 0)
-      currentIndex = 2;
-  
-    } else {
-      carouselCounter++;
-      currentIndex = carouselCounter+1;
-      if (currentIndex > numImages - 1) {
-        currentIndex = 1;
-      }
-  
-      carousel.style.transition = '300ms';
-      carousel.style.left = `calc(-100vw * ${carouselCounter})`;
-    }
-  
-    // TEST
-    toggleSpaceDescriptions();
-    // END OF TEST
-  
-    console.log('Current Index'+currentIndex);
-    console.log('CarouselCounter'+carouselCounter);
-  })
-// end of click functionality
+carouselLeftClick.addEventListener("click", moveCarouselLeft);
+carouselRightClick.addEventListener("click", moveCarouselRight);
 
 const theSpaceLeftArrow = document.querySelector('.arrow-left');
 const theSpaceRightArrow = document.querySelector('.arrow-right');
