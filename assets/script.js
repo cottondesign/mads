@@ -24,17 +24,19 @@ for (let i = 0; i < dayElements.length; i++) {
   }
 }
 
-// if (schedule[schedule.length-1].to == 12) {
-//   schedule[schedule.length-1].to = 0;
-// }
+
 // console.log(schedule[schedule.length-1].to);
 
 for (let i = 0; i < schedule.length; i++) {
+  if (i != 0 && schedule[i-1].to == 12) {
+    schedule[i-1].to = 0;
+  }
   if (schedule[i].day == currentDay) {
     // console.log(schedule[i].day);
 
     if (i == 0) {
       if ((currentHour >= (schedule[i].from + 12)) || (currentHour < schedule[schedule.length-1].to)) {
+        // console.log('open');
         storeStatus.innerHTML = '* open now ';
         storeStatus.classList.add('store-open');
         if (currentHour < schedule[schedule.length-1].to) {
@@ -50,6 +52,7 @@ for (let i = 0; i < schedule.length; i++) {
       }
     } else if ((currentHour >= (schedule[i].from + 12)) || (currentHour < schedule[i-1].to)) {
       storeStatus.innerHTML = '* open now ';
+      // console.log('open');
       storeStatus.classList.add('store-open');
       if (currentHour < schedule[i-1].to) {
         storeClosingTime.innerHTML = `closes ${schedule[i-1].to}am`;
