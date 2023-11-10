@@ -24,7 +24,7 @@ subsections:
         description: hefeweissbier 5.5%
   - items:
       - name: Miller High Life
-        price: 6
+        price: 7
         description: American Lager 4.6%
       - name: Le Chouffe Blonde
         description: Blonde Ale 8%
