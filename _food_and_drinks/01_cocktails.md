@@ -24,7 +24,7 @@ subsections:
         price: 16
         description: Mezcal, Aperol, Pineapple, Lime
       - name: Trade Route
-        price: 21
+        price: 17
         description: Angel's Envy bourbon, Amburana cachaca. spiced saffron, coconut
           water, lemon, egg white
   - subsection-header: N/A Beverages
