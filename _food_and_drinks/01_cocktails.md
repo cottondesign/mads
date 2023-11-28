@@ -38,4 +38,8 @@ subsections:
       - name: Phony Negroni
         price: 10
         description: n/a gin or mezcal negroni
+      - name: Chicha Morada Spritz
+        price: 12
+        description: Lyre's N/A prosecco paired with a Peruvian punch made with purple
+          corn, pineapple, clove, cinnamon, and green apples
 ---
