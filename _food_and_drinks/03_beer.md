@@ -38,5 +38,8 @@ subsections:
       - name: "High Noon Tequila Grapefruit "
         price: 8
         description: Canned Seltzer 4.5%
+      - name: Ace Joker
+        price: 8
+        description: Cider
     subsection-header: Packaged
 ---
