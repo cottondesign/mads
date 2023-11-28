@@ -11,7 +11,7 @@ subsections:
         description: Cognac, Jamaican Rum, Banana Oil, Pistachio
       - name: Cozy Season
         price: 16
-        description: Dark Rum, Fino Sherry, Spiced Pear, Demerara, Mole Bitters
+        description: Santa Teresa Rum, Fino Sherry, Spiced Pear, Demerara, Mole Bitters
       - name: Morning Margarita
         price: 16
         description: Earl Grey infused Don Fulano blanco, Dry Curacao, Agave, Lime, Saline
