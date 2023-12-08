@@ -6,9 +6,9 @@ subsections:
       - name: Madeline
         price: 16
         description: Vodka, Espresso, Amargo Vallet, Green Chiles, Vanilla, Moka
-      - name: Offshore Account
+      - name: Spiked Hot Cider
         price: 16
-        description: Cognac, Jamaican Rum, Banana Oil, Pistachio
+        description: calvados, apple cider reduction, ginger honey, cinnamon, grapefruit
       - name: Cozy Season
         price: 16
         description: Santa Teresa Rum, Fino Sherry, Spiced Pear, Demerara, Mole Bitters
