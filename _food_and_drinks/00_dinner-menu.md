@@ -8,8 +8,9 @@ subsections:
         description: Rotating flavors
         note: Pepperoni Pizza
       - name: Bibb Salad
-        price: 18
-        description: castelfranco, shaved turnip, ricotta salata, farro, sherry vinaigrette
+        price: 17
+        description: castelfranco, turnip, ricotta salata, farro, sherry vinaigrette,
+          crispy shallots
       - name: Grilled Lacinato Kale
         price: 15
         description: house made fruit vinegar, black lentils ragout, miso butter bread
@@ -18,14 +19,14 @@ subsections:
         description: rutabaga, sunchokes, celeriac over colcannon, madeira pan sauce
       - name: Smoked Salmon Dip
         price: 16
-        description: black raddish, kettle chips
+        description: black raddish, malt vinegar chips
       - name: Parsnip Cavatelli
         price: 26
         description: braised duck, pickled mustard greens, pecorino
       - name: Ploughman's Platter
         price: 34
-        description: wild boar pate, short rib pastrami, Bayley Hazen Blue, Calderwood,
-          apple jam,  pickled vegetables, candied walnuts, everything crackers
+        description: two house made charcuterie, two chef selected cheeses, seasonal
+          fruit jam,  pickled vegetables, candied walnuts, heavily seeded rye
       - name: Waffle Fry Poutine
         price: 15
         description: cheese curds, veggie gravy, scallion soubise
