@@ -6,7 +6,7 @@ subsections:
       - name: House Popcorn
         price: 6
         description: Rotating flavors
-        note: Pepperoni Pizza
+        note: duck fat and olive oil
       - name: Bibb Salad
         price: 17
         description: castelfranco, turnip, ricotta salata, farro, sherry vinaigrette,
