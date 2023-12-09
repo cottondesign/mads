@@ -6,7 +6,7 @@ subsections:
       - name: House Popcorn
         price: 6
         description: Rotating flavors
-        note: duck fat and olive oil
+        note: "TODAY: duck fat and herbs"
       - name: Bibb Salad
         price: 17
         description: castelfranco, turnip, ricotta salata, farro, sherry vinaigrette,
