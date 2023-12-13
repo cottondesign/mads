@@ -8,14 +8,14 @@ subsections:
         description: Rotating flavors
         note: "TODAY: duck fat and herbs"
       - name: Bibb Salad
-        price: 17
+        price: 18
         description: castelfranco, turnip, ricotta salata, farro, sherry vinaigrette,
           crispy shallots
       - name: Grilled Lacinato Kale
         price: 15
         description: house made fruit vinegar, black lentils ragout, miso butter bread
       - name: Beef Fat Roasted Root Vegetables
-        price: 14
+        price: 15
         description: rutabaga, sunchokes, celeriac over colcannon, madeira pan sauce
       - name: Smoked Salmon Dip
         price: 16
@@ -28,13 +28,13 @@ subsections:
         description: two house made charcuterie, two chef selected cheeses, seasonal
           fruit jam,  pickled vegetables, candied walnuts, heavily seeded rye
       - name: Waffle Fry Poutine
-        price: 15
+        price: 18
         description: cheese curds, veggie gravy, scallion soubise
       - name: Petit Cassoulet
         price: 26
         description: bean stew, confit duck, provencal sausage, braised pork
       - name: House Burger
-        price: 20
+        price: 18
         note: Add $5 for waffle fries
         description: bacon, egg, cheddar, cherry pepper aioli, english muffin
 ---
