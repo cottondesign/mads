@@ -30,11 +30,16 @@ space-areas:
       - path: /assets/images/bg13.jpg
   - name: Private Room
     description: |-
-      Fits up to 70 guests comfortably
+      Fits up to 70+ guests 
 
-      Full bar and bathrooms in room
+      Full private bar and bathrooms in room
 
-      2 skylights and window providing tons of natural light for daytime events
+      2 skylights and window providing ample natural light for daytime events
 
       Private entry/exit if needed
-    coming-soon: true
+    coming-soon: false
+    images:
+      - path: /assets/images/uploads/4l9a3143.jpg
+      - path: /assets/images/uploads/4l9a2615.jpg
+      - path: /assets/images/uploads/4l9a2680.jpg
+      - path: /assets/images/uploads/4l9a2808.jpg
