@@ -15,13 +15,13 @@ space-areas:
       - path: /assets/images/bg8.jpg
   - name: Mezzanine
     description: Overlooking the main bar from the second floor, this area has
-      several large banquets and can host several groups or one party of 20-40
-      guests.
+      several large booths and can host several groups or one party of
+      20-30guests.
     coming-soon: false
     images:
-      - path: /assets/images/bg11.jpg
-      - path: /assets/images/bg17.jpg
-      - path: /assets/images/bg18.jpg
+      - path: /assets/images/uploads/mezzanine-3.jpg
+      - path: /assets/images/uploads/mezzanine-3.jpg
+      - path: /assets/images/uploads/mezzanine-2-.jpg
   - name: Dining Room
     description: Grab a table. Have a meal or drink...not sure what else to say
       here. It's a dining room.
