@@ -19,15 +19,17 @@ space-areas:
       20-30guests.
     coming-soon: false
     images:
-      - path: /assets/images/uploads/mezzanine-3.jpg
-      - path: /assets/images/uploads/mezzanine-3.jpg
-      - path: /assets/images/uploads/mezzanine-2-.jpg
+      - path: /assets/images/uploads/4l9a4170.jpg
+      - path: /assets/images/uploads/4l9a4158.jpg
+      - path: /assets/images/uploads/4l9a3742.jpg
   - name: Dining Room
     description: Grab a table. Have a meal or drink...not sure what else to say
       here. It's a dining room.
     coming-soon: false
     images:
-      - path: /assets/images/bg13.jpg
+      - path: /assets/images/uploads/4l9a4185.jpg
+      - path: /assets/images/uploads/4l9a3804.jpg
+      - path: /assets/images/uploads/4l9a3509.jpg
   - name: Private Room
     description: |-
       Fits up to 70+ guests 
@@ -42,4 +44,3 @@ space-areas:
       - path: /assets/images/uploads/4l9a3143.jpg
       - path: /assets/images/uploads/4l9a2615.jpg
       - path: /assets/images/uploads/4l9a2680.jpg
-      - path: /assets/images/uploads/4l9a2808.jpg
