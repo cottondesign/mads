@@ -5,14 +5,16 @@ space-areas:
 
       36ft long bar<br>
 
-      A wide variety of spirts from around the world.
+      A wide variety of spirts from around the world.<br>
 
       2 Frame screens for art display and big event viewings
     coming-soon: false
     images:
-      - path: /assets/images/bg1.jpg
-      - path: /assets/images/bg4.jpg
-      - path: /assets/images/bg8.jpg
+      - path: /assets/images/uploads/4l9a3997.jpg
+      - path: /assets/images/uploads/4l9a4075.jpg
+      - path: /assets/images/uploads/4l9a3963.jpg
+      - path: /assets/images/uploads/4l9a3817.jpg
+      - path: /assets/images/uploads/4l9a3978.jpg
   - name: Mezzanine
     description: Overlooking the main bar from the second floor, this area has
       several large booths and can host several groups or one party of
