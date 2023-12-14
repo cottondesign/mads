@@ -1,11 +1,11 @@
 space-areas:
   - name: Bar
     description: |-
-      Features:<br>
+      Features:<br><br>
 
-      36ft long bar<br>
+      36ft long bar<br><br>
 
-      A wide variety of spirts from around the world.<br>
+      A wide variety of spirts from around the world.<br><br>
 
       2 Frame screens for art display and big event viewings
     coming-soon: false
