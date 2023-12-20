@@ -4,7 +4,7 @@ subsections:
   - subsection-header: Sparkling
     items:
       - name: Hild "Sekt Brut"
-        price: 13
+        price: 14
         description: Germany - The wine bubbles with flavors of juicy tropical fruit,
           white flowers, and chalky, vibrant acidity.
       - name: Mae Son "Frizzante"
