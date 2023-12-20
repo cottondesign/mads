@@ -26,10 +26,9 @@ subsections:
           yet combined with a sexy, almost feral undercurrent.
   - subsection-header: White
     items:
-      - name: Barbara Ohlzelt "Leader"
+      - name: "Brand Weissburgunder "
         price: 14
-        description: Austria - Mineral with green fruit, white pepper, and a light
-          herbaciousness
+        description: German - Zippy and fresh
       - name: Lieu Dit "Sauvignon Blanc"
         price: 17
         description: California - High toned & Mineral. Edgy to take the edge off.
