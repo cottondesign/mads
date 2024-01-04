@@ -26,18 +26,12 @@ subsections:
       - name: Miller High Life
         price: 7
         description: American Lager 4.6%
-      - name: Le Chouffe Blonde
-        description: Blonde Ale 8%
-        price: 9
       - name: Oxbow Surfcasting
         price: 8
         description: Gose 4.5%
       - name: Radiant Pig It Ain't Easy
         price: 11
         description: Imperial IPA 8%
-      - name: "High Noon Tequila Grapefruit "
-        price: 8
-        description: Canned Seltzer 4.5%
       - name: Ace Joker
         price: 8
         description: Cider
