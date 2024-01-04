@@ -20,7 +20,7 @@ subsections:
       - name: Smoked Salmon Dip
         price: 16
         description: black raddish, malt vinegar chips
-      - name: Parsnip Cavatelli
+      - name: Duck & Parsnip Cavatelli
         price: 26
         description: braised duck, pickled mustard greens, pecorino
       - name: Ploughman's Platter
