@@ -5,7 +5,7 @@ hours:
     to: 4AM
   - day: Tuesday
     from: 5PM
-    to: 4AM
+    to: 12AM
     open: true
   - day: Wednesday
     from: 5PM
