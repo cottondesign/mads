@@ -6,7 +6,7 @@ hours:
   - day: Tuesday
     from: 5PM
     to: 4AM
-    open: false
+    open: true
   - day: Wednesday
     from: 5PM
     to: 12AM
