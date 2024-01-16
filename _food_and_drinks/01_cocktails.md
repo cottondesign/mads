@@ -27,6 +27,9 @@ subsections:
         price: 17
         description: Angel's Envy bourbon, Amburana cachaca. spiced saffron, coconut
           water, lemon, egg white
+      - name: Offshore Account
+        price: 17
+        description: Pierre Ferrand 10 Gen Cognac, Jamaican Rum, Banana Oil, Pistachio, Lime
   - subsection-header: N/A Beverages
     items:
       - name: Yuzu Soda
@@ -42,4 +45,7 @@ subsections:
         price: 12
         description: Lyre's N/A prosecco paired with a Peruvian punch made with purple
           corn, pineapple, clove, cinnamon, and green apples
+      - name: Hot Cider
+        price: 12
+        description: Our house Spiked Cider but not spiked.
 ---
