@@ -3,9 +3,6 @@ title: Beer
 subsections:
   - subsection-header: On tap
     items:
-      - name: BK Lager
-        price: 8
-        description: Lager 5.2%
       - name: Dogfish Head 60 min IPA
         price: 8
         description: IPA 6%
