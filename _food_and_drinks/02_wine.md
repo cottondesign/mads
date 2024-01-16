@@ -14,6 +14,10 @@ subsections:
       - name: Miller High Life
         price: 7
         description: Champagne of beers
+      - name: Jacques Lassaigne les Vignes de Montgueux
+        description: Bottle only. Focused and quite zingy with some citrus and a seam of
+          white stone minerality.
+        price: 155
   - subsection-header: Skin Contact
     items:
       - name: OVUm "PNK Salt"
