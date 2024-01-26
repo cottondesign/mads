@@ -30,6 +30,12 @@ subsections:
       - name: Offshore Account
         price: 17
         description: Pierre Ferrand 10 Gen Cognac, Jamaican Rum, Banana Oil, Pistachio, Lime
+      - name: 5th Dimension
+        price: 16
+        description: gin, china china, bruto americano, nardini amaro
+      - name: Bartender's Choice Daiquiri
+        price: 16
+        description: go with your gut, trust your bartender
   - subsection-header: N/A Beverages
     items:
       - name: Yuzu Soda
@@ -40,7 +46,7 @@ subsections:
         description: n/a hazy ipa
       - name: Phony Negroni
         price: 10
-        description: n/a gin or mezcal negroni
+        description: n/a negroni
       - name: Chicha Morada Spritz
         price: 12
         description: Lyre's N/A prosecco paired with a Peruvian punch made with purple
