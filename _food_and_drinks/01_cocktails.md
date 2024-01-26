@@ -36,7 +36,7 @@ subsections:
       - name: Bartender's Choice Daiquiri
         price: 16
         description: go with your gut, trust your bartender
-  - subsection-header: N/A Beverages
+  - subsection-header: No Booze
     items:
       - name: Yuzu Soda
         price: 7
