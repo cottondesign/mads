@@ -23,9 +23,6 @@ subsections:
       - name: Miller High Life
         price: 7
         description: American Lager 4.6%
-      - name: Oxbow Surfcasting
-        price: 8
-        description: Gose 4.5%
       - name: Radiant Pig It Ain't Easy
         price: 11
         description: Imperial IPA 8%
