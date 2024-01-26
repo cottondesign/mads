@@ -32,7 +32,7 @@ subsections:
         description: Pierre Ferrand 10 Gen Cognac, Jamaican Rum, Banana Oil, Pistachio, Lime
       - name: 5th Dimension
         price: 16
-        description: gin, china china, bruto americano, nardini amaro
+        description: Gin, China China, Bruto Americano, Nardini Amaro
       - name: Bartender's Choice Daiquiri
         price: 16
         description: go with your gut, trust your bartender
