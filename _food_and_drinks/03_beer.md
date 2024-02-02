@@ -18,14 +18,11 @@ subsections:
         description: Pilsner 5.0%
       - name: Grimm Weisse
         price: 9
-        description: hefeweissbier 5.5%
+        description: Hefeweissbier 5.5%
   - items:
       - name: Miller High Life
         price: 7
         description: American Lager 4.6%
-      - name: Radiant Pig It Ain't Easy
-        price: 11
-        description: Imperial IPA 8%
       - name: Ace Joker
         price: 8
         description: Cider
