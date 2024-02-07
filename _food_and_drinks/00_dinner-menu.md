@@ -6,7 +6,7 @@ subsections:
       - name: House Popcorn
         price: 7
         description: Rotating flavors
-        note: "TODAY: Citrus Sesame"
+        note: "TODAY: Guajillo chili "
       - name: Bibb Salad
         price: 18
         description: castelfranco, turnip, ricotta salata, farro, sherry vinaigrette,
