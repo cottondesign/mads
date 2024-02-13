@@ -14,7 +14,7 @@ subsections:
         description: Porter 6.5%
         note: I mean, it already said Porter
       - name: Talea Al Dente
-        price: 9
+        price: 10
         description: Pilsner 5.0%
       - name: Grimm Weisse
         price: 9
