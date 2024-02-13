@@ -4,19 +4,19 @@ subsections:
   - subsection-header: ""
     items:
       - name: Madeline
-        price: 16
+        price: 17
         description: Vodka, Espresso, Amargo Vallet, Green Chiles, Vanilla, Moka
       - name: Spiked Hot Cider
         price: 16
         description: calvados, apple cider reduction, ginger honey, cinnamon, grapefruit
       - name: Cozy Season
-        price: 16
+        price: 17
         description: Santa Teresa Rum, Fino Sherry, Spiced Pear, Demerara, Mole Bitters
       - name: Morning Margarita
-        price: 16
+        price: 17
         description: Earl Grey infused Don Fulano blanco, Dry Curacao, Agave, Lime, Saline
       - name: Tuxedo Mask
-        price: 16
+        price: 17
         description: Gin, Montenegro, Amontillado Sherry, Lemon, Pomegranate, Lemon,
           Clarified milk, Bubbles
         note: Yup, milk
@@ -31,7 +31,7 @@ subsections:
         price: 17
         description: Pierre Ferrand 10 Gen Cognac, Jamaican Rum, Banana Oil, Pistachio, Lime
       - name: 5th Dimension
-        price: 16
+        price: 17
         description: Gin, China China, Bruto Americano, Nardini Amaro
       - name: Bartender's Choice Daiquiri
         price: 16
