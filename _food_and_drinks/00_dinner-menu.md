@@ -27,7 +27,7 @@ subsections:
         price: 24
         description: italian spices, citrus, shishito pepper relish, celery root puree
       - name: Waffle Fry Poutine
-        price: 18
+        price: 19
         description: cheese curds, veggie gravy, scallion soubise
       - name: Cast Iron Savory Pie
         price: 26
