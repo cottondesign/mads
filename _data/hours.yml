@@ -25,5 +25,5 @@ hours:
     to: 4AM
   - day: Sunday
     open: true
-    from: "11"
+    from: 1PM
     to: 12AM
