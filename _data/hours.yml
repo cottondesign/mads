@@ -21,9 +21,9 @@ hours:
     to: 4AM
   - day: Saturday
     open: true
-    from: 12PM
+    from: 12:01PM
     to: 4AM
   - day: Sunday
     open: true
-    from: 12PM
+    from: 12:01PM
     to: 12AM
