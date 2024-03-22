@@ -26,7 +26,7 @@ subsections:
         description: jack and cheddar cheese, chorizo, herbed breadcrumbs
         note: can be made vegetarian
       - name: Waffle Fry Poutine
-        price: 18
+        price: 19
         description: cheese curds, veggie gravy, scallion soubise
       - name: Short Rib Nachos
         price: 24
