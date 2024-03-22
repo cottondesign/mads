@@ -39,8 +39,8 @@ subsections:
       - name: Classic Burger
         price: 18
         note: ""
-        description: house blend ground beef, american cheese, lettuce, tomato, onion,
-          brioche
+        description: house blend ground beef, american cheese, chipotle mayo, lettuce,
+          tomato, onion, brioche
       - name: The Traveler
         price: 20
         description: "house blend ground beef, crispy prosciutto, chimichurri,
