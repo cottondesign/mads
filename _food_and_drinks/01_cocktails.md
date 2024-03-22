@@ -6,9 +6,6 @@ subsections:
       - name: Madeline
         price: 17
         description: Vodka, Espresso, Amargo Vallet, Green Chiles, Vanilla, Moka
-      - name: Spiked Hot Cider
-        price: 16
-        description: calvados, apple cider reduction, ginger honey, cinnamon, grapefruit
       - name: Cozy Season
         price: 17
         description: Santa Teresa Rum, Fino Sherry, Spiced Pear, Demerara, Mole Bitters
@@ -51,7 +48,4 @@ subsections:
         price: 12
         description: Lyre's N/A prosecco paired with a Peruvian punch made with purple
           corn, pineapple, clove, cinnamon, and green apples
-      - name: Hot Cider
-        price: 12
-        description: Our house Spiked Cider but not spiked.
 ---
