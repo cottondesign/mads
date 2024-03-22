@@ -1,5 +1,5 @@
 ---
-title: Dinner Menu
+title: Food Menu
 subsections:
   - subsection-header: ""
     items:
@@ -9,10 +9,11 @@ subsections:
       - name: Shishito Peppers
         description: guajillo, citrus, sea salt, lemon
         price: 11
-      - name: Crispy Brussel Sprouts
+        note: ""
+      - name: Crispy Brussels Sprouts
         price: 12
         description: oyster mushrooms, avocado aioli, crispy tortilla
-        note: vegan
+        note: ""
       - name: Cholula Buffalo Wings
         price: 15
         description: ginger buttermilk, celery, and rainbow carrots
