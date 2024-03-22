@@ -7,7 +7,7 @@ subsections:
         price: 23
         description: red wine shallot mignonette and cocktail sauce
       - name: Shishito Peppers
-        description: guajillo, citrus, sea salt, lemon
+        description: guajillo citrus sea salt, lemon
         price: 11
         note: ""
       - name: Crispy Brussels Sprouts
