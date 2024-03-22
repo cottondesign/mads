@@ -3,54 +3,48 @@ title: Dinner Menu
 subsections:
   - subsection-header: ""
     items:
-      - name: House Popcorn
-        price: 7
-        description: Rotating flavors
-        note: "TODAY: Pimento Cheese"
-      - name: Bibb Salad
-        price: 18
-        description: castelfranco, turnip, ricotta salata, farro, sherry vinaigrette,
-          crispy shallots
-      - name: Grilled Lacinato Kale
-        price: 15
-        description: house made fruit vinegar, black lentils ragout, miso butter bread
-      - name: 1/2 Dozen Oysters
-        price: 22
-        description: horseradish mignonette, lemon
-      - name: Smoked Salmon Rillette
-        price: 16
-        description: black raddish, malt vinegar chips
-      - name: Chicken Croquettes
-        price: 14
-        description: Braised greens, garlic and herb aioli
-      - name: Crispy Wild Boar Ribs
-        price: 24
-        description: italian spices, citrus, shishito pepper relish, celery root puree
-      - name: Waffle Fry Poutine
-        price: 19
-        description: cheese curds, veggie gravy, scallion soubise
-      - name: Cast Iron Savory Pie
-        price: 26
-        description: rotating seasonal selection
-      - name: Duck & Parsnip Cavatelli
-        price: 26
-        description: braised duck, pickled mustard greens, pecorino
-      - name: Ploughman's Platter
-        price: 34
-        description: two house made charcuterie, two chef selected cheeses, seasonal
-          fruit jam,  pickled vegetables, candied walnuts, heavily seeded rye
-      - name: House Burger
-        price: 18
-        note: Add $5 for waffle fries
-        description: bacon, egg, cheddar, cherry pepper aioli, english muffin
-      - name: Burger Special
-        price: 19
-        description: always changing
-      - name: Pork Schnitzel Sandwich
-        price: 18
-        description: "beer-brined pork schnitzel, braised red cabbage, dijonnaise, sunny
-          egg, rye roll "
-      - name: Griddle Banana Bread
+      - name: 1/2 Dozen Oysters of the Day
+        price: 23
+        description: red wine shallot mignonette and cocktail sauce
+      - name: Shishito Peppers
+        description: guajillo, citrus, sea salt, lemon
+        price: 11
+      - name: Crispy Brussel Sprouts
         price: 12
-        description: cognac custard, banana chips, crushed pistachio
+        description: oyster mushrooms, avocado aioli, crispy tortilla
+        note: vegan
+      - name: Cholula Buffalo Wings
+        price: 15
+        description: ginger buttermilk, celery, and rainbow carrots
+      - name: Kale Ceasar
+        price: 12
+        description: garlic croutons, shaved parmesean
+        note: can add grilled/fried chicken
+      - name: Chorizo Mac & Cheese
+        price: 15
+        description: jack and cheddar cheese, chorizo, herbed breadcrumbs
+        note: can be made vegetarian
+      - name: Waffle Fry Poutine
+        price: 18
+        description: cheese curds, veggie gravy, scallion soubise
+      - name: Short Rib Nachos
+        price: 24
+        description: mole short rib, pickled fresno, pico de gallo, house cheese blend,
+          chipotle crema
+      - name: The Chicken Sandwich
+        price: 18
+        description: choice of grilled or fried chicken, pickled fresnos, miso aioli,
+          lettuce, tomato, onion, brioche
+      - name: Classic Burger
+        price: 18
+        note: ""
+        description: house blend ground beef, american cheese, lettuce, tomato, onion,
+          brioche
+      - name: The Traveler
+        price: 20
+        description: "house blend ground beef, crispy prosciutto, chimichurri,
+          mozzarella, lettuce, tomato, onion, brioche "
+      - name: "Side of Fries "
+        price: 8
+        description: "angostura aioli "
 ---
