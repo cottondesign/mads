@@ -18,7 +18,7 @@ subsections:
         price: 15
         description: ginger buttermilk, celery, and rainbow carrots
       - name: Kale Ceasar
-        price: 12
+        price: 15
         description: garlic croutons, shaved parmesean
         note: can add grilled/fried chicken
       - name: Chorizo Mac & Cheese
