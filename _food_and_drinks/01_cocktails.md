@@ -14,8 +14,8 @@ subsections:
         description: Earl Grey infused Don Fulano blanco, Dry Curacao, Agave, Lime, Saline
       - name: Tuxedo Mask
         price: 17
-        description: Gin, Montenegro, Amontillado Sherry, Lemon, Pomegranate, Lemon,
-          Clarified milk, Bubbles
+        description: Citadelle Jardin d'ete gin, Montenegro, Amontillado Sherry, Lemon,
+          Pomegranate, Lemon, Clarified milk, Bubbles
         note: Yup, milk
       - name: Polar Bear
         price: 16
