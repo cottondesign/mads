@@ -19,7 +19,7 @@ subsections:
         note: Yup, milk
       - name: Polar Bear
         price: 16
-        description: Mezcal, Aperol, Pineapple, Lime
+        description: Vida Mezcal, Aperol, Pineapple, Lime
       - name: Trade Route
         price: 17
         description: Angel's Envy bourbon, Amburana cachaca. spiced saffron, coconut
