@@ -10,7 +10,7 @@ subsections:
         description: guajillo citrus sea salt, lemon
         price: 11
         note: ""
-      - name: Crispy Brussels Sprouts
+      - name: Brussels Sprouts
         price: 12
         description: oyster mushrooms, avocado aioli, crispy tortilla
         note: ""
