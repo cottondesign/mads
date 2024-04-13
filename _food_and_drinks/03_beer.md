@@ -23,5 +23,8 @@ subsections:
       - name: Ace Joker
         price: 8
         description: Cider
+      - name: Ebbs No. 3
+        description: IPA 4.4%
+        price: 8
     subsection-header: Packaged
 ---
