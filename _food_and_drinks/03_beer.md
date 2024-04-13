@@ -3,16 +3,13 @@ title: Beer
 subsections:
   - subsection-header: On tap
     items:
-      - name: Dogfish Head 60 min IPA
-        price: 8
-        description: IPA 6%
       - name: Maine Lunch
         price: 14
         description: IPA 7.0%
-      - name: Founders Porter
+      - name: Rotating Seasonal Draft
         price: 8
-        description: Porter 6.5%
-        note: I mean, it already said Porter
+        description: "Current: Montauk Surf Beer 4.5%"
+        note: ""
       - name: Talea Al Dente
         price: 10
         description: Pilsner 5.0%
