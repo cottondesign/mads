@@ -33,6 +33,13 @@ subsections:
       - name: Bartender's Choice Daiquiri
         price: 16
         description: go with your gut, trust your bartender
+      - name: Moonflower
+        price: 17
+        description: Singani 63, chareau aloe, creme de violette, raspberry, lemon
+      - name: El Topo
+        price: 17
+        description: Montelobos mezcal, strega, cap crose blanc, px sherry, cold brew,
+          nitro pumped
   - subsection-header: No Booze
     items:
       - name: Yuzu Soda
