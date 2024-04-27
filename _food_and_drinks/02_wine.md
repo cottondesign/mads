@@ -42,11 +42,6 @@ subsections:
         price: 18
         description: Oregon - Mid bodied & vibrant. Ripe PNW cherries, black pepper &
           volcanic rock
-      - name: Inconnu "Kitsune"
-        price: 19
-        description: California - acid, tannin, fruit, & earth combine in a wine that
-          keeps you coming back for another sip. Mid/Full in body and a
-          tightwire balance of fruit and rustic earth.
       - name: Nuova Cappelletta "NSA"
         price: 17
         description: Piedmonte - Savory, spicy, darkly floral and brooding.
