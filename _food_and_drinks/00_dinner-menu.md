@@ -36,6 +36,9 @@ subsections:
       - name: Cholula Buffalo Wings
         price: 15
         description: ginger buttermilk, celery, and rainbow carrots
+      - name: Ceviche of the day
+        price: 21
+        description: mango, red onion, radish, fresno chile, tobiko
       - name: Kale Ceasar
         price: 15
         description: garlic croutons, shaved parmesean
@@ -44,6 +47,9 @@ subsections:
         price: 15
         description: jack and cheddar cheese, chorizo, herbed breadcrumbs
         note: can be made vegetarian
+      - name: Tacos of the day
+        price: 15
+        description: three per order, house made tortillas
       - name: Waffle Fry Poutine
         price: 19
         description: cheese curds, veggie gravy, scallion soubise
@@ -67,4 +73,7 @@ subsections:
       - name: "Side of Fries "
         price: 8
         description: "angostura aioli "
+      - name: Churro Cheesecake
+        price: 11
+        description: confit strawberries and blueberry sauce
 ---
