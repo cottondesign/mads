@@ -1,7 +1,26 @@
 ---
 title: Food Menu
 subsections:
-  - subsection-header: ""
+  - subsection-header: Weekend Brunch Options til 3:30
+    items:
+      - name: Avocado Toast
+        price: 14
+        description: pepitas, red radish, pickled onion, sunflower sprouts, pickled
+          fresno, sourdough
+      - name: Mole Chilaquiles
+        price: 19
+        description: Crispy tortillas, short rib, sliced avocado, red onion, chipotle
+          crema, sunny side egg
+      - name: Breakfast Sandwich
+        price: 11
+        description: scrambled egg, bacon, chipotle aioli, cheddar, texas toast
+      - name: Challah French Toast
+        price: 17
+        description: strawberry confit, orange mascarpone, syrup
+      - name: Chicken & Waffles
+        price: 18
+        description: spicy mezcal maple syrup, strawberry butter
+  - subsection-header: All Day Food
     items:
       - name: 1/2 Dozen Oysters of the Day
         price: 23
