@@ -73,6 +73,10 @@ subsections:
       - name: "Side of Fries "
         price: 8
         description: "angostura aioli "
+      - name: Portobello Sandwich
+        price: 18
+        description: smashed avocado, pickled onions, sunflower sprouts, chimichurri,
+          sourdough
       - name: Churro Cheesecake
         price: 11
         description: confit strawberries and blueberry sauce
