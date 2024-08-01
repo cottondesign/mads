@@ -40,6 +40,9 @@ subsections:
         price: 17
         description: Montelobos mezcal, strega, cap crose blanc, px sherry, cold brew,
           nitro pumped
+      - name: Seasonal Slushy
+        price: 16
+        description: Tequila, mezcal, watermelon, serrano, lime
   - subsection-header: No Booze
     items:
       - name: Yuzu Soda
