@@ -24,10 +24,9 @@ subsections:
         price: 15
         description: Oregon - Takes you straight to the Gorge with cherry orchards and
           salty thru-lines.
-      - name: Roberto Henriquez "Pais Verde"
-        price: 15
-        description: Chile - 200+ yr old vines! Juicy in the way that cranberries are,
-          yet combined with a sexy, almost feral undercurrent.
+      - name: Roberto Henriquez Orange
+        price: 17
+        description: Chile - 200+ yr old vines! aromatic salinity and floral notes
   - subsection-header: White
     items:
       - name: "Brand Weissburgunder "
@@ -42,7 +41,10 @@ subsections:
         price: 18
         description: Oregon - Mid bodied & vibrant. Ripe PNW cherries, black pepper &
           volcanic rock
-      - name: Nuova Cappelletta "NSA"
+      - name: Field Recordings - Sangiovese
+        price: 16
+        description: California - light and juicy
+      - name: Sebastian David - Chilled Cab
         price: 17
-        description: Piedmonte - Savory, spicy, darkly floral and brooding.
+        description: Loire Valley - wild and vibrant
 ---
