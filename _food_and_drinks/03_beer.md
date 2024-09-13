@@ -8,23 +8,26 @@ subsections:
         description: IPA 7.0%
       - name: Rotating Seasonal Draft
         price: 8
-        description: "Current: Montauk Surf Beer 4.5%"
+        description: "Current: Torch and Crown Share House 5.4%"
         note: ""
       - name: Talea Al Dente
         price: 10
         description: Pilsner 5.0%
-      - name: Grimm Weisse
+      - name: Torch & Crown High Brau
         price: 9
-        description: Hefeweissbier 5.5%
+        description: Oktoberfest 5.5%
   - items:
       - name: Miller High Life
         price: 7
         description: American Lager 4.6%
-      - name: Ace Joker
-        price: 8
-        description: Cider
       - name: Ebbs No. 3
         description: IPA 4.4%
+        price: 9
+      - name: Aval
         price: 8
+        description: cider 6%
+      - name: Dogfish Head Seaquench
+        price: 8
+        description: Sour Ale 4.9%
     subsection-header: Packaged
 ---
