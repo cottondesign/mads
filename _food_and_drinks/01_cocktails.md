@@ -5,24 +5,24 @@ subsections:
     items:
       - name: Madeline
         price: 17
-        description: Vodka, Espresso, Amargo Vallet, Green Chiles, Vanilla, Moka
+        description: Vodka, espresso, amargo vallet, green chiles, vanilla, moka
       - name: Surfbort
         price: 17
         description: Watermelon rind-infused Planteray rum, rhum agricole, mango oleo, lime
       - name: Morning Margarita
         price: 17
-        description: Earl Grey infused Ocho Tequila blanco, dry curacao, agave, lime, Saline
+        description: Earl grey infused Ocho Tequila blanco, dry curacao, agave, lime, Saline
       - name: Tuxedo Mask
         price: 17
-        description: Citadelle Jardin d'ete gin, Montenegro, Amontillado Sherry, Lemon,
-          Pomegranate, Lemon, Clarified milk, Bubbles
+        description: Citadelle Jardin d'ete gin, Montenegro, amontillado sherry, lemon,
+          pomegranate, clarified milk, bubbles
         note: Yup, milk
       - name: Polar Bear
         price: 16
         description: Vida mezcal, Aperol, pineapple, lime
       - name: Trade Route
         price: 17
-        description: Angel's Envy bourbon, Amburana cachaca. spiced saffron, coconut
+        description: Angel's Envy bourbon, amburana cachaca. spiced saffron, coconut
           water, lemon, egg white
       - name: 5th Dimension
         price: 17
