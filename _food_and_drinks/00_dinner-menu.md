@@ -8,7 +8,7 @@ subsections:
         description: pepitas, red radish, pickled onion, sunflower sprouts, pickled
           fresno, sourdough
       - name: Mole Chilaquiles
-        price: 19
+        price: 24
         description: Crispy tortillas, short rib, sliced avocado, red onion, chipotle
           crema, sunny side egg
       - name: Breakfast Sandwich
@@ -18,7 +18,7 @@ subsections:
         price: 17
         description: strawberry confit, orange mascarpone, syrup
       - name: Chicken & Waffles
-        price: 18
+        price: 17
         description: spicy mezcal maple syrup, strawberry butter
   - subsection-header: All Day Food
     items:
