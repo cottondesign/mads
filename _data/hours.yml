@@ -14,7 +14,7 @@ hours:
   - day: Thursday
     open: true
     from: 5PM
-    to: 1AM
+    to: 12AM
   - day: Friday
     open: true
     from: 3PM
