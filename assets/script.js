@@ -5,76 +5,161 @@ tableNumber.innerHTML = Math.floor(Math.random()*20) + 1;
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 tableLetter.innerHTML = alphabet[Math.floor(Math.random()*alphabet.length)];
 
-// dynamic header for hours
-const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}));
-const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-let currentDay = days[currentDate.getDay()];
-let currentHour = currentDate.getHours();
+// // dynamic header for hours
+const currentDate = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
+const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+let currentDayIndex = currentDate.getDay(); // getDay() returns 0 for Sunday, 1 for Monday, etc.
 
+// Adjust index since schedule starts with Monday
+currentDayIndex = (currentDayIndex === 0) ? 6 : currentDayIndex - 1; // Shift index so that 0 corresponds to Monday
+
+let currentDecimalTime = currentDate.getHours() + (currentDate.getMinutes() / 60); // Combine hours and minutes as decimal time
+
+// Parse your schedule here (replace with actual parsed schedule if needed)
 let dayElements = document.querySelectorAll(".hours-day");
 let hours = document.querySelectorAll(".hours");
-let storeStatus = document.querySelector('#storeStatus');
-let storeClosingTime = document.querySelector('#storeClosingTime');
 const schedule = [];
 for (let i = 0; i < dayElements.length; i++) {
-  if (hours[i].textContent == 'CLOSED') {
-    schedule[i] = { day: dayElements[i].textContent, from: hours[i].textContent, to: hours[i].textContent };
+  if (hours[i].classList.contains('hours-closed')) {
+    schedule[i] = { day: dayElements[i].textContent, open: false, from: hours[i].textContent, to: hours[i].textContent };
   } else {
-    schedule[i] = { day: dayElements[i].textContent, from: hours[i].querySelector('.hours-from').textContent.replace(/[^0-9]/g,"")*1, to: hours[i].querySelector('.hours-to').textContent.replace(/[^0-9]/g,"")*1 };
+    schedule[i] = { day: dayElements[i].textContent, open: true, from: hours[i].querySelector('.hours-from').textContent, to: hours[i].querySelector('.hours-to').textContent };
   }
 }
 
+// test
+// currentDayIndex = 1;
+// currentDecimalTime = 3.5;
+// console.log(schedule);
+// console.log(schedule[currentDayIndex].day, currentDecimalTime);
 
-// console.log(schedule[schedule.length-1].to);
+// Ensure the storeStatus and storeClosingTime elements exist in your HTML
+let storeStatus = document.querySelector('#storeStatus');
+let storeClosingTime = document.querySelector('#storeClosingTime');
 
-for (let i = 0; i < schedule.length; i++) {
-  if (i != 0 && schedule[i-1].to == 12) {
-    schedule[i-1].to = 0;
+// Utility function to convert time like "5PM" to 24-hour decimal format
+function convertTo24HourDecimal(timeStr) {
+  const [time, modifier] = timeStr.match(/(\d+)(AM|PM)/).slice(1);
+  let hours = parseInt(time);
+  
+  // Convert to 24-hour format
+  if (modifier === "PM" && hours < 12) hours += 12;
+  if (modifier === "AM" && hours === 12) hours = 0; // Midnight case
+
+  // Return the correct hour between 0 and 23
+  return hours;
+}
+
+// Utility function to convert 24-hour time to 12-hour format for display
+function format12HourTime(decimalHour) {
+  let hour = Math.floor(decimalHour);
+  let minute = Math.round((decimalHour - hour) * 60);
+  let period = hour >= 12 ? 'PM' : 'AM';
+  hour = hour % 12;
+  if (hour === 0) hour = 12; // Handle 12 AM or 12 PM
+
+  // If minutes are 0, omit them from the display
+  if (minute === 0) {
+    return `${hour}${period}`;
   }
-  if (schedule[i].day == currentDay) {
-    // console.log(schedule[i].day);
 
-    if (i == 0) {
-      if ((currentHour >= (schedule[i].from + 12)) || (currentHour < schedule[schedule.length-1].to)) {
-        // console.log('open');
-        storeStatus.innerHTML = '* open now ';
-        storeStatus.classList.add('store-open');
-        if (currentHour < schedule[schedule.length-1].to) {
-          storeClosingTime.innerHTML = `closes ${schedule[schedule.length-1].to}am`;
-        } else {
-          storeClosingTime.innerHTML = `closes ${schedule[i].to}am`;
-        }
-      } else if (schedule[i].from != 'CLOSED') {
-        storeStatus.innerHTML = '* closed ';
-        storeClosingTime.innerHTML = `opens ${schedule[i].from}`;
-      } else {
-        firstOpens();
-      }
-    } else if ((currentHour >= (schedule[i].from + 12)) || (currentHour < schedule[i-1].to)) {
-      storeStatus.innerHTML = '* open now ';
-      // console.log('open');
-      storeStatus.classList.add('store-open');
-      if (currentHour < schedule[i-1].to) {
-        storeClosingTime.innerHTML = `closes ${schedule[i-1].to}am`;
-      } else {
-        storeClosingTime.innerHTML = `closes ${schedule[i].to}am`;
-      }
-    } else if (schedule[i].from != 'CLOSED') {
-      storeStatus.innerHTML = '* closed ';
-      storeClosingTime.innerHTML = `opens ${schedule[i].from}pm`;
+  return `${hour}:${minute < 10 ? '0' : ''}${minute}${period}`;
+}
+
+// Check the previous day's schedule if it's before 7 AM
+function checkPreviousDay(currentDayIndex, currentDecimalTime) {
+  const prevDayIndex = (currentDayIndex === 0) ? 6 : currentDayIndex - 1; // Previous day
+  const prevDaySchedule = schedule[prevDayIndex];
+
+  // If previous day is marked as closed, ignore times
+  if (!prevDaySchedule.open) {
+    return { open: false };
+  }
+
+  // Convert the previous day's open/close times
+  let prevDayOpenHour = convertTo24HourDecimal(prevDaySchedule.from);
+  let prevDayCloseHour = convertTo24HourDecimal(prevDaySchedule.to);
+  
+  // Check if the previous day closes after midnight (i.e., prevDayCloseHour is earlier than prevDayOpenHour)
+  if (prevDayCloseHour < prevDayOpenHour) {
+    // If current time is before prevDayCloseHour (early morning), it's still open
+    if (currentDecimalTime < prevDayCloseHour) {
+      return { open: true, closingTime: prevDayCloseHour };
+    }
+  }
+
+  // Store is closed by default if past closing time
+  return { open: false };
+}
+
+// Check today's schedule if it's after 7 AM
+function checkCurrentDay(currentDayIndex, currentDecimalTime) {
+  const todaySchedule = schedule[currentDayIndex];
+
+  // If today is marked as closed, ignore times and return closed status
+  if (!todaySchedule.open) {
+    return { open: false };
+  }
+
+  // Convert today's open/close times
+  let todayOpenHour = convertTo24HourDecimal(todaySchedule.from);
+  let todayCloseHour = convertTo24HourDecimal(todaySchedule.to);
+  
+  // Handle past-midnight closing times (e.g., closing at 4 AM next day)
+  if (todayCloseHour < todayOpenHour) {
+    todayCloseHour += 24; // Adjust to handle closing after midnight
+  }
+
+  // Check if the current time falls within today's open hours
+  if (todaySchedule.open && currentDecimalTime >= todayOpenHour && currentDecimalTime < todayCloseHour) {
+    return { open: true, closingTime: todayCloseHour % 24 }; // Wrap around to keep within 24-hour format
+  }
+
+  return { open: false };
+}
+
+// Determine if the store is open or closed
+let statusX;
+if (currentDecimalTime < 7) {
+  // Before 7 AM, check the previous day's schedule
+  statusX = checkPreviousDay(currentDayIndex, currentDecimalTime);
+} else {
+  // After 7 AM, check today's schedule
+  statusX = checkCurrentDay(currentDayIndex, currentDecimalTime);
+}
+
+// Update the DOM based on whether the store is open or closed
+if (statusX.open) {
+  storeStatus.innerHTML = '* open now ';
+  storeStatus.classList.add('store-open');
+  storeClosingTime.innerHTML = `closes ${format12HourTime(statusX.closingTime)}`;
+} else {
+  storeStatus.innerHTML = '* closed ';
+  let nextOpening = getNextOpening(currentDayIndex);
+  if (nextOpening) {
+    if (nextOpening.dayIndex === currentDayIndex) {
+      // Only display the time if it's the same day
+      storeClosingTime.innerHTML = `opens ${nextOpening.from}`;
     } else {
-      firstOpens();
+      // Display day and time if it's a different day
+      storeClosingTime.innerHTML = `opens ${nextOpening.day} ${nextOpening.from}`;
     }
+  } else {
+    storeClosingTime.innerHTML = 'Closed for the rest of the week';
   }
 }
-function firstOpens() {
-  for (let i=0; i < schedule.length; i++) {
-    if (schedule[i].from != 'CLOSED') {
-      storeStatus.innerHTML = '* closed ';
-      storeClosingTime.innerHTML = `opens ${schedule[i].day} ${schedule[i].from}pm`;
-      break;
+
+// Get the next opening time (if the store is closed)
+function getNextOpening(currentDayIndex) {
+  for (let i = 0; i < 7; i++) {
+    let dayIndex = (currentDayIndex + i) % 7;
+    const daySchedule = schedule[dayIndex];
+
+    if (daySchedule.open) {
+      return { day: daySchedule.day, from: daySchedule.from, dayIndex };
     }
   }
+  return null; // if all days are closed
 }
 
 // The Space JS
@@ -399,7 +484,7 @@ const theSpaceRightArrow = document.querySelector('.arrow-right');
 
 
 let numImages = document.getElementById("carousel").childElementCount;
-console.log(numImages);
+// console.log(numImages);
 const imageArray = document.querySelectorAll('.carousel-image img');
 const carouselContainer = document.getElementById('carouselContainer');
 const carousel = document.getElementById('carousel');

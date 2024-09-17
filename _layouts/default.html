@@ -213,6 +213,7 @@
                         <td class="hours-day">{{ day.day }}</td>
                         {% if day.open == false %}
                         <td class="hours hours-closed">CLOSED</td>
+                        <!-- <td class="hours hours-hours hours-closed"><span class="hours-from">{{ day.from }}</span> – <span class='hours-to'>{{ day.to }}</span></td> -->
                         {% else %}
                         <td class="hours hours-hours"><span class="hours-from">{{ day.from }}</span> – <span class='hours-to'>{{ day.to }}</span></td>
                         {% endif %}
