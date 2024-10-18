@@ -12,8 +12,8 @@ space-areas:
     images:
       - path: /assets/images/uploads/4l9a3997.jpg
       - path: /assets/images/uploads/4l9a4075.jpg
+      - path: /assets/images/uploads/pxl_20240622_184010595.jpg
       - path: /assets/images/uploads/4l9a3963.jpg
-      - path: /assets/images/uploads/4l9a3817.jpg
       - path: /assets/images/uploads/4l9a3978.jpg
   - name: Mezzanine
     description: Overlooking the main bar from the second floor, this area has
@@ -31,6 +31,7 @@ space-areas:
     images:
       - path: /assets/images/uploads/4l9a4185.jpg
       - path: /assets/images/uploads/4l9a3804.jpg
+      - path: /assets/images/uploads/pxl_20240921_005811706.jpg
       - path: /assets/images/uploads/4l9a3509.jpg
   - name: Private Back Room
     description: >-
