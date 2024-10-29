@@ -37,7 +37,7 @@ subsections:
         price: 17
         description: Ilegal mezcal, strega, cap corse blanc, px sherry, cold brew, nitro
           pumped
-      - name: 86 Shauwnes
+      - name: 86 Sean
         price: 17
         description: Calvados, rye whiskey, honey, salted grapefruit, lemon
       - name: Offshore Account
