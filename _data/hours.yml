@@ -17,13 +17,13 @@ hours:
     to: 12AM
   - day: Friday
     open: true
-    from: 3PM
-    to: 4AM
+    from: 5PM
+    to: 2AM
   - day: Saturday
     open: true
     from: 12PM
-    to: 4AM
+    to: 2AM
   - day: Sunday
     open: true
     from: 12PM
-    to: 12AM
+    to: 10PM
