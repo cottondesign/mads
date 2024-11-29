@@ -30,9 +30,17 @@ subsections:
         description: guajillo citrus sea salt, lemon
         price: 11
         note: ""
+      - name: Papas Bravas
+        price: 13
+        description: roasted rainbow baby potatoes, chile de arbol sauce, confit garlic
+          aioli
       - name: Cholula Buffalo Wings
         price: 15
         description: ginger buttermilk, celery, and rainbow carrots
+      - name: Red Quinoa Salad
+        price: 15
+        description: red quinoa, romaine lettuce, red pepper, dried figs, cucumber,
+          pickled onion, spicy pepitas, mango pink peppercorn vinaigrette
       - name: Kale Ceasar
         price: 15
         description: garlic croutons, shaved parmesean
@@ -44,19 +52,32 @@ subsections:
       - name: Tacos of the day
         price: 15
         description: three per order, house made tortillas
+      - name: Poke Wonton Nachos
+        price: 21
+        description: ahi tuna, crispy wontons, mango, cucumber, seaweed, chiltepin
+          chiles, scallions, sesame seeds, unagi sauce, sriracha mayo, micro
+          cilantro
       - name: Short Rib Nachos
         price: 24
         description: mole short rib, pickled fresno, pico de gallo, house cheese blend,
           chipotle crema
-      - name: The Chicken Sandwich
-        price: 18
-        description: choice of grilled or fried chicken, pickled fresnos, miso aioli,
-          lettuce, tomato, onion, brioche
       - name: Classic Burger
         price: 18
         note: ""
         description: house blend ground beef, american cheese, chipotle mayo, lettuce,
           tomato, onion, brioche
+      - name: The Chicken Sandwich
+        price: 18
+        description: choice of grilled or fried chicken, pickled fresnos, miso aioli,
+          lettuce, tomato, onion, brioche
+      - name: Spicy Chicken Sandwich
+        price: 19
+        description: "cholula buffalo sauce, chipotle cilantro slaw, house pickles,
+          brioche "
+      - name: Short Rib Grilled Cheese
+        price: 15
+        description: american cheese, guajillo orange jam, mole short rib jus, challah
+          pullman bread
       - name: Portobello Sandwich
         price: 18
         description: smashed avocados, pickled onions, sunflower sprouts, chimichurri,
