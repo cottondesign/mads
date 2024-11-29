@@ -26,23 +26,13 @@ subsections:
         description: three pancakes, blueberry compote, maple syrup
   - subsection-header: All Day Food
     items:
-      - name: 1/2 Dozen Oysters of the Day
-        price: 23
-        description: red wine shallot mignonette and cocktail sauce
       - name: Shishito Peppers
         description: guajillo citrus sea salt, lemon
         price: 11
         note: ""
-      - name: Brussels Sprouts
-        price: 12
-        description: oyster mushrooms, avocado aioli, crispy tortilla
-        note: ""
       - name: Cholula Buffalo Wings
         price: 15
         description: ginger buttermilk, celery, and rainbow carrots
-      - name: Ceviche of the day
-        price: 21
-        description: mango, red onion, radish, fresno chile, tobiko
       - name: Kale Ceasar
         price: 15
         description: garlic croutons, shaved parmesean
@@ -54,9 +44,6 @@ subsections:
       - name: Tacos of the day
         price: 15
         description: three per order, house made tortillas
-      - name: Waffle Fry Poutine
-        price: 19
-        description: cheese curds, veggie gravy, scallion soubise
       - name: Short Rib Nachos
         price: 24
         description: mole short rib, pickled fresno, pico de gallo, house cheese blend,
@@ -70,10 +57,6 @@ subsections:
         note: ""
         description: house blend ground beef, american cheese, chipotle mayo, lettuce,
           tomato, onion, brioche
-      - name: The Traveler
-        price: 20
-        description: "house blend ground beef, crispy prosciutto, chimichurri,
-          mozzarella, lettuce, tomato, onion, brioche "
       - name: Portobello Sandwich
         price: 18
         description: smashed avocados, pickled onions, sunflower sprouts, chimichurri,
