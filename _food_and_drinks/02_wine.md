@@ -20,13 +20,12 @@ subsections:
         price: 155
   - subsection-header: Skin Contact
     items:
-      - name: OVUm "PNK Salt"
+      - name: Can Sumoi - Rose
         price: 15
-        description: Oregon - Takes you straight to the Gorge with cherry orchards and
-          salty thru-lines.
-      - name: Roberto Henriquez Orange
-        price: 17
-        description: Chile - 200+ yr old vines! aromatic salinity and floral notes
+        description: Spain - white pepper and sour cherry
+      - name: Queen of the Sierra - Orange
+        price: 16
+        description: California - round and bright
   - subsection-header: White
     items:
       - name: "Brand Weissburgunder "
@@ -37,14 +36,10 @@ subsections:
         description: California - High toned & Mineral. Edgy to take the edge off.
   - subsection-header: Red
     items:
-      - name: Swick Wines "Pinot Noir"
-        price: 18
-        description: Oregon - Mid bodied & vibrant. Ripe PNW cherries, black pepper &
-          volcanic rock
+      - name: Chateau Calval - Merlot
+        price: 16
+        description: Bordeaux - full bodied and fruity
       - name: Field Recordings - Sangiovese
         price: 16
         description: California - light and juicy
-      - name: Sebastian David - Chilled Cab
-        price: 17
-        description: Loire Valley - wild and vibrant
 ---
