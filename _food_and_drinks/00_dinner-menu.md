@@ -14,12 +14,16 @@ subsections:
       - name: Breakfast Sandwich
         price: 11
         description: scrambled egg, bacon, chipotle aioli, cheddar, texas toast
-      - name: Challah French Toast
-        price: 17
-        description: strawberry confit, orange mascarpone, syrup
       - name: Chicken & Waffles
-        price: 17
+        price: 18
         description: spicy mezcal maple syrup, strawberry butter
+      - name: Breakfast Tacos
+        price: 15
+        description: three per order - scrambled eggs, chorizo, cotija cheese, and salsa
+          ranchera
+      - name: Buttermilk Pancakes
+        price: 17
+        description: three pancakes, blueberry compote, maple syrup
   - subsection-header: All Day Food
     items:
       - name: 1/2 Dozen Oysters of the Day
