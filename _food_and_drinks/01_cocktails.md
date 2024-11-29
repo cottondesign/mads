@@ -3,46 +3,46 @@ title: Cocktails
 subsections:
   - subsection-header: ""
     items:
-      - name: Madeline
+      - name: Madeline Year 2
         price: 17
-        description: Vodka, espresso, amargo vallet, green chiles, vanilla, moka
-      - name: Surfbort
-        price: 17
-        description: Watermelon rind-infused Planteray rum, rhum agricole, mango oleo, lime
+        description: ocho reposado, licor 43, graham cracker, barolo chinato, espresso
       - name: Morning Margarita
         price: 17
-        description: Earl grey infused Ocho Tequila blanco, dry curacao, agave, lime, Saline
-      - name: Tuxedo Mask
-        price: 17
-        description: Citadelle Jardin d'ete gin, Montenegro, amontillado sherry, lemon,
-          pomegranate, clarified milk, bubbles
-        note: Yup, milk
+        description: earl grey infused don fulano blanco, dry curacao, agave, lime, Saline
       - name: Polar Bear
         price: 16
-        description: Vida mezcal, Aperol, pineapple, lime
+        description: vida mezcal, aperol, pineapple, lime
       - name: Trade Route
         price: 17
-        description: Angel's Envy bourbon, amburana cachaca. spiced saffron, coconut
+        description: angel's envy bourbon, amburana cachaca. spiced saffron, coconut
           water, lemon, egg white
       - name: 5th Dimension
         price: 17
-        description: Gin, China China, Bruto Americano, Nardini Amaro
+        description: gin, china china, bruto americano, nardini amaro
       - name: Bartender's Choice Daiquiri
         price: 17
         description: go with your gut, trust your bartender
-      - name: Moonflower
-        price: 17
-        description: Singani 63, chareau aloe, creme de violette, raspberry, lemon
       - name: El Topo
         price: 17
-        description: Ilegal mezcal, strega, cap corse blanc, px sherry, cold brew, nitro
+        description: ilegal mezcal, strega, cap corse blanc, px sherry, cold brew, nitro
           pumped
       - name: 86 Sean
         price: 17
         description: Calvados, rye whiskey, honey, salted grapefruit, lemon
       - name: Offshore Account
         price: 18
-        description: Pierre Ferrand Cognac, Jamaican rum, banana oleo, pistachio, lime
+        description: pierre ferrand Cognac, jamaican rum, banana oleo, pistachio, lime
+      - name: Beetsie Boy
+        price: 17
+        description: diplomatico reserva esclusiva, empirical ayuuk, beets, allspice,
+          ginger, lime
+      - name: Log Cabin
+        price: 17
+        description: bourbon, scotch, aged rum, cognac, px sherry, frangelico
+      - name: Plum Martini
+        price: 18
+        description: plum-infused grey goose vodka, sake, cocchi americano, house-oaked
+          gin, limoncello, plum bitters
   - subsection-header: No Booze
     items:
       - name: Yuzu Soda
