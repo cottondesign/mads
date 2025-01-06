@@ -31,6 +31,9 @@ img {
   --charWidth: 9.914px;
   --dividerHeight: 0.3em;
   --linePadding: calc((var(--navItemHeight) - var(--dividerHeight)) / 2);
+
+  --subNavTop: -154px;
+  // --subNavTop: -185px;
 }
 
 @font-face {
@@ -445,7 +448,7 @@ body.receipt-moveUp {
 .food-and-drinks-subnav {
   position: sticky;
   position: -webkit-sticky;
-  top: -154px;
+  top: var(--subNavTop);
   z-index: 1;
 
   a:last-of-type {

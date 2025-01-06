@@ -365,12 +365,22 @@ function openSection(section){
 }
 
 
-
 // Food And Drinks JS
+
+// set subnav position
+const subMenu = document.querySelector('.food-and-drinks-subnav');
+const subMenuItems = subMenu.querySelectorAll('a');
+const root = document.documentElement;
+
+const subMenuItemHeight = document.querySelector('.submenu-nav').getBoundingClientRect().height;
+const menuSingleBarHeight = document.querySelector('.menu-single-bar').getBoundingClientRect().height;
+
+const subMenuHeight = subMenuItems.length*subMenuItemHeight + ((subMenuItems.length + 1) * menuSingleBarHeight);
+root.style.setProperty('--subNavTop', `-${subMenuHeight}px`);
+
 const subheaderTitles = document.querySelectorAll('.food-and-drinks-subheader-title');
 // const submenuOpenButtons = document.querySelectorAll('.submenu-open-button');
 const submenuCloseButton = document.querySelector('.submenu-close-button');
-const subMenu = document.querySelector('.food-and-drinks-subnav');
 
 // new open submenu 
 for (subheaderTitle of subheaderTitles) {
