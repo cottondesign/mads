@@ -4,7 +4,7 @@ subsections:
   - subsection-header: Sparkling
     items:
       - name: Hild "Sekt Brut"
-        price: 14
+        price: 15
         description: Germany - The wine bubbles with flavors of juicy tropical fruit,
           white flowers, and chalky, vibrant acidity.
       - name: Mae Son "Frizzante"
@@ -36,9 +36,9 @@ subsections:
         description: California - High toned & Mineral. Edgy to take the edge off.
   - subsection-header: Red
     items:
-      - name: Chateau Calval - Merlot
-        price: 16
-        description: Bordeaux - full bodied and fruity
+      - name: Quinta de Unihue - Pais
+        price: 15
+        description: Chile - hints of earth and red fruit
       - name: Field Recordings - Sangiovese
         price: 16
         description: California - light and juicy
