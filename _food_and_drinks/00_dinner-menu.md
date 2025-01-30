@@ -24,6 +24,7 @@ subsections:
       - name: Buttermilk Pancakes
         price: 17
         description: three pancakes, blueberry compote, maple syrup
+        note: can add chocolate chips, strawberries or fried chicken
   - subsection-header: All Day Food
     items:
       - name: Shishito Peppers
