@@ -43,6 +43,18 @@ subsections:
         price: 18
         description: plum-infused grey goose vodka, sake, cocchi americano, house-oaked
           gin, limoncello, plum bitters
+      - name: Barrel-Aged Vieux Carre
+        price: 20
+        description: widow jane applewood rye, pierre ferrand cognac, antica rosso
+          vermouth, benedictine, bitters
+        note: Aged in a Widow Jane barrel
+      - name: Coquito
+        price: 16
+        description: bacardi ocho, coconut, milks, nutmeg, cinnamon, love
+      - name: Tanpopo
+        price: 18
+        description: whiskey, golden falernum, allspice, caramel dandelion nut tea, sudachi
+        note: served hot
   - subsection-header: No Booze
     items:
       - name: Yuzu Soda
