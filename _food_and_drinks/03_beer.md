@@ -13,9 +13,9 @@ subsections:
       - name: Talea Al Dente
         price: 10
         description: Pilsner 5.0%
-      - name: Torch & Crown High Brau
+      - name: Torch & Crown Apres
         price: 9
-        description: Oktoberfest 5.5%
+        description: Winter Lager 6.8%
   - items:
       - name: Miller High Life
         price: 7
