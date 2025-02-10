@@ -81,6 +81,3 @@ collections:
           - label: "Site Description"
             name: "description"
             widget: "string"
-          - label: "Share Image"
-            name: "shareImage"
-            widget: "image"
