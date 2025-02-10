@@ -23,34 +23,8 @@ collections:
               - {label: Price, name: price, widget: number, value_type: float}
               - {label: Description, name: description, widget: string}
               - {label: Funny Red Text, name: note, widget: string, required: false}
-  # - name: "Food and Drinks Menu"
-  #   label: "General"
-  #   files:
-  #     - label: "Food and Drinks Menu"
-  #       name: "menu"
-  #       file: "_data/menu.yml"
-  #       fields:
-  #         - {label: "Layout", name: "layout", widget: "hidden", default: default"}
-  #         - label: "Menu Categories"
-  #           name: "menu"
-  #           widget: "list"
-  #           fields:
-  #             - {label: Category, name: category-header, widget: string}
-  #             - label: "Subsection"
-  #               name: "subsections"
-  #               widget: "list"
-  #               fields: 
-  #               - {label: Subsection, name: subsection-header, widget: string}
-  #               - label: "Menu Item"
-  #                 name: "items"
-  #                 widget: "list"
-  #                 fields:
-  #                 - {label: Name, name: name, widget: string}
-  #                 - {label: Price, name: price, widget: string}
-  #                 - {label: Description, name: description, widget: string}
-  #                 - {label: Note, name: note, widget: string}
   - name: "other-pages"
-    label: "Other Pages"
+    label: "Other Pages & Settings"
     files:
       - name: "the-space"
         label: "Space"
@@ -97,3 +71,16 @@ collections:
           - label: "Reservations"
             name: "reservations-body"
             widget: "markdown"
+      - name: "settings"
+        label: "Settings"
+        file: "_data/settings.yml"
+        fields:
+          - label: "Site Title"
+            name: "title"
+            widget: "string"
+          - label: "Site Description"
+            name: "description"
+            widget: "string"
+          - label: "Share Image"
+            name: "shareImage"
+            widget: "image"

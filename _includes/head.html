@@ -4,24 +4,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% if page.title %}
-  <title>{{page.title}} *** {{site.title}}</title>
-  <meta property="twitter:image:alt" content="{{page.title}} - {{site.title}}">
-  <meta property="og:site_name" content="{{page.title}} - {{site.title}}">
-  <meta property="og:title" content="{{page.title}} - {{site.title}}">
-  <meta property="twitter:title" content="{{page.title}} - {{site.title}}">
+  <title>{{page.title}} *** {{site.data.settings.title}}</title>
+  <meta property="twitter:image:alt" content="{{page.title}} - {{site.data.settings.title}}">
+  <meta property="og:site_name" content="{{page.title}} - {{site.data.settings.title}}">
+  <meta property="og:title" content="{{page.title}} - {{site.data.settings.title}}">
+  <meta property="twitter:title" content="{{page.title}} - {{site.data.settings.title}}">
   {% else %}
-  <title>{{site.title}}</title>
-  <meta property="twitter:image:alt" content="{{site.title}}">
-  <meta property="og:site_name" content="{{site.title}}">
-  <meta property="og:title" content="{{site.title}}">
-  <meta property="twitter:title" content="{{site.title}}">
+  <title>{{site.data.settings.title}}</title>
+  <meta property="twitter:image:alt" content="{{site.data.settings.title}}">
+  <meta property="og:site_name" content="{{site.data.settings.title}}">
+  <meta property="og:title" content="{{site.data.settings.title}}">
+  <meta property="twitter:title" content="{{site.data.settings.title}}">
   {% endif %}
 
   <!-- META CONTENT -->
 
-  <meta name="description" content="{{site.description}}">
-  <meta property="og:description" content="{{site.description}}">
-  <meta property="twitter:description" content="{{site.description}}">
+  <meta name="description" content="{{site.data.settings.description}}">
+  <meta property="og:description" content="{{site.data.settings.description}}">
+  <meta property="twitter:description" content="{{site.data.settings.description}}">
 
   <meta property="og:url" content="madelinesnyc.com">
 
