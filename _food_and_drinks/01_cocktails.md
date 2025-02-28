@@ -13,7 +13,7 @@ subsections:
         price: 16
         description: vida mezcal, aperol, pineapple, lime
       - name: Trade Route
-        price: 17
+        price: 18
         description: angel's envy bourbon, amburana cachaca. spiced saffron, coconut
           water, lemon, egg white
       - name: 5th Dimension
@@ -22,10 +22,6 @@ subsections:
       - name: Bartender's Choice Daiquiri
         price: 17
         description: go with your gut, trust your bartender
-      - name: El Topo
-        price: 17
-        description: ilegal mezcal, strega, cap corse blanc, px sherry, cold brew, nitro
-          pumped
       - name: 86 Sean
         price: 17
         description: Calvados, rye whiskey, honey, salted grapefruit, lemon
@@ -51,10 +47,6 @@ subsections:
       - name: Coquito
         price: 16
         description: bacardi ocho, coconut, milks, nutmeg, cinnamon, love
-      - name: Tanpopo
-        price: 18
-        description: whiskey, golden falernum, allspice, caramel dandelion nut tea, sudachi
-        note: served hot
   - subsection-header: No Booze
     items:
       - name: Yuzu Soda
