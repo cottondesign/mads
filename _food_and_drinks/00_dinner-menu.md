@@ -12,7 +12,7 @@ subsections:
         description: Crispy tortillas, short rib, sliced avocado, red onion, chipotle
           crema, sunny side egg
       - name: Breakfast Sandwich
-        price: 11
+        price: 13
         description: scrambled egg, bacon, chipotle aioli, cheddar, texas toast
       - name: Chicken & Waffles
         price: 18
