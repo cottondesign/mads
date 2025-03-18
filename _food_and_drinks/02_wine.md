@@ -9,7 +9,7 @@ subsections:
           white flowers, and chalky, vibrant acidity.
       - name: Mae Son "Frizzante"
         price: 16
-        description: Trentino-Alto Adige - Perky, happy, dry effervesance wrapped in
+        description: Trentino-Alto Adige - Perky, happy, dry effervesence wrapped in
           crunchy savory red fruit.
       - name: Miller High Life
         price: 7
