@@ -1,23 +1,23 @@
 hours:
   - day: Monday
-    open: false
-    from: 5PM
-    to: 4AM
-  - day: Tuesday
-    from: 5PM
+    open: true
+    from: 4PM
     to: 12AM
-    open: false
+  - day: Tuesday
+    from: 4PM
+    to: 12AM
+    open: true
   - day: Wednesday
-    from: 5PM
+    from: 4PM
     to: 12AM
     open: true
   - day: Thursday
     open: true
-    from: 5PM
+    from: 4PM
     to: 12AM
   - day: Friday
     open: true
-    from: 5PM
+    from: 3PM
     to: 2AM
   - day: Saturday
     open: true
