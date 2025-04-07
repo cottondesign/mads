@@ -23,5 +23,8 @@ subsections:
       - name: Aval
         price: 8
         description: cider 6%
+      - name: Athletic Cerveza
+        price: 7
+        description: mexican style copper 0%abv
     subsection-header: Packaged
 ---
