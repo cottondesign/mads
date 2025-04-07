@@ -20,4 +20,13 @@ subsections:
       - name: Burger and Beer
         price: 21
         description: Choice of sandwich and seasonal draft or miller high life
+      - name: Oysters
+        price: 2
+        description: $2 per oyster
+      - name: House Burger Sliders
+        price: 10
+        description: 2.5oz beef patty, chipotle ketchup, cheese, pickles
+      - name: Portobello Sliders
+        price: 10
+        description: portobello, tomato, pickled onion, vegan avocado aioli
 ---
