@@ -46,17 +46,17 @@ subsections:
         note: Aged in a Widow Jane barrel
   - subsection-header: No Booze
     items:
-      - name: Yuzu Soda
-        price: 7
-        description: Yuzu Juice + carbonation
-      - name: Athletic Brewing Free Wave
-        price: 6
-        description: n/a hazy ipa
+      - name: Shy Tai
+        price: 12
+        description: Amaro Falso, Yuzu, Orgeat
       - name: Phony Negroni
         price: 10
-        description: n/a negroni
+        description: local St Agrestis made 0%abv negroni
       - name: Chicha Morada Spritz
         price: 12
         description: Lyre's N/A prosecco paired with a Peruvian punch made with purple
           corn, pineapple, clove, cinnamon, and green apples
+      - name: Amaro Falso
+        price: 10
+        description: local St Agrestis made 0%abv amaro
 ---
