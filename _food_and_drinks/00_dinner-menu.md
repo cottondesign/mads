@@ -27,6 +27,9 @@ subsections:
         note: can add chocolate chips, strawberries or fried chicken
   - subsection-header: All Day Food
     items:
+      - name: Oysters
+        price: 21
+        description: (half dozen) lemon, shallot mignonette, cocktail sauce
       - name: Shishito Peppers
         description: guajillo citrus sea salt, lemon
         price: 11
@@ -89,4 +92,8 @@ subsections:
       - name: Churro Cheesecake
         price: 11
         description: confit strawberries and blueberry sauce
+      - name: Au Poivre Burger
+        price: 22
+        description: wagyu beef, crisp lettuce, caramelized onion, valdeon cheese, green
+          peppercorn sauce (limited supply daily)
 ---
