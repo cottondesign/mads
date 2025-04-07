@@ -20,9 +20,9 @@ subsections:
         price: 155
   - subsection-header: Skin Contact
     items:
-      - name: Can Sumoi - Rose
+      - name: Ovum - PNK Salt Rose
         price: 15
-        description: Spain - white pepper and sour cherry
+        description: Oregon - light and refreshing minerality
       - name: Queen of the Sierra - Orange
         price: 16
         description: California - round and bright
