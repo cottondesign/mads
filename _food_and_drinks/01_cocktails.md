@@ -24,15 +24,15 @@ subsections:
         description: bourbon, scotch, aged rum, cognac, px sherry, frangelico
       - name: 5th Dimension
         price: 17
-        description: gin, china china, bruto americano, nardini amaro
+        description: norman gin, china china, bruto americano, nardini amaro
       - name: Plum Martini
         price: 18
         description: plum-infused grey goose vodka, sake, cocchi americano, house-oaked
           gin, limoncello, plum bitters
       - name: Hibiscus Chamomile Mojito
         price: 17
-        description: planteray rum, hibiscus, chamomile, mint, lime, clarified milk,
-          carbonation
+        description: planteray 3 star rum, bacardi ocho rum, hibiscus, chamomile, mint,
+          lime, clarified milk, carbonation
       - name: Moonflower
         price: 17
         description: singani 63, creme de violette, aloe, raspberry, lemon
