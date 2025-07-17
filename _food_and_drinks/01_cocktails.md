@@ -15,13 +15,6 @@ subsections:
       - name: Tomato Martini
         price: 18
         description: za'atar oil washed gin, tomato dashi, forthave genepi
-      - name: Almond Joy
-        price: 17
-        description: planteray cut & dry rum, cacao, clarified coconut milk, almond,
-          cold brew
-      - name: Log Cabin
-        price: 17
-        description: bourbon, scotch, aged rum, cognac, px sherry, frangelico
       - name: 5th Dimension
         price: 17
         description: norman gin, china china, bruto americano, nardini amaro
@@ -39,10 +32,10 @@ subsections:
       - name: Bartender's Choice Daiquiri
         price: 17
         description: go with your gut, trust your bartender
-      - name: Barrel-Aged Vieux Carre
-        price: 20
-        description: widow jane applewood rye, pierre ferrand cognac, antica rosso
-          vermouth, benedictine, bitters
+      - name: Barrel-Aged Bamboo
+        price: 18
+        description: house sherry blend, carpano bianco, orange bitters, finished in a
+          vieux carre seasoned barrel
         note: Aged in a Widow Jane barrel
   - subsection-header: No Booze
     items:
