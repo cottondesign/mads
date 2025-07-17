@@ -36,10 +36,10 @@ subsections:
         description: California - High toned & Mineral. Edgy to take the edge off.
   - subsection-header: Red
     items:
-      - name: Quinta de Unihue - Pais
+      - name: Turning Tide - Cab Sauv
         price: 15
-        description: Chile - hints of earth and red fruit
-      - name: Field Recordings - Sangiovese
+        description: California - dark plum & mulled cherry
+      - name: Muller Ruprecht - Rot
         price: 16
-        description: California - light and juicy
+        description: Germany - Bright and juicy (served chilled)
 ---
