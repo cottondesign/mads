@@ -57,7 +57,7 @@ subsections:
         price: 15
         description: three per order, house made tortillas
       - name: Poke Wonton Nachos
-        price: 21
+        price: 23
         description: ahi tuna, crispy wontons, mango, cucumber, seaweed, chiltepin
           chiles, scallions, sesame seeds, unagi sauce, sriracha mayo, micro
           cilantro
@@ -70,6 +70,10 @@ subsections:
         note: ""
         description: house blend ground beef, american cheese, chipotle mayo, lettuce,
           tomato, onion, brioche
+      - name: Au Poivre Burger
+        price: 22
+        description: wagyu beef, crisp lettuce, caramelized onion, valdeon cheese, green
+          peppercorn sauce (limited supply daily)
       - name: The Chicken Sandwich
         price: 18
         description: choice of grilled or fried chicken, pickled fresnos, miso aioli,
@@ -89,11 +93,4 @@ subsections:
       - name: "Side of Fries "
         price: 8
         description: "angostura aioli "
-      - name: Churro Cheesecake
-        price: 11
-        description: confit strawberries and blueberry sauce
-      - name: Au Poivre Burger
-        price: 22
-        description: wagyu beef, crisp lettuce, caramelized onion, valdeon cheese, green
-          peppercorn sauce (limited supply daily)
 ---
