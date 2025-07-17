@@ -22,6 +22,14 @@ subsections:
         price: 18
         description: plum-infused grey goose vodka, sake, cocchi americano, house-oaked
           gin, limoncello, plum bitters
+      - name: Guns, Rum, Rugby
+        price: 17
+        description: santa teresa arabica cask rum, planteray sealander, demerara,
+          burlesque bitters
+      - name: Smooth Talker
+        price: 17
+        description: mellow corn whiskey, conniption gin, zucca, strawberry rhubarb
+          shrub, yuzu, saison
       - name: Hibiscus Chamomile Mojito
         price: 17
         description: planteray 3 star rum, bacardi ocho rum, hibiscus, chamomile, mint,
