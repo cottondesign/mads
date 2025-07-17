@@ -45,6 +45,9 @@ subsections:
         description: house sherry blend, carpano bianco, orange bitters, finished in a
           vieux carre seasoned barrel
         note: Aged in a Widow Jane barrel
+      - name: Frozen
+        price: 16
+        description: Rotating ideas. Ask for flavor
   - subsection-header: No Booze
     items:
       - name: Shy Tai
