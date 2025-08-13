@@ -7,90 +7,75 @@ subsections:
         price: 14
         description: pepitas, red radish, pickled onion, sunflower sprouts, pickled
           fresno, sourdough
-      - name: Mole Chilaquiles
-        price: 24
-        description: Crispy tortillas, short rib, sliced avocado, red onion, chipotle
-          crema, sunny side egg
-      - name: Breakfast Sandwich
+      - name: Corned Beef Reuben
         price: 13
-        description: scrambled egg, bacon, chipotle aioli, cheddar, texas toast
+        description: spicy harissa mayo, swiss cheese, sunny egg
+      - name: Two Eggs Any Style
+        price: 18
+        description: feta, avocado, sourdough toast
       - name: Chicken & Waffles
         price: 18
-        description: spicy mezcal maple syrup, strawberry butter
-      - name: Breakfast Tacos
-        price: 15
-        description: three per order - scrambled eggs, chorizo, cotija cheese, and salsa
-          ranchera
+        description: spicy mezcal maple syrup
       - name: Buttermilk Pancakes
         price: 17
-        description: three pancakes, blueberry compote, maple syrup
-        note: can add chocolate chips, strawberries or fried chicken
+        description: hazelnut praline butter
+        note: ""
   - subsection-header: All Day Food
     items:
+      - name: Popcorn
+        price: 7
+        description: "butter, espelette "
       - name: Oysters
         price: 21
-        description: (half dozen) lemon, shallot mignonette, cocktail sauce
+        description: (half dozen) lemon, shallot mignonette
+      - name: Shrimp Cocktail
+        price: 19
+        description: house made cocktail sauce
+      - name: Double Fried French Fries
+        price: 8
+        description: "killer aioli "
       - name: Shishito Peppers
         description: guajillo citrus sea salt, lemon
         price: 11
         note: ""
-      - name: Papas Bravas
-        price: 13
-        description: roasted rainbow baby potatoes, chile de arbol sauce, confit garlic
-          aioli
-      - name: Cholula Buffalo Wings
+      - name: Croquettes
+        price: 12
+        description: bistro ham, comte cheese, onion jam
+      - name: Ultimate Chicken Wings
         price: 15
-        description: ginger buttermilk, celery, and rainbow carrots
-      - name: Red Quinoa Salad
+        description: cajun rub, ranch, house pickles
+      - name: Heirloom Tomato Salad
         price: 15
-        description: red quinoa, romaine lettuce, red pepper, dried figs, cucumber,
-          pickled onion, spicy pepitas, mango pink peppercorn vinaigrette
-      - name: Kale Ceasar
+        description: ricotta salata, basil, EVOO
+      - name: Bibb Salad
         price: 15
-        description: garlic croutons, shaved parmesean
+        description: green goddess dressing, garlic croutons, shaved cheese
         note: can add grilled/fried chicken
-      - name: Chorizo Mac & Cheese
+      - name: Creamy Corn Mac & Cheese
         price: 15
-        description: jack and cheddar cheese, chorizo, herbed breadcrumbs
-        note: can be made vegetarian
-      - name: Tacos of the day
-        price: 15
-        description: three per order, house made tortillas
+        description: porter beer cheddar, shaved scallions
+        note: ""
       - name: Poke Wonton Nachos
         price: 23
         description: ahi tuna, crispy wontons, mango, cucumber, seaweed, chiltepin
           chiles, scallions, sesame seeds, unagi sauce, sriracha mayo, micro
           cilantro
-      - name: Short Rib Nachos
+      - name: Fried Chicken Plate
         price: 24
-        description: mole short rib, pickled fresno, pico de gallo, house cheese blend,
-          chipotle crema
-      - name: Classic Burger
-        price: 18
-        note: ""
-        description: house blend ground beef, american cheese, chipotle mayo, lettuce,
-          tomato, onion, brioche
+        description: best coleslaw, barbecue sauce, ranch, house pickles
       - name: Au Poivre Burger
-        price: 22
-        description: wagyu beef, crisp lettuce, caramelized onion, valdeon cheese, green
-          peppercorn sauce (limited supply daily)
-      - name: The Chicken Sandwich
-        price: 18
-        description: choice of grilled or fried chicken, pickled fresnos, miso aioli,
-          lettuce, tomato, onion, brioche
-      - name: Spicy Chicken Sandwich
         price: 19
-        description: "cholula buffalo sauce, chipotle cilantro slaw, house pickles,
-          brioche "
-      - name: Short Rib Grilled Cheese
-        price: 15
-        description: american cheese, guajillo orange jam, mole short rib jus, challah
-          pullman bread
-      - name: Portobello Sandwich
-        price: 18
-        description: smashed avocados, pickled onions, sunflower sprouts, chimichurri,
+        description: grass fed beef, crisp lettuce, caramelized onion, valdeon cheese,
+          green peppercorn sauce
+      - name: Fried Chicken Sandwich
+        price: 17
+        description: fried chicken, lime mayo, pickles, best coleslaw, potato bun
+      - name: Vegetarian BLT
+        price: 17
+        description: crispy halloumi, heirloom tomato, avocado, garlic aioli, chives,
           sourdough
-      - name: "Side of Fries "
-        price: 8
-        description: "angostura aioli "
+      - name: Classic Sundae Everydae
+        price: 12
+        description: vanilla ice cream, warm chocolate sauce, brownie, brandied and
+          fresh cherries
 ---
