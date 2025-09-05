@@ -14,9 +14,9 @@ subsections:
     subsection-header: Drinks
   - subsection-header: Food
     items:
-      - name: Cholula Buffalo Wings
+      - name: Ultimate Wings
         price: 8
-        description: ginger buttermilk, celery, rainbow carrots
+        description: cajun rub, ranch, house pickles
       - name: Burger and Beer
         price: 21
         description: Choice of sandwich and seasonal draft or miller high life
