@@ -26,7 +26,4 @@ subsections:
       - name: House Burger Sliders
         price: 10
         description: 2.5oz beef patty, chipotle ketchup, cheese, pickles
-      - name: Portobello Sliders
-        price: 10
-        description: portobello, tomato, pickled onion, vegan avocado aioli
 ---
