@@ -38,9 +38,6 @@ subsections:
         description: guajillo citrus sea salt, lemon
         price: 11
         note: ""
-      - name: Croquettes
-        price: 12
-        description: bistro ham, comte cheese, onion jam
       - name: Ultimate Chicken Wings
         price: 15
         description: cajun rub, ranch, house pickles
