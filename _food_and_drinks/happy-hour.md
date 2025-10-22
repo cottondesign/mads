@@ -6,7 +6,7 @@ subsections:
         price: 5
         description: Seasonal Draft or High Life
       - name: Cocktails & Wine
-        price: 10
+        price: 12
         description: Old Fashioned, Margarita, Daiquiri, any wine
       - name: Well Drinks
         price: 8
