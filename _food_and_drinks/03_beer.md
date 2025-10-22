@@ -7,12 +7,15 @@ subsections:
         price: 14
         description: IPA 7.0%
       - name: Rotating Seasonal Draft
-        price: 8
-        description: "Current: Pacifico 4.4%"
+        price: 9
+        description: Just ask
         note: ""
       - name: Talea Al Dente
         price: 10
         description: Pilsner 5.0%
+      - name: Ommegang Farm Fresh
+        price: 9
+        description: saison 4.8%
   - items:
       - name: Miller High Life
         price: 7
@@ -26,5 +29,8 @@ subsections:
       - name: Athletic Cerveza
         price: 7
         description: mexican style copper 0%abv
+      - name: KCKC Vicious Crush
+        price: 9
+        description: sour 5.2%
     subsection-header: Packaged
 ---
