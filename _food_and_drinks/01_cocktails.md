@@ -3,18 +3,18 @@ title: Cocktails
 subsections:
   - subsection-header: ""
     items:
-      - name: Madeline Year 2
+      - name: Madeline Year 3
         price: 17
-        description: ocho reposado, licor 43, graham cracker, barolo chinato, espresso
-      - name: Polar Bear
-        price: 16
-        description: vida mezcal, aperol, pineapple, lime
+        description: copalli rum coquito, espresso, borghetti
+      - name: Paw Paw Patrol
+        price: 17
+        description: mezcal, aperol, paw paw fruit, green chile, lime
       - name: Morning Margarita
         price: 17
         description: earl grey infused don fulano blanco, dry curacao, agave, lime, Saline
-      - name: Tomato Martini
-        price: 18
-        description: za'atar oil washed gin, tomato dashi, forthave genepi
+      - name: Mushy Feelings
+        price: 17
+        description: mushroom gin, empircal ayuuk, basil, benedictine, bordiga extra dry
       - name: 5th Dimension
         price: 17
         description: norman gin, china china, bruto americano, nardini amaro
@@ -26,33 +26,43 @@ subsections:
         price: 17
         description: santa teresa arabica cask rum, planteray sealander, demerara,
           burlesque bitters
-      - name: Smooth Talker
+      - name: Wool Scarf
         price: 17
-        description: mellow corn whiskey, conniption gin, zucca, strawberry rhubarb
-          shrub, yuzu, saison
-      - name: Hibiscus Chamomile Mojito
+        description: widow jane paradigm rye, montenegro amaro, maple, black walnut,
+          lemon, egg white
+      - name: Tuxedo Mask
         price: 17
-        description: planteray 3 star rum, bacardi ocho rum, hibiscus, chamomile, mint,
-          lime, clarified milk, carbonation
+        description: citadelle gin, montenegro, amontillado sherry, pomegranate, lemon,
+          clarified milk, carbonation
       - name: Moonflower
         price: 17
         description: singani 63, creme de violette, aloe, raspberry, lemon
-      - name: Bartender's Choice Daiquiri
+      - name: Corny Movies
         price: 17
-        description: go with your gut, trust your bartender
-      - name: Barrel-Aged Bamboo
-        price: 18
-        description: house sherry blend, carpano bianco, orange bitters, finished in a
-          vieux carre seasoned barrel
+        description: rhum jm vsop, baby jane corn whiskey, nixta, black pepper demerara,
+          bitters, saline
         note: Aged in a Widow Jane barrel
-      - name: Frozen
+      - name: Prickly Pear French 75
         price: 16
-        description: Rotating ideas. Ask for flavor
+        description: condesa prickly pear gin, simple, lemon, bubbly
+      - name: Dirty Gin Martini
+        price: 18
+        description: four pillars olive leaf, house made olive brine
+      - name: Greenpoint
+        price: 18
+        description: widow jane paradigm rye, yellow chartreuse, sweet vermouth, bitters
+      - name: Clarified Long Island Iced Tea
+        price: 22
+        description: vodka, gin, rum, tequila, dry curacao, cola, coconut milk, lime,
+          carbonation
+      - name: Oaxacan Old Fashioned
+        price: 18
+        description: reposado tequila, cruz de fuego cirial mezcal, agave, bitters
   - subsection-header: No Booze
     items:
-      - name: Shy Tai
+      - name: Fall In Love
         price: 12
-        description: Amaro Falso, Yuzu, Orgeat
+        description: pineapple shrub, clove, cinnamon, ginger beer
       - name: Phony Negroni
         price: 10
         description: local St Agrestis made 0%abv negroni
