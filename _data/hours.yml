@@ -1,12 +1,12 @@
 hours:
   - day: Monday
-    open: true
+    open: false
     from: 5PM
     to: 12AM
   - day: Tuesday
     from: 5PM
     to: 12AM
-    open: true
+    open: false
   - day: Wednesday
     from: 4PM
     to: 12AM
