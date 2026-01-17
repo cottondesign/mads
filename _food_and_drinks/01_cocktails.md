@@ -18,10 +18,6 @@ subsections:
       - name: 5th Dimension
         price: 17
         description: norman gin, china china, bruto americano, nardini amaro
-      - name: Plum Martini
-        price: 18
-        description: plum-infused grey goose vodka, sake, cocchi americano, house-oaked
-          gin, limoncello, plum bitters
       - name: Guns, Rum, Rugby
         price: 17
         description: santa teresa arabica cask rum, planteray sealander, demerara,
