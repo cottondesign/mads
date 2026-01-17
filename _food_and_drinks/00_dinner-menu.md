@@ -24,13 +24,13 @@ subsections:
     items:
       - name: Popcorn
         price: 7
-        description: "butter, espelette "
+        description: butter, cheddar
       - name: Oysters
         price: 21
         description: (half dozen) lemon, shallot mignonette
       - name: Shrimp Cocktail
         price: 19
-        description: house made cocktail sauce
+        description: house made yuzu cocktail sauce
       - name: Double Fried French Fries
         price: 8
         description: "killer aioli "
@@ -40,17 +40,17 @@ subsections:
         note: ""
       - name: Ultimate Chicken Wings
         price: 15
-        description: cajun rub, ranch, house pickles
-      - name: Heirloom Tomato Salad
+        description: cajun dry rub, buttermilk ranch,  carrots, celery
+      - name: Cucumber Salad
         price: 15
-        description: ricotta salata, basil, EVOO
+        description: mint, coriander, shallots, feta
       - name: Bibb Salad
         price: 15
         description: green goddess dressing, garlic croutons, shaved cheese
         note: can add grilled/fried chicken
-      - name: Creamy Corn Mac & Cheese
+      - name: Four Cheese Mac & Cheese
         price: 15
-        description: porter beer cheddar, shaved scallions
+        description: cheddar, fontina, mozzarella, and provolone
         note: ""
       - name: Poke Wonton Nachos
         price: 23
@@ -59,14 +59,14 @@ subsections:
           cilantro
       - name: Fried Chicken Plate
         price: 24
-        description: best coleslaw, barbecue sauce, ranch, house pickles
+        description: curry slaw, buttermilk ranch, house pickles
       - name: Au Poivre Burger
         price: 19
         description: grass fed beef, crisp lettuce, caramelized onion, valdeon cheese,
           green peppercorn sauce
       - name: Fried Chicken Sandwich
         price: 17
-        description: fried chicken, lime mayo, pickles, best coleslaw, potato bun
+        description: fried chicken, curry slaw, lime mayo, pickles, brioche
       - name: Vegetarian BLT
         price: 17
         description: crispy halloumi, heirloom tomato, avocado, garlic aioli, chives,
