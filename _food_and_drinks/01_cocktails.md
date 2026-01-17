@@ -37,7 +37,7 @@ subsections:
         price: 17
         description: rhum jm vsop, baby jane corn whiskey, nixta, black pepper demerara,
           bitters, saline
-        note: Aged in a Widow Jane barrel
+        note: ""
       - name: Prickly Pear French 75
         price: 16
         description: condesa prickly pear gin, simple, lemon, bubbly
