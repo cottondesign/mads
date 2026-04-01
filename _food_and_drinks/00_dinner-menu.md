@@ -49,6 +49,10 @@ subsections:
         description: romaine, dairy free green goddess dressing, garlic croutons, shaved
           cheese
         note: can add grilled/fried chicken or avocado
+      - name: Quinoa & Squash Salad
+        price: 20
+        description: honeynut squash, quinoa, fried chickpeas, pickled pearl onions,
+          dukkah spice, honey sherry glaze
       - name: Four Cheese Mac & Cheese
         price: 15
         description: cheddar, fontina, mozzarella, and provolone
@@ -80,8 +84,4 @@ subsections:
       - name: Coconut Oil Cake
         price: 15
         description: coconut chantilly, macerated fruit
-      - name: Quinoa & Squash Salad
-        price: 20
-        description: honeynut squash, quinoa, fried chickpeas, pickled pearl onions,
-          dukkah spice, honey sherry glaze
 ---
