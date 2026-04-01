@@ -5,27 +5,27 @@ subsections:
     items:
       - name: Madeline Year 3
         price: 17
-        description: copalli rum coquito, espresso, borghetti
+        description: coquito, espresso, borghetti
       - name: Paw Paw Patrol
         price: 17
         description: mezcal, aperol, paw paw fruit, green chile, lime
       - name: Morning Margarita
         price: 17
         description: earl grey infused don fulano blanco, dry curacao, agave, lime, Saline
-      - name: Mushy Feelings
+      - name: Surfbort
         price: 17
-        description: mushroom gin, empircal ayuuk, basil, benedictine, bordiga extra dry
-      - name: 5th Dimension
+        description: rum, watermelon rind, mango macerate, lime
+      - name: Clockwork Orange
         price: 17
-        description: norman gin, china china, bruto americano, nardini amaro
-      - name: Guns, Rum, Rugby
+        description: ilegal mezcal, pierre ferrand dry curacao, cocchi torino, mole and
+          fire bitters
+      - name: Sunshower
         price: 17
-        description: santa teresa arabica cask rum, planteray sealander, demerara,
-          burlesque bitters
-      - name: Wool Scarf
-        price: 17
-        description: widow jane paradigm rye, montenegro amaro, maple, black walnut,
-          lemon, egg white
+        description: vodka, radicchio, aloe, citrus, white balsamic, lemon, honey, soda
+      - name: Kirby Mains
+        price: 18
+        description: Botanist gin, cocchi torino, select apertivo, italicus, pistachio,
+          citrus, egg white, soda
       - name: Tuxedo Mask
         price: 17
         description: citadelle gin, montenegro, amontillado sherry, pomegranate, lemon,
@@ -33,20 +33,23 @@ subsections:
       - name: Moonflower
         price: 17
         description: singani 63, creme de violette, aloe, raspberry, lemon
-      - name: Corny Movies
+      - name: Love on Delivery
         price: 17
-        description: rhum jm vsop, baby jane corn whiskey, nixta, black pepper demerara,
-          bitters, saline
+        description: gin, cocchi americano, mint, lime, bubbly
         note: ""
+      - name: Grace Under Pressure
+        price: 17
+        description: vodka, grapefruit, mandarin, lime, honey, anise
+      - name: Freddie at Wembley
+        price: 17
+        description: bourbon, dandelion caramel nut tea, method sweet vermouth,
+          benedictine, cynar, passionfruit & guava bitters
       - name: Prickly Pear French 75
         price: 16
         description: condesa prickly pear gin, simple, lemon, bubbly
       - name: Dirty Gin Martini
         price: 18
         description: four pillars olive leaf, house made olive brine
-      - name: Greenpoint
-        price: 18
-        description: widow jane paradigm rye, yellow chartreuse, sweet vermouth, bitters
       - name: Clarified Long Island Iced Tea
         price: 22
         description: vodka, gin, rum, tequila, dry curacao, cola, coconut milk, lime,
@@ -54,6 +57,9 @@ subsections:
       - name: Oaxacan Old Fashioned
         price: 18
         description: reposado tequila, cruz de fuego cirial mezcal, agave, bitters
+      - name: Enzoni
+        price: 17
+        description: gin, campari, white grapes, lemon
   - subsection-header: No Booze
     items:
       - name: Fall In Love
