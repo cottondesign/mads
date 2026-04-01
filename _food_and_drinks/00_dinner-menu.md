@@ -36,7 +36,7 @@ subsections:
         description: "chipotle aioli "
       - name: Shishito Peppers
         description: garlic yuzu aioli
-        price: 11
+        price: 12
         note: ""
       - name: Ultimate Chicken Wings
         price: 15
