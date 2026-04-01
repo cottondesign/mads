@@ -28,7 +28,7 @@ subsections:
         description: California - round and bright
   - subsection-header: White
     items:
-      - name: "Brand Weissburgunder "
+      - name: Haus Weiss
         price: 14
         description: German - Zippy and fresh
       - name: Lieu Dit "Sauvignon Blanc"
@@ -39,7 +39,7 @@ subsections:
       - name: Turning Tide - Cab Sauv
         price: 15
         description: California - dark plum & mulled cherry
-      - name: Muller Ruprecht - Rot
+      - name: Gober & Freinbichler - Chill!
         price: 16
         description: Germany - Bright and juicy (served chilled)
 ---
