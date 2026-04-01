@@ -27,15 +27,15 @@ subsections:
         description: butter, cheddar
       - name: Oysters
         price: 21
-        description: (half dozen) lemon, shallot mignonette
+        description: (half dozen) sudachi & timut pepper mignonette
       - name: Shrimp Cocktail
         price: 19
         description: house made yuzu cocktail sauce
       - name: Double Fried French Fries
         price: 8
-        description: "killer aioli "
+        description: "chipotle aioli "
       - name: Shishito Peppers
-        description: guajillo citrus sea salt, lemon
+        description: garlic yuzu aioli
         price: 11
         note: ""
       - name: Ultimate Chicken Wings
@@ -44,10 +44,11 @@ subsections:
       - name: Cucumber Salad
         price: 15
         description: mint, coriander, shallots, feta
-      - name: Bibb Salad
+      - name: Green Goddess
         price: 15
-        description: green goddess dressing, garlic croutons, shaved cheese
-        note: can add grilled/fried chicken
+        description: romaine, dairy free green goddess dressing, garlic croutons, shaved
+          cheese
+        note: can add grilled/fried chicken or avocado
       - name: Four Cheese Mac & Cheese
         price: 15
         description: cheddar, fontina, mozzarella, and provolone
@@ -59,7 +60,12 @@ subsections:
           cilantro
       - name: Fried Chicken Plate
         price: 24
-        description: curry slaw, buttermilk ranch, house pickles
+        description: curry slaw, buttermilk ranch, house pickles, buttermilk biscuit,
+          whipped honey butter
+      - name: Classic Burger
+        price: 16
+        description: grass-fed beef, american cheese, lettuce, tomato, pickle, onion,
+          aioli, brioche
       - name: Au Poivre Burger
         price: 19
         description: grass fed beef, crisp lettuce, caramelized onion, valdeon cheese,
@@ -71,8 +77,11 @@ subsections:
         price: 17
         description: crispy halloumi, heirloom tomato, avocado, garlic aioli, chives,
           sourdough
-      - name: Classic Sundae Everydae
-        price: 12
-        description: vanilla ice cream, warm chocolate sauce, brownie, brandied and
-          fresh cherries
+      - name: Coconut Oil Cake
+        price: 15
+        description: coconut chantilly, macerated fruit
+      - name: Quinoa & Squash Salad
+        price: 20
+        description: honeynut squash, quinoa, fried chickpeas, pickled pearl onions,
+          dukkah spice, honey sherry glaze
 ---
