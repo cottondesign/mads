@@ -16,6 +16,9 @@ subsections:
       - name: Ommegang Farm Fresh
         price: 9
         description: saison 4.8%
+      - name: Other Half Forever Ever
+        price: 10
+        description: double dry-hopped IPA 4.7%
   - items:
       - name: Miller High Life
         price: 7
