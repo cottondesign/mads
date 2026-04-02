@@ -49,7 +49,7 @@ subsections:
         description: romaine, dairy free green goddess dressing, garlic croutons, shaved
           cheese
         note: can add grilled/fried chicken or avocado
-      - name: "Quinoa & Squash "
+      - name: Quinoa & Squash Pirogue
         price: 20
         description: honeynut squash, quinoa, fried chickpeas, pickled pearl onions,
           dukkah spice, honey sherry glaze
