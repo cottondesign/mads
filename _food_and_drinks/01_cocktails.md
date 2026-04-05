@@ -52,8 +52,8 @@ subsections:
         description: four pillars olive leaf, house made olive brine
       - name: Clarified Long Island Iced Tea
         price: 22
-        description: vodka, gin, rum, tequila, dry curacao, cola, coconut milk, lime,
-          carbonation
+        description: vodka, gin, rum, tequila, dry curacao, clarified cola, coconut
+          milk, lime, carbonation
       - name: Oaxacan Old Fashioned
         price: 18
         description: reposado tequila, cruz de fuego cirial mezcal, agave, bitters
