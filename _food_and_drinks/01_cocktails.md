@@ -59,7 +59,7 @@ subsections:
         description: reposado tequila, cruz de fuego cirial mezcal, agave, bitters
       - name: Enzoni
         price: 17
-        description: gin, campari, white grapes, lemon
+        description: gin, campari, white grape, lemon
   - subsection-header: No Booze
     items:
       - name: Fall In Love
