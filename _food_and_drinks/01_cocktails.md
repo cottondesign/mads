@@ -22,10 +22,6 @@ subsections:
       - name: Sunshower
         price: 17
         description: vodka, radicchio, aloe, citrus, white balsamic, lemon, honey, soda
-      - name: Kirby Mains
-        price: 18
-        description: Botanist gin, cocchi torino, select apertivo, italicus, pistachio,
-          citrus, egg white, soda
       - name: Tuxedo Mask
         price: 17
         description: citadelle gin, montenegro, amontillado sherry, pomegranate, lemon,
@@ -47,6 +43,12 @@ subsections:
       - name: Prickly Pear French 75
         price: 16
         description: condesa prickly pear gin, simple, lemon, bubbly
+      - name: House Martini
+        price: 18
+        description: gin, melon, cocchi americano, blanc vermouth, peychaud's bitters
+      - name: Tomato Martini
+        price: 18
+        description: gin, tomato dashi, dry vermouth, fino sherry
       - name: Dirty Gin Martini
         price: 18
         description: four pillars olive leaf, house made olive brine
