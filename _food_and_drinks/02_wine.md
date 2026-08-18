@@ -20,9 +20,9 @@ subsections:
         price: 155
   - subsection-header: Skin Contact
     items:
-      - name: Ovum - PNK Salt Rose
+      - name: Cotes de Toul
         price: 15
-        description: Oregon - light and refreshing minerality
+        description: France - crisp & refreshing
       - name: Queen of the Sierra - Orange
         price: 16
         description: California - round and bright
