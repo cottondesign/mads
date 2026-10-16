@@ -9,30 +9,31 @@ subsections:
       - name: Paw Paw Patrol
         price: 17
         description: mezcal, aperol, paw paw fruit, green chile, lime
-      - name: Morning Margarita
+      - name: FISH IN A BARREL
         price: 17
-        description: earl grey infused don fulano blanco, dry curacao, agave, lime, Saline
-      - name: Surfbort
-        price: 17
-        description: rum, watermelon rind, mango macerate, lime
+        description: whistlepig piggyback bourbon, manzanilla sherry, fish sauce, maple,
+          saline, thai bitters
       - name: Clockwork Orange
         price: 17
         description: ilegal mezcal, pierre ferrand dry curacao, cocchi torino, mole and
           fire bitters
-      - name: Sunshower
+      - name: THE WEDGE
         price: 17
-        description: vodka, radicchio, aloe, citrus, white balsamic, lemon, honey, soda
+        description: vodka, radicchio, cognac, amaretto, honey, lemon, roquefort, egg ehite
+      - name: ISLA BONITA
+        price: 17
+        description: reposado tequila, campari, apricot, cafe liqueur, chocolate bitters
       - name: Tuxedo Mask
         price: 17
         description: citadelle gin, montenegro, amontillado sherry, pomegranate, lemon,
           clarified milk, carbonation
-      - name: Moonflower
+      - name: SORRY CHIEF
         price: 17
-        description: singani 63, creme de violette, aloe, raspberry, lemon
-      - name: Love on Delivery
+        description: mezcal, averna, st germain, cassis, lime, lavender bitters
+      - name: NEW GROOVE
         price: 17
-        description: gin, cocchi americano, mint, lime, bubbly
-        note: ""
+        description: house blend of rums, maggie's farm falernum, chicha morada,
+          demerara, lime
       - name: Grace Under Pressure
         price: 17
         description: vodka, grapefruit, mandarin, lime, honey, anise
@@ -40,9 +41,6 @@ subsections:
         price: 17
         description: bourbon, dandelion caramel nut tea, method sweet vermouth,
           benedictine, cynar, passionfruit & guava bitters
-      - name: Prickly Pear French 75
-        price: 16
-        description: condesa prickly pear gin, simple, lemon, bubbly
       - name: House Martini
         price: 18
         description: gin, melon, cocchi americano, blanc vermouth, peychaud's bitters
@@ -59,14 +57,17 @@ subsections:
       - name: Oaxacan Old Fashioned
         price: 18
         description: reposado tequila, cruz de fuego cirial mezcal, agave, bitters
-      - name: Enzoni
+      - name: BUBBLE TROUBLE
         price: 17
-        description: gin, campari, white grape, lemon
+        description: bruot americano, montenegro amaro, lillet blanc
+      - name: NOT SO DARK & STORMY
+        price: 17
+        description: smith & cross rum, ginger shrub, apple, black lemon bitters, soda
   - subsection-header: No Booze
     items:
-      - name: Fall In Love
+      - name: Harry Osborn
         price: 12
-        description: pineapple shrub, clove, cinnamon, ginger beer
+        description: ginger shrub, pineapple, lime, soda
       - name: Phony Negroni
         price: 10
         description: local St Agrestis made 0%abv negroni
@@ -74,7 +75,4 @@ subsections:
         price: 12
         description: Lyre's N/A prosecco paired with a Peruvian punch made with purple
           corn, pineapple, clove, cinnamon, and green apples
-      - name: Amaro Falso
-        price: 10
-        description: local St Agrestis made 0%abv amaro
 ---
