@@ -50,19 +50,19 @@ subsections:
       - name: Dirty Gin Martini
         price: 18
         description: four pillars olive leaf, house made olive brine
+      - name: BUBBLE TROUBLE
+        price: 17
+        description: bruot americano, montenegro amaro, lillet blanc
       - name: Clarified Long Island Iced Tea
         price: 22
         description: vodka, gin, rum, tequila, dry curacao, clarified cola, coconut
           milk, lime, carbonation
-      - name: Oaxacan Old Fashioned
-        price: 18
-        description: reposado tequila, cruz de fuego cirial mezcal, agave, bitters
-      - name: BUBBLE TROUBLE
-        price: 17
-        description: bruot americano, montenegro amaro, lillet blanc
       - name: NOT SO DARK & STORMY
         price: 17
         description: smith & cross rum, ginger shrub, apple, black lemon bitters, soda
+      - name: Oaxacan Old Fashioned
+        price: 18
+        description: reposado tequila, cruz de fuego cirial mezcal, agave, bitters
   - subsection-header: No Booze
     items:
       - name: Harry Osborn
