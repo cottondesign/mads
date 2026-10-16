@@ -7,22 +7,17 @@ subsections:
         price: 15
         description: Germany - The wine bubbles with flavors of juicy tropical fruit,
           white flowers, and chalky, vibrant acidity.
-      - name: Mae Son "Frizzante"
+      - name: Alpamanta  - Breva Sparkling Red
         price: 16
-        description: Trentino-Alto Adige - Perky, happy, dry effervesence wrapped in
-          crunchy savory red fruit.
+        description: perky & dry, argentina
       - name: Miller High Life
         price: 7
         description: Champagne of beers
-      - name: Jacques Lassaigne les Vignes de Montgueux
-        description: Bottle only. Focused and quite zingy with some citrus and a seam of
-          white stone minerality.
+      - name: Famille Mousse L'Esquisse Extra Brut
+        description: Bottle only. white raspberry and delicate minerality
         price: 155
   - subsection-header: Skin Contact
     items:
-      - name: Cotes de Toul
-        price: 15
-        description: France - crisp & refreshing
       - name: Queen of the Sierra - Orange
         price: 16
         description: California - round and bright
@@ -42,4 +37,7 @@ subsections:
       - name: Gober & Freinbichler - Chill!
         price: 16
         description: Germany - Bright and juicy (served chilled)
+      - name: Iuli Umberta - Barbera
+        price: 15
+        description: fresh, juicy, light acidity. italy
 ---
