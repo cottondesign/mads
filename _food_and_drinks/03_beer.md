@@ -13,12 +13,12 @@ subsections:
       - name: Talea Al Dente
         price: 10
         description: Pilsner 5.0%
-      - name: Ommegang Farm Fresh
-        price: 9
-        description: saison 4.8%
       - name: Other Half Forever Ever
         price: 10
         description: double dry-hopped IPA 4.7%
+      - name: Radiant Pig Gangster Duck
+        price: 9
+        description: hoppy red ale 6.2%
   - items:
       - name: Miller High Life
         price: 7
@@ -29,11 +29,11 @@ subsections:
       - name: Aval
         price: 8
         description: cider 6%
-      - name: Athletic Cerveza
-        price: 7
-        description: mexican style copper 0%abv
       - name: KCKC Vicious Crush
         price: 9
         description: sour 5.2%
+      - name: Athletic Cerveza
+        price: 7
+        description: mexican style copper 0%abv
     subsection-header: Packaged
 ---
