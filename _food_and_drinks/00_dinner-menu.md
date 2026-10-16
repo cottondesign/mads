@@ -20,19 +20,16 @@ subsections:
         price: 17
         description: hazelnut praline butter
         note: ""
+      - name: Shakshuka
+        price: 17
+        description: tomato, feta, eggs, onion, turmeric, coriander, garlic, sourdough side
   - subsection-header: All Day Food
     items:
-      - name: Popcorn
-        price: 7
-        description: butter, cheddar
-      - name: Oysters
-        price: 21
-        description: (half dozen) sudachi & timut pepper mignonette
-      - name: Shrimp Cocktail
-        price: 19
-        description: house made yuzu cocktail sauce
+      - name: Oysters Rockefeller
+        price: 20
+        description: bacon, butter, dill, shallots, tobasco
       - name: Double Fried French Fries
-        price: 8
+        price: 9
         description: "chipotle aioli "
       - name: Shishito Peppers
         description: garlic yuzu aioli
@@ -40,16 +37,14 @@ subsections:
         note: ""
       - name: Ultimate Chicken Wings
         price: 15
-        description: cajun dry rub, buttermilk ranch,  carrots, celery
-      - name: Cucumber Salad
+        description: honey & yuzu koshu
+      - name: Roasted Squash
+        price: 16
+        description: feta, ricotta, chili crisp, pomegranate glaze
+      - name: House Salad
         price: 15
-        description: mint, coriander, shallots, feta
-      - name: Green Goddess
-        price: 15
-        description: romaine, dairy free green goddess dressing, garlic croutons, shaved
-          cheese
-        note: can add grilled/fried chicken or avocado
-      - name: Quinoa & Squash Pirogue
+        description: castelfranco, frisee, yogurt, sherry, fish sauce
+      - name: "Quinoa Stuffed Squash "
         price: 20
         description: honeynut squash, quinoa, fried chickpeas, pickled pearl onions,
           dukkah spice, honey sherry glaze
@@ -62,25 +57,24 @@ subsections:
         description: ahi tuna, crispy wontons, mango, cucumber, seaweed, chiltepin
           chiles, scallions, sesame seeds, unagi sauce, sriracha mayo, micro
           cilantro
-      - name: Fried Chicken Plate
-        price: 24
-        description: curry slaw, buttermilk ranch, house pickles, buttermilk biscuit,
-          whipped honey butter
       - name: Classic Burger
         price: 16
         description: grass-fed beef, american cheese, lettuce, tomato, pickle, onion,
           aioli, brioche
-      - name: Au Poivre Burger
-        price: 19
-        description: grass fed beef, crisp lettuce, caramelized onion, valdeon cheese,
-          green peppercorn sauce
       - name: Fried Chicken Sandwich
         price: 17
-        description: fried chicken, curry slaw, lime mayo, pickles, brioche
+        description: fried chicken, spicy cajun, ranch, pickles, brioche
       - name: Vegetarian BLT
         price: 17
         description: crispy halloumi, heirloom tomato, avocado, garlic aioli, chives,
           sourdough
+      - name: Fried Chicken Plate
+        price: 24
+        description: buttermilk ranch, house pickles, buttermilk biscuit, whipped honey
+          butter
+      - name: Steak Frites
+        price: 28
+        description: hot curry, timut & szechuan peppers, fries
       - name: Coconut Oil Cake
         price: 15
         description: coconut chantilly, macerated fruit
